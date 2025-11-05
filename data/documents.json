@@ -1,0 +1,144 @@
+{
+  "documents": [
+    {
+      "id": 1,
+      "title": "Сертификат соответствия на услуги поверки",
+      "type": "certificate",
+      "filename": "certificate-verification-services.pdf",
+      "size": "2.1 МБ",
+      "uploadDate": "2024-01-10",
+      "description": "Сертификат соответствия на выполнение работ по поверке средств измерений"
+    },
+    {
+      "id": 2,
+      "title": "Аттестат аккредитации лаборатории",
+      "type": "certificate",
+      "filename": "accreditation-certificate.pdf",
+      "size": "1.8 МБ",
+      "uploadDate": "2024-01-10",
+      "description": "Аттестат аккредитации испытательной лаборатории"
+    },
+    {
+      "id": 3,
+      "title": "Техническое описание системы дистанционного съема",
+      "type": "specification",
+      "filename": "remote-reading-system-specs.pdf",
+      "size": "3.5 МБ",
+      "uploadDate": "2023-12-15",
+      "description": "Подробное техническое описание системы автоматического съема показаний"
+    },
+    {
+      "id": 4,
+      "title": "Инструкция по эксплуатации счетчиков Вега NB-11",
+      "type": "manual",
+      "filename": "vega-nb11-manual.pdf",
+      "size": "4.2 МБ",
+      "uploadDate": "2023-12-10",
+      "description": "Руководство пользователя по эксплуатации теплосчетчиков Вега NB-11"
+    },
+    {
+      "id": 5,
+      "title": "Методика поверки теплосчетчиков",
+      "type": "specification",
+      "filename": "heat-meter-verification-method.pdf",
+      "size": "2.8 МБ",
+      "uploadDate": "2023-12-05",
+      "description": "Официальная методика поверки счетчиков тепловой энергии"
+    },
+    {
+      "id": 6,
+      "title": "Методика поверки водосчетчиков",
+      "type": "specification",
+      "filename": "water-meter-verification-method.pdf",
+      "size": "2.3 МБ",
+      "uploadDate": "2023-12-05",
+      "description": "Методика поверки счетчиков холодной и горячей воды"
+    },
+    {
+      "id": 7,
+      "title": "Прайс-лист на услуги 2024",
+      "type": "price-list",
+      "filename": "price-list-2024.pdf",
+      "size": "1.2 МБ",
+      "uploadDate": "2024-01-01",
+      "description": "Актуальные цены на все виды услуг компании"
+    },
+    {
+      "id": 8,
+      "title": "Договор на техническое обслуживание (образец)",
+      "type": "contract",
+      "filename": "maintenance-contract-template.pdf",
+      "size": "0.8 МБ",
+      "uploadDate": "2023-11-20",
+      "description": "Типовой договор на техническое обслуживание приборов учета"
+    },
+    {
+      "id": 9,
+      "title": "Требования к установке счетчиков тепла",
+      "type": "specification",
+      "filename": "heat-meter-installation-requirements.pdf",
+      "size": "1.9 МБ",
+      "uploadDate": "2023-11-15",
+      "description": "Технические требования к монтажу теплосчетчиков"
+    },
+    {
+      "id": 10,
+      "title": "Требования к установке водосчетчиков",
+      "type": "specification",
+      "filename": "water-meter-installation-requirements.pdf",
+      "size": "1.6 МБ",
+      "uploadDate": "2023-11-15",
+      "description": "Нормативные требования к установке счетчиков воды"
+    },
+    {
+      "id": 11,
+      "title": "Свидетельство о поверке (образец)",
+      "type": "certificate",
+      "filename": "verification-certificate-sample.pdf",
+      "size": "0.5 МБ",
+      "uploadDate": "2023-11-10",
+      "description": "Образец свидетельства о поверке средств измерений"
+    },
+    {
+      "id": 12,
+      "title": "Руководство по подключению к системе дистанционного съема",
+      "type": "manual",
+      "filename": "remote-connection-guide.pdf",
+      "size": "2.7 МБ",
+      "uploadDate": "2023-11-01",
+      "description": "Пошаговое руководство по подключению счетчиков к системе дистанционного съема"
+    }
+  ],
+  "documentTypes": [
+    {
+      "id": "certificate",
+      "name": "Сертификаты",
+      "icon": "bi-award",
+      "description": "Сертификаты соответствия и аккредитации"
+    },
+    {
+      "id": "specification",
+      "name": "Технические документы",
+      "icon": "bi-file-earmark-text",
+      "description": "Технические характеристики и требования"
+    },
+    {
+      "id": "manual",
+      "name": "Инструкции",
+      "icon": "bi-book",
+      "description": "Руководства пользователя и инструкции"
+    },
+    {
+      "id": "price-list",
+      "name": "Прайс-листы",
+      "icon": "bi-currency-dollar",
+      "description": "Актуальные цены на услуги"
+    },
+    {
+      "id": "contract",
+      "name": "Договоры",
+      "icon": "bi-file-earmark-check",
+      "description": "Типовые договоры и соглашения"
+    }
+  ]
+}

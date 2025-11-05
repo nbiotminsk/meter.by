@@ -1,0 +1,144 @@
+{
+  "services": [
+    {
+      "id": "verification-heat",
+      "title": "Поверка счетчиков тепла",
+      "category": "verification",
+      "subcategory": "heat",
+      "description": "Профессиональная поверка приборов учета тепловой энергии",
+      "detailedInfo": "Выполняем поверку счетчиков тепла в соответствии с требованиями Республики Беларусь. Используем современное оборудование и сертифицированные методики. Предоставляем официальные документы о поверке.",
+      "icon": "bi-thermometer-half",
+      "image": "images/placeholders/heat-meter-verification.jpg",
+      "price": 150,
+      "unit": "шт"
+    },
+    {
+      "id": "verification-water",
+      "title": "Поверка счетчиков воды",
+      "category": "verification",
+      "subcategory": "water",
+      "description": "Поверка приборов учета холодной и горячей воды",
+      "detailedInfo": "Проводим поверку водосчетчиков с выездом на объект или в лабораторных условиях. Быстрое оформление документов, соответствие всем стандартам качества.",
+      "icon": "bi-droplet",
+      "image": "images/placeholders/water-meter-verification.jpg",
+      "price": 80,
+      "unit": "шт"
+    },
+    {
+      "id": "installation-heat",
+      "title": "Монтаж счетчиков тепла",
+      "category": "installation",
+      "subcategory": "heat",
+      "description": "Профессиональный монтаж теплосчетчиков",
+      "detailedInfo": "Выполняем монтаж счетчиков тепла любой сложности. Работаем с различными типами систем отопления. Гарантия на выполненные работы.",
+      "icon": "bi-tools",
+      "image": "images/placeholders/heat-meter-installation.jpg",
+      "price": 300,
+      "unit": "шт"
+    },
+    {
+      "id": "installation-water",
+      "title": "Монтаж счетчиков воды",
+      "category": "installation",
+      "subcategory": "water",
+      "description": "Установка водосчетчиков холодной и горячей воды",
+      "detailedInfo": "Качественная установка счетчиков воды с соблюдением всех технических требований. Работаем быстро и аккуратно.",
+      "icon": "bi-wrench",
+      "image": "images/placeholders/water-meter-installation.jpg",
+      "price": 120,
+      "unit": "шт"
+    },
+    {
+      "id": "pnr-balancing",
+      "title": "Балансировка системы отопления",
+      "category": "pnr",
+      "subcategory": "balancing",
+      "description": "Настройка и балансировка отопительных систем",
+      "detailedInfo": "Профессиональная балансировка системы отопления для обеспечения равномерного распределения тепла. Повышение эффективности работы системы.",
+      "icon": "bi-gear",
+      "image": "images/placeholders/heating-balancing.jpg",
+      "price": 500,
+      "unit": "услуга"
+    },
+    {
+      "id": "pnr-startup",
+      "title": "Запуск системы отопления",
+      "category": "pnr",
+      "subcategory": "startup",
+      "description": "Пуско-наладочные работы систем отопления",
+      "detailedInfo": "Комплексный запуск и настройка систем отопления. Проверка всех узлов, настройка параметров, составление протоколов испытаний.",
+      "icon": "bi-play-circle",
+      "image": "images/placeholders/heating-startup.jpg",
+      "price": 400,
+      "unit": "услуга"
+    },
+    {
+      "id": "remote-heat",
+      "title": "Дистанционный съем тепла",
+      "category": "remote",
+      "subcategory": "heat",
+      "description": "Подключение счетчиков тепла к системе дистанционного съема",
+      "detailedInfo": "Современная система дистанционного съема показаний теплосчетчиков. Автоматическая передача данных, удобный личный кабинет для контроля потребления.",
+      "icon": "bi-wifi",
+      "image": "images/placeholders/remote-heat-reading.jpg",
+      "price": 200,
+      "unit": "подключение"
+    },
+    {
+      "id": "remote-water",
+      "title": "Дистанционный съем воды",
+      "category": "remote",
+      "subcategory": "water",
+      "description": "Подключение водосчетчиков к системе дистанционного съема",
+      "detailedInfo": "Автоматический съем показаний счетчиков воды. Исключение человеческого фактора, точность учета, своевременная передача данных.",
+      "icon": "bi-broadcast",
+      "image": "images/placeholders/remote-water-reading.jpg",
+      "price": 150,
+      "unit": "подключение"
+    },
+    {
+      "id": "equipment-vega",
+      "title": "Вега NB-11",
+      "category": "equipment",
+      "subcategory": "meters",
+      "description": "Продажа современных приборов учета Вега NB-11",
+      "detailedInfo": "Высокоточные счетчики Вега NB-11 с возможностью дистанционного съема показаний. Надежность, долговечность, соответствие всем стандартам.",
+      "icon": "bi-cpu",
+      "image": "images/placeholders/vega-nb11.jpg",
+      "price": 450,
+      "unit": "шт"
+    }
+  ],
+  "categories": [
+    {
+      "id": "verification",
+      "name": "Поверка приборов",
+      "description": "Поверка счетчиков тепла и воды",
+      "icon": "bi-check-circle"
+    },
+    {
+      "id": "installation",
+      "name": "Монтаж счетчиков",
+      "description": "Установка приборов учета",
+      "icon": "bi-tools"
+    },
+    {
+      "id": "pnr",
+      "name": "ПНР",
+      "description": "Пуско-наладочные работы",
+      "icon": "bi-gear"
+    },
+    {
+      "id": "remote",
+      "name": "Дистанционный съем",
+      "description": "Системы автоматического съема показаний",
+      "icon": "bi-wifi"
+    },
+    {
+      "id": "equipment",
+      "name": "Продажа оборудования",
+      "description": "Современные приборы учета",
+      "icon": "bi-cart"
+    }
+  ]
+}

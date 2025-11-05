@@ -1,0 +1,365 @@
+{
+  "categories": [
+    {
+      "id": "verification",
+      "name": "Поверка приборов учета",
+      "description": "Профессиональная поверка счетчиков тепла и воды с выдачей сертификатов",
+      "icon": "bi-check-circle",
+      "services": [
+        {
+          "id": "verification-heat",
+          "name": "Поверка счетчиков тепла",
+          "description": "Поверка приборов учета тепловой энергии в соответствии с требованиями РБ",
+          "price": 150,
+          "unit": "шт",
+          "features": [
+            "Сертификат поверки",
+            "Выезд на объект",
+            "Гарантия качества"
+          ]
+        },
+        {
+          "id": "verification-water-cold",
+          "name": "Поверка счетчиков холодной воды",
+          "description": "Поверка водосчетчиков холодной воды с оформлением документов",
+          "price": 80,
+          "unit": "шт",
+          "features": [
+            "Сертификат поверки",
+            "Быстрое оформление",
+            "Лабораторная поверка"
+          ]
+        },
+        {
+          "id": "verification-water-hot",
+          "name": "Поверка счетчиков горячей воды",
+          "description": "Поверка водосчетчиков горячей воды с выездом специалиста",
+          "price": 90,
+          "unit": "шт",
+          "features": [
+            "Сертификат поверки",
+            "Выезд на объект",
+            "Экспресс-поверка"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "installation",
+      "name": "Монтаж счетчиков",
+      "description": "Профессиональный монтаж приборов учета с гарантией качества",
+      "icon": "bi-tools",
+      "services": [
+        {
+          "id": "installation-heat",
+          "name": "Монтаж счетчика тепла",
+          "description": "Установка теплосчетчика с подключением к системе отопления",
+          "price": 300,
+          "unit": "шт",
+          "features": [
+            "Монтаж",
+            "Настройка",
+            "Гарантия 2 года",
+            "Пуско-наладка"
+          ]
+        },
+        {
+          "id": "installation-water-cold",
+          "name": "Монтаж счетчика холодной воды",
+          "description": "Установка водосчетчика холодной воды с опломбировкой",
+          "price": 120,
+          "unit": "шт",
+          "features": [
+            "Монтаж",
+            "Опломбировка",
+            "Гарантия 1 год"
+          ]
+        },
+        {
+          "id": "installation-water-hot",
+          "name": "Монтаж счетчика горячей воды",
+          "description": "Установка водосчетчика горячей воды с настройкой",
+          "price": 140,
+          "unit": "шт",
+          "features": [
+            "Монтаж",
+            "Настройка",
+            "Опломбировка",
+            "Гарантия 1 год"
+          ]
+        },
+        {
+          "id": "installation-complex",
+          "name": "Комплексный монтаж узла учета",
+          "description": "Установка полного узла учета тепла с автоматикой",
+          "price": 800,
+          "unit": "узел",
+          "features": [
+            "Полный узел",
+            "Автоматика",
+            "Настройка",
+            "Гарантия 3 года"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pnr",
+      "name": "Пуско-наладочные работы (ПНР)",
+      "description": "Комплекс работ по запуску и настройке систем отопления",
+      "icon": "bi-gear-wide-connected",
+      "services": [
+        {
+          "id": "pnr-balancing",
+          "name": "Балансировка системы отопления",
+          "description": "Гидравлическая балансировка для оптимального распределения тепла",
+          "price": 500,
+          "unit": "система",
+          "features": [
+            "Диагностика",
+            "Настройка",
+            "Протокол работ",
+            "Гарантия"
+          ]
+        },
+        {
+          "id": "pnr-startup",
+          "name": "Запуск системы отопления",
+          "description": "Пуск системы отопления с проверкой всех параметров",
+          "price": 400,
+          "unit": "система",
+          "features": [
+            "Пуск системы",
+            "Проверка параметров",
+            "Настройка автоматики"
+          ]
+        },
+        {
+          "id": "pnr-commissioning",
+          "name": "Комплексная наладка",
+          "description": "Полный комплекс пуско-наладочных работ",
+          "price": 1200,
+          "unit": "объект",
+          "features": [
+            "Полная наладка",
+            "Документооборот",
+            "Обучение персонала",
+            "Гарантия 1 год"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "remote",
+      "name": "Дистанционный съем показаний",
+      "description": "Подключение к системе автоматической передачи показаний",
+      "icon": "bi-broadcast-pin",
+      "services": [
+        {
+          "id": "remote-connection-heat",
+          "name": "Подключение счетчика тепла к системе",
+          "description": "Подключение теплосчетчика к системе дистанционного съема",
+          "price": 200,
+          "unit": "шт",
+          "features": [
+            "Подключение",
+            "Настройка передачи",
+            "Тестирование"
+          ]
+        },
+        {
+          "id": "remote-connection-water",
+          "name": "Подключение счетчика воды к системе",
+          "description": "Подключение водосчетчика к системе дистанционного съема",
+          "price": 150,
+          "unit": "шт",
+          "features": [
+            "Подключение",
+            "Настройка",
+            "Проверка связи"
+          ]
+        },
+        {
+          "id": "remote-monthly",
+          "name": "Ежемесячное обслуживание",
+          "description": "Техническое обслуживание системы дистанционного съема",
+          "price": 50,
+          "unit": "месяц",
+          "features": [
+            "Мониторинг",
+            "Техподдержка",
+            "Отчеты"
+          ]
+        },
+        {
+          "id": "remote-setup",
+          "name": "Настройка системы съема",
+          "description": "Первоначальная настройка системы дистанционного съема",
+          "price": 300,
+          "unit": "система",
+          "features": [
+            "Настройка",
+            "Интеграция",
+            "Обучение",
+            "Документация"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "equipment",
+      "name": "Продажа оборудования",
+      "description": "Поставка сертифицированного оборудования для учета ресурсов",
+      "icon": "bi-box-seam",
+      "services": [
+        {
+          "id": "equipment-vega-nb11",
+          "name": "Счетчик Вега NB-11",
+          "description": "Ультразвуковой счетчик тепла Вега NB-11 с возможностью дистанционного съема",
+          "price": 450,
+          "unit": "шт",
+          "features": [
+            "Ультразвуковой",
+            "Дистанционный съем",
+            "Гарантия 4 года",
+            "Сертификат"
+          ]
+        },
+        {
+          "id": "equipment-water-meter",
+          "name": "Счетчик воды импульсный",
+          "description": "Водосчетчик с импульсным выходом для дистанционного съема",
+          "price": 180,
+          "unit": "шт",
+          "features": [
+            "Импульсный выход",
+            "Антимагнитная защита",
+            "Гарантия 6 лет"
+          ]
+        },
+        {
+          "id": "equipment-temperature-sensor",
+          "name": "Датчик температуры",
+          "description": "Высокоточный датчик температуры для теплосчетчиков",
+          "price": 120,
+          "unit": "шт",
+          "features": [
+            "Высокая точность",
+            "Долговечность",
+            "Гарантия 5 лет"
+          ]
+        },
+        {
+          "id": "equipment-data-logger",
+          "name": "Регистратор данных",
+          "description": "Устройство для сбора и передачи данных с приборов учета",
+          "price": 350,
+          "unit": "шт",
+          "features": [
+            "GSM/GPRS",
+            "Автономное питание",
+            "Защита IP65",
+            "Гарантия 3 года"
+          ]
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "id": "basic-heat",
+      "name": "Базовый пакет (Тепло)",
+      "description": "Поверка + монтаж счетчика тепла",
+      "originalPrice": 450,
+      "discountPrice": 400,
+      "services": [
+        "verification-heat",
+        "installation-heat"
+      ],
+      "popular": false
+    },
+    {
+      "id": "premium-heat",
+      "name": "Премиум пакет (Тепло)",
+      "description": "Полный комплекс: поверка, монтаж, подключение к дистанционному съему",
+      "originalPrice": 650,
+      "discountPrice": 550,
+      "services": [
+        "verification-heat",
+        "installation-heat",
+        "remote-connection-heat"
+      ],
+      "popular": true
+    },
+    {
+      "id": "water-complete",
+      "name": "Комплект для воды",
+      "description": "Поверка и монтаж счетчиков холодной и горячей воды",
+      "originalPrice": 430,
+      "discountPrice": 380,
+      "services": [
+        "verification-water-cold",
+        "verification-water-hot",
+        "installation-water-cold",
+        "installation-water-hot"
+      ],
+      "popular": false
+    },
+    {
+      "id": "smart-home",
+      "name": "Умный дом",
+      "description": "Полная автоматизация учета: тепло + вода + дистанционный съем",
+      "originalPrice": 1200,
+      "discountPrice": 950,
+      "services": [
+        "verification-heat",
+        "installation-heat",
+        "verification-water-cold",
+        "verification-water-hot",
+        "installation-water-cold",
+        "installation-water-hot",
+        "remote-connection-heat",
+        "remote-connection-water",
+        "remote-setup"
+      ],
+      "popular": true
+    },
+    {
+      "id": "business-solution",
+      "name": "Бизнес решение",
+      "description": "Комплексное решение для коммерческих объектов",
+      "originalPrice": 2500,
+      "discountPrice": 2000,
+      "services": [
+        "installation-complex",
+        "pnr-commissioning",
+        "remote-setup",
+        "equipment-vega-nb11",
+        "equipment-data-logger"
+      ],
+      "popular": false
+    },
+    {
+      "id": "maintenance-annual",
+      "name": "Годовое обслуживание",
+      "description": "Полное техническое обслуживание на 12 месяцев",
+      "originalPrice": 600,
+      "discountPrice": 500,
+      "services": [
+        "remote-monthly",
+        "remote-monthly",
+        "remote-monthly",
+        "remote-monthly",
+        "remote-monthly",
+        "remote-monthly",
+        "remote-monthly",
+        "remote-monthly",
+        "remote-monthly",
+        "remote-monthly",
+        "remote-monthly",
+        "remote-monthly"
+      ],
+      "popular": false
+    }
+  ]
+}

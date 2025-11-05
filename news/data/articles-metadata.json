@@ -1,0 +1,58 @@
+{
+  "articles": [
+    {
+      "id": "new-verification-requirements-2024",
+      "title": "Новые требования к поверке счетчиков в 2024 году",
+      "slug": "2024-01-15-new-verification-requirements-2024",
+      "date": "2024-01-15",
+      "excerpt": "Изменения в законодательстве Республики Беларусь касательно поверки приборов учета. Что нужно знать потребителям.",
+      "image": "images/placeholders/blog-verification-2024.jpg",
+      "tags": ["поверка", "законодательство", "2024"]
+    },
+    {
+      "id": "remote-reading-advantages",
+      "title": "Преимущества дистанционного съема показаний",
+      "slug": "2024-01-10-remote-reading-advantages",
+      "date": "2024-01-10",
+      "excerpt": "Почему стоит перейти на автоматический съем показаний счетчиков. Экономия времени и повышение точности учета.",
+      "image": "images/placeholders/blog-remote-reading.jpg",
+      "tags": ["дистанционный съем", "автоматизация", "технологии"]
+    },
+    {
+      "id": "heat-meter-choice",
+      "title": "Как правильно выбрать счетчик тепла",
+      "slug": "2024-01-05-heat-meter-choice",
+      "date": "2024-01-05",
+      "excerpt": "Руководство по выбору теплосчетчика для квартиры или дома. Основные характеристики и критерии выбора.",
+      "image": "images/placeholders/blog-heat-meter-choice.jpg",
+      "tags": ["счетчики тепла", "выбор", "монтаж"]
+    },
+    {
+      "id": "energy-saving-apartments",
+      "title": "Энергосбережение в многоквартирных домах",
+      "slug": "2023-12-28-energy-saving-apartments",
+      "date": "2023-12-28",
+      "excerpt": "Практические советы по снижению расходов на отопление и горячую воду в квартире. Простые способы экономии.",
+      "image": "images/placeholders/blog-energy-saving.jpg",
+      "tags": ["энергосбережение", "экономия", "коммунальные услуги"]
+    },
+    {
+      "id": "meter-maintenance",
+      "title": "Техническое обслуживание приборов учета",
+      "slug": "2023-12-20-meter-maintenance",
+      "date": "2023-12-20",
+      "excerpt": "Важность регулярного обслуживания счетчиков. Как продлить срок службы приборов учета и обеспечить их точность.",
+      "image": "images/placeholders/blog-maintenance.jpg",
+      "tags": ["обслуживание", "ремонт", "техподдержка"]
+    },
+    {
+      "id": "digitalization-utilities",
+      "title": "Цифровизация коммунальных услуг в Беларуси",
+      "slug": "2023-12-15-digitalization-utilities",
+      "date": "2023-12-15",
+      "excerpt": "Развитие цифровых технологий в сфере ЖКХ. Как современные решения улучшают качество коммунальных услуг.",
+      "image": "images/placeholders/blog-digitalization.jpg",
+      "tags": ["цифровизация", "технологии", "ЖКХ", "инновации"]
+    }
+  ]
+}

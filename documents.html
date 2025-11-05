@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документы - Meter.by</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Сертификаты, руководства и техническая документация по системе дистанционного съема показаний счетчиков в Беларуси.">
+    <meta name="keywords"
+        content="документы, сертификаты, руководства, техническая документация, поверка счетчиков, Беларусь">
+    <meta name="author" content="Система дистанционного съема">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Документы - Meter.by">
+    <meta property="og:description"
+        content="Сертификаты, руководства и техническая документация по системе дистанционного съема показаний">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://meter.by/documents.html">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/dark-theme.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/image-optimization.css" rel="stylesheet">
+    <link href="css/glassmorphism-services.css" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Документы - Meter.by",
+        "description": "Сертификаты, руководства и техническая документация по системе дистанционного съема показаний счетчиков",
+        "url": "https://meter.by/documents.html",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Meter.by",
+            "url": "https://meter.by"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-broadcast-pin me-2"></i>
+                Meter.by
+            </a>
+
+            <div class="d-flex align-items-center order-lg-3">
+                <!-- Theme Switcher -->
+                <button class="theme-switcher me-3" x-data="themeSwitch" @click="toggle()" x-init="init()">
+                    <i :class="isDark ? 'bi bi-sun' : 'bi bi-moon'"></i>
+                </button>
+
+                <!-- Messenger Buttons -->
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-primary btn-sm me-2 telegram-btn">
+                        <i class="bi bi-telegram me-1"></i><span class="btn-text">Telegram</span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm viber-btn">
+                        <i class="bi bi-chat-dots me-1"></i><span class="btn-text">Viber</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" title="Главная">
+                            <i class="bi bi-house-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news/index.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="documents.html">Документы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="prices.html">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html">Видео</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section py-5 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h1 class="display-4 fw-bold mb-4">
+                            Документы и сертификаты
+                        </h1>
+                        <p class="lead mb-4">
+                            Полная техническая документация, сертификаты соответствия и руководства по эксплуатации
+                            для систем дистанционного съема показаний приборов учета.
+                        </p>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="#documents" class="btn btn-primary btn-lg">
+                                <i class="bi bi-file-earmark-text me-2"></i>Просмотреть документы
+                            </a>
+                            <a href="index.html#services" class="btn btn-outline-primary btn-lg">
+                                <i class="bi bi-gear me-2"></i>Наши услуги
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documents Section -->
+        <section id="documents" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="display-5 fw-bold">Документы</h2>
+                        <p class="lead">Сертификаты, руководства и техническая документация</p>
+                    </div>
+                </div>
+
+                <!-- Documents will be loaded here by Alpine.js -->
+                <div x-data="documentsComponent" x-init="init()">
+
+
+                    <!-- Loading indicator -->
+                    <div class="row" x-show="loading">
+                        <div class="col-12 text-center py-5">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Загрузка документов...</span>
+                            </div>
+                            <p class="mt-3 text-muted">Загрузка документов...</p>
+                        </div>
+                    </div>
+
+                    <!-- No documents found -->
+                    <div class="row" x-show="!loading && documents.length === 0">
+                        <div class="col-12 text-center py-5">
+                            <div class="alert alert-warning">
+                                <i class="bi bi-exclamation-triangle fs-1 mb-3"></i>
+                                <p>Документы не найдены</p>
+                                <button class="btn btn-outline-primary" @click="loadDocuments()">
+                                    Попробовать снова
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4" x-show="documents.length > 0">
+                        <template x-for="document in displayedDocuments" :key="document.id">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 glass-effect">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start">
+                                            <i :class="getDocumentIcon(document.type)"
+                                                class="fs-2 text-primary me-3"></i>
+                                            <div class="flex-grow-1">
+                                                <h6 class="card-title" x-text="document.title"></h6>
+                                                <p class="card-text small text-muted" x-text="document.description"></p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <small class="text-muted" x-text="document.size"></small>
+                                                    <a :href="'documents/' + document.filename"
+                                                        class="btn btn-sm btn-outline-primary" target="_blank">
+                                                        <i class="bi bi-download me-1"></i>Скачать
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+
+                    <!-- Show More Button -->
+                    <div class="row mt-4" x-show="documents.length > 6">
+                        <div class="col-12 text-center">
+                            <button @click="toggleShowAll()"
+                                class="btn btn-outline-primary btn-lg documents-toggle-btn">
+                                <i :class="showAll ? 'bi bi-chevron-up' : 'bi bi-chevron-down'" class="me-2"></i>
+                                <span x-text="showAll ? 'Скрыть документы' : 'Показать все документы'"></span>
+                                <span x-show="!showAll" class="ms-1 badge bg-primary rounded-pill">
+                                    +<span x-text="documents.length - 6"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Need Help Section -->
+        <section class="py-5 consultation-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="display-6 fw-bold mb-4">Нужна консультация?</h2>
+                        <p class="lead mb-4">
+                            Не нашли нужный документ или у вас есть вопросы?
+                            Свяжитесь с нашими специалистами для получения подробной консультации.
+                        </p>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="#" class="btn btn-primary btn-lg telegram-btn">
+                                <i class="bi bi-telegram me-2"></i>Написать в Telegram
+                            </a>
+                            <a href="#" class="btn btn-outline-light btn-lg viber-btn">
+                                <i class="bi bi-chat-dots me-2"></i>Связаться через Viber
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Meter.by</h5>
+                    <p>Современные решения для учета ресурсов в Республике Беларусь</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>
+                        <i class="bi bi-telephone me-2"></i>+375 (29) 123-45-67<br>
+                        <i class="bi bi-envelope me-2"></i>info@meter.by
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="bi bi-telegram"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-chat-dots"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <small>&copy; 2024 Meter.by. Все права защищены.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Messenger Buttons -->
+    <div class="messenger-buttons">
+        <a href="#" class="messenger-btn telegram-btn" title="Telegram">
+            <i class="bi bi-telegram"></i>
+        </a>
+        <a href="#" class="messenger-btn viber-btn" title="Viber">
+            <i class="bi bi-chat-dots"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation-manager.js"></script>
+
+    <!-- Documents Component (inline for debugging) -->
+    <script>
+        document.addEventListener('alpine:init', () => {
+            // Theme Switcher Component
+            Alpine.data('themeSwitch', () => ({
+                isDark: localStorage.getItem('theme') === 'dark',
+
+                init() {
+                    // Set initial theme
+                    this.updateTheme();
+                },
+
+                toggle() {
+                    this.isDark = !this.isDark;
+                    this.updateTheme();
+                },
+
+                updateTheme() {
+                    const theme = this.isDark ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', theme);
+                    localStorage.setItem('theme', theme);
+                }
+            }));
+
+            Alpine.data('documentsComponent', () => ({
+                documents: [],
+                displayedDocuments: [],
+                showAll: false,
+                loading: true,
+
+                async init() {
+                    await this.loadDocuments();
+                },
+
+                async loadDocuments() {
+                    try {
+                        this.loading = true;
+
+                        // Попробуем разные пути
+                        const possiblePaths = [
+                            'data/documents.json',
+                            './data/documents.json',
+                            '/data/documents.json'
+                        ];
+
+                        let data = null;
+                        let lastError = null;
+
+                        for (const path of possiblePaths) {
+                            try {
+                                const response = await fetch(path);
+                                if (response.ok) {
+                                    data = await response.json();
+                                    console.log(`Documents loaded from ${path}`);
+                                    break;
+                                }
+                            } catch (fetchError) {
+                                lastError = fetchError;
+                            }
+                        }
+
+                        if (!data) {
+                            // Если все пути не сработали, используем fallback данные
+                            console.log('Using fallback document data');
+                            data = await this.getFallbackData();
+                        }
+
+                        if (data && data.documents) {
+                            this.documents = data.documents;
+                            this.updateDisplayedDocuments();
+                        } else {
+                            this.documents = [];
+                        }
+                    } catch (error) {
+                        console.error('Error loading documents:', error);
+                        this.documents = [];
+                    } finally {
+                        this.loading = false;
+                    }
+                },
+
+                async getFallbackData() {
+                    // Fallback данные на случай, если файл не загружается
+                    return {
+                        documents: [
+                            {
+                                id: 1,
+                                title: "Сертификат соответствия на услуги поверки",
+                                type: "certificate",
+                                filename: "certificate-verification-services.pdf",
+                                size: "2.1 МБ",
+                                uploadDate: "2024-01-10",
+                                description: "Сертификат соответствия на выполнение работ по поверке средств измерений"
+                            },
+                            {
+                                id: 2,
+                                title: "Аттестат аккредитации лаборатории",
+                                type: "certificate",
+                                filename: "accreditation-certificate.pdf",
+                                size: "1.8 МБ",
+                                uploadDate: "2024-01-10",
+                                description: "Аттестат аккредитации испытательной лаборатории"
+                            },
+                            {
+                                id: 3,
+                                title: "Техническое описание системы дистанционного съема",
+                                type: "specification",
+                                filename: "remote-reading-system-specs.pdf",
+                                size: "3.5 МБ",
+                                uploadDate: "2023-12-15",
+                                description: "Подробное техническое описание системы автоматического съема показаний"
+                            },
+                            {
+                                id: 4,
+                                title: "Инструкция по эксплуатации счетчиков Вега NB-11",
+                                type: "manual",
+                                filename: "vega-nb11-manual.pdf",
+                                size: "4.2 МБ",
+                                uploadDate: "2023-12-10",
+                                description: "Руководство пользователя по эксплуатации теплосчетчиков Вега NB-11"
+                            },
+                            {
+                                id: 5,
+                                title: "Методика поверки теплосчетчиков",
+                                type: "specification",
+                                filename: "heat-meter-verification-method.pdf",
+                                size: "2.8 МБ",
+                                uploadDate: "2023-12-05",
+                                description: "Официальная методика поверки счетчиков тепловой энергии"
+                            },
+                            {
+                                id: 6,
+                                title: "Методика поверки водосчетчиков",
+                                type: "specification",
+                                filename: "water-meter-verification-method.pdf",
+                                size: "2.3 МБ",
+                                uploadDate: "2023-12-05",
+                                description: "Методика поверки счетчиков холодной и горячей воды"
+                            },
+                            {
+                                id: 7,
+                                title: "Прайс-лист на услуги 2024",
+                                type: "price-list",
+                                filename: "price-list-2024.pdf",
+                                size: "1.2 МБ",
+                                uploadDate: "2024-01-01",
+                                description: "Актуальные цены на все виды услуг компании"
+                            },
+                            {
+                                id: 8,
+                                title: "Договор на техническое обслуживание (образец)",
+                                type: "contract",
+                                filename: "maintenance-contract-template.pdf",
+                                size: "0.8 МБ",
+                                uploadDate: "2023-11-20",
+                                description: "Типовой договор на техническое обслуживание приборов учета"
+                            },
+                            {
+                                id: 9,
+                                title: "Требования к установке счетчиков тепла",
+                                type: "specification",
+                                filename: "heat-meter-installation-requirements.pdf",
+                                size: "1.9 МБ",
+                                uploadDate: "2023-11-15",
+                                description: "Технические требования к монтажу теплосчетчиков"
+                            },
+                            {
+                                id: 10,
+                                title: "Требования к установке водосчетчиков",
+                                type: "specification",
+                                filename: "water-meter-installation-requirements.pdf",
+                                size: "1.6 МБ",
+                                uploadDate: "2023-11-15",
+                                description: "Нормативные требования к установке счетчиков воды"
+                            },
+                            {
+                                id: 11,
+                                title: "Свидетельство о поверке (образец)",
+                                type: "certificate",
+                                filename: "verification-certificate-sample.pdf",
+                                size: "0.5 МБ",
+                                uploadDate: "2023-11-10",
+                                description: "Образец свидетельства о поверке средств измерений"
+                            },
+                            {
+                                id: 12,
+                                title: "Руководство по подключению к системе дистанционного съема",
+                                type: "manual",
+                                filename: "remote-connection-guide.pdf",
+                                size: "2.7 МБ",
+                                uploadDate: "2023-11-01",
+                                description: "Пошаговое руководство по подключению счетчиков к системе дистанционного съема"
+                            }
+                        ]
+                    };
+                },
+
+                updateDisplayedDocuments() {
+                    if (this.showAll) {
+                        this.displayedDocuments = this.documents;
+                    } else {
+                        this.displayedDocuments = this.documents.slice(0, 6);
+                    }
+                },
+
+                toggleShowAll() {
+                    this.showAll = !this.showAll;
+                    this.updateDisplayedDocuments();
+                },
+
+                getDocumentIcon(type) {
+                    const iconMap = {
+                        'certificate': 'bi bi-award',
+                        'specification': 'bi bi-file-earmark-text',
+                        'manual': 'bi bi-book',
+                        'price-list': 'bi bi-currency-dollar',
+                        'contract': 'bi bi-file-earmark-check',
+                        'default': 'bi bi-file-earmark'
+                    };
+                    return iconMap[type] || iconMap['default'];
+                }
+            }));
+
+
+        });
+    </script>
+
+</body>
+
+</html>

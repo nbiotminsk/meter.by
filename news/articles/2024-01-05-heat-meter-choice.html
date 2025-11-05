@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как правильно выбрать счетчик тепла - Meter.by</title>
+    <meta name="description" content="Руководство по выбору теплосчетчика для квартиры или дома. Основные характеристики и критерии выбора.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/dark-theme.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html"><i class="bi bi-broadcast-pin me-2"></i>Meter.by</a>
+            <div class="d-flex align-items-center order-lg-3">
+                <button class="theme-switcher me-3" x-data="themeSwitch" @click="toggle()" x-init="init()"><i :class="isDark ? 'bi bi-sun' : 'bi bi-moon'"></i></button>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-primary btn-sm me-2 telegram-btn"><i class="bi bi-telegram me-1"></i><span class="btn-text">Telegram</span></a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm viber-btn"><i class="bi bi-chat-dots me-1"></i><span class="btn-text">Viber</span></a>
+                </div>
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            </div>
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html"><i class="bi bi-house-fill"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#services">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../documents.html">Документы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../prices.html">Цены</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../videos.html">Видео</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <article class="article-page py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="mb-4"><a href="../index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left me-2"></i>Вернуться к новостям</a></div>
+                        <header class="article-header mb-4">
+                            <h1 class="display-4 mb-3">Как правильно выбрать счетчик тепла</h1>
+                            <div class="article-meta d-flex align-items-center text-muted mb-3"><i class="bi bi-calendar3 me-2"></i><span>5 января 2024 г.</span></div>
+                            <div class="article-tags mb-3">
+                                <span class="badge bg-secondary me-1">счетчики тепла</span>
+                                <span class="badge bg-secondary me-1">выбор</span>
+                                <span class="badge bg-secondary me-1">монтаж</span>
+                            </div>
+                        </header>
+                        <div class="article-image mb-4"><img src="../../images/placeholders/blog-heat-meter-choice.jpg" alt="Как правильно выбрать счетчик тепла" class="img-fluid rounded shadow-sm" style="width: 100%; max-height: 400px; object-fit: cover;"></div>
+                        <div class="article-excerpt bg-light p-4 rounded mb-4 border-start border-primary border-4"><p class="lead mb-0">Руководство по выбору теплосчетчика для квартиры или дома. Основные характеристики и критерии выбора.</p></div>
+                        <div class="article-content" style="line-height: 1.8; font-size: 1.1rem;">
+                            <p>Выбор счетчика тепла - важное решение, которое влияет на точность учета и размер коммунальных платежей. При выборе необходимо учитывать несколько ключевых факторов.</p>
+                            <h4 class="mt-4 mb-3">Основные критерии выбора:</h4>
+                            <ol class="mb-4">
+                                <li class="mb-2">Диаметр трубопровода</li>
+                                <li class="mb-2">Тип системы отопления</li>
+                                <li class="mb-2">Качество теплоносителя</li>
+                                <li class="mb-2">Требуемая точность измерений</li>
+                                <li class="mb-2">Возможность дистанционного съема</li>
+                            </ol>
+                            <h4 class="mt-4 mb-3">Типы счетчиков:</h4>
+                            <ul class="mb-4">
+                                <li class="mb-2">Механические - надежные и недорогие</li>
+                                <li class="mb-2">Ультразвуковые - высокая точность</li>
+                                <li class="mb-2">Электромагнитные - для сложных условий</li>
+                                <li class="mb-2">Вихревые - универсальные решения</li>
+                            </ul>
+                            <p>Мы поможем подобрать оптимальный счетчик для ваших условий и выполним профессиональный монтаж с гарантией качества.</p>
+                        </div>
+                        <footer class="article-footer mt-5 pt-4 border-top">
+                            <div class="row">
+                                <div class="col-md-6"><h5 class="mb-3">Поделиться статьей</h5><div class="d-flex gap-2"><a href="#" class="btn btn-outline-primary"><i class="bi bi-telegram"></i></a><a href="#" class="btn btn-outline-secondary"><i class="bi bi-chat-dots"></i></a></div></div>
+                                <div class="col-md-6 text-md-end mt-3 mt-md-0"><h5 class="mb-3">Есть вопросы?</h5><a href="../../prices.html" class="btn btn-primary"><i class="bi bi-calculator me-2"></i>Рассчитать стоимость</a></div>
+                            </div>
+                        </footer>
+                        <div id="related-articles" class="mt-5 pt-4 border-top" x-data="relatedArticles" x-init="init()">
+                            <h3 class="mb-4">Похожие статьи</h3>
+                            <div class="row g-4" x-show="articles.length > 0">
+                                <template x-for="article in articles" :key="article.id">
+                                    <div class="col-md-4"><div class="card h-100" style="cursor: pointer;" @click="navigateToArticle(article.slug)"><img :src="'../../' + article.image" :alt="article.title" class="card-img-top" style="height: 150px; object-fit: cover;"><div class="card-body"><h6 class="card-title" x-text="article.title"></h6><small class="text-muted"><i class="bi bi-calendar me-1"></i><span x-text="formatDate(article.date)"></span></small></div></div></div>
+                                </template>
+                            </div>
+                        </div>
+                        <div class="mt-5 text-center"><a href="../index.html" class="btn btn-outline-primary btn-lg"><i class="bi bi-arrow-left me-2"></i>Вернуться к новостям</a></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer class="footer py-4"><div class="container"><div class="row"><div class="col-md-6"><h5>Meter.by</h5><p>Современные решения для учета ресурсов в Республике Беларусь</p></div><div class="col-md-6 text-md-end"><p><i class="bi bi-telephone me-2"></i>+375 (29) 123-45-67<br><i class="bi bi-envelope me-2"></i>info@meter.by</p></div></div><hr><div class="row"><div class="col-12 text-center"><small>&copy; 2024 Meter.by. Все права защищены.</small></div></div></div></footer>
+    <div class="messenger-buttons"><a href="#" class="messenger-btn telegram-btn"><i class="bi bi-telegram"></i></a><a href="#" class="messenger-btn viber-btn"><i class="bi bi-chat-dots"></i></a></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script src="../../js/navigation-manager.js"></script>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('themeSwitch', () => ({ isDark: localStorage.getItem('theme') === 'dark', toggle() { this.isDark = !this.isDark; document.body.classList.add('theme-transition'); const newTheme = this.isDark ? 'dark' : 'light'; localStorage.setItem('theme', newTheme); document.documentElement.setAttribute('data-theme', newTheme); setTimeout(() => { document.body.classList.remove('theme-transition'); }, 300); }, init() { const savedTheme = this.isDark ? 'dark' : 'light'; document.documentElement.setAttribute('data-theme', savedTheme); document.body.classList.add('theme-transition'); } }));
+            Alpine.data('relatedArticles', () => ({ articles: [], currentArticleTags: ["счетчики тепла", "выбор", "монтаж"], async init() { await this.loadRelatedArticles(); }, async loadRelatedArticles() { try { const response = await fetch('../data/articles-metadata.json'); if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`); const data = await response.json(); const allArticles = data.articles || []; const currentSlug = '2024-01-05-heat-meter-choice'; const related = allArticles.filter(article => article.slug !== currentSlug).map(article => { const matchingTags = article.tags.filter(tag => this.currentArticleTags.includes(tag)).length; return { ...article, matchingTags }; }).filter(article => article.matchingTags > 0).sort((a, b) => b.matchingTags - a.matchingTags).slice(0, 3); this.articles = related; } catch (error) { console.error('Error loading related articles:', error); this.articles = []; } }, formatDate(dateString) { return new Date(dateString).toLocaleDateString('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' }); }, navigateToArticle(slug) { window.location.href = `${slug}.html`; } }));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - Meter.by</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Актуальные новости и статьи о системе дистанционного съема показаний счетчиков в Беларуси. Изменения в законодательстве, новые технологии и полезные советы.">
+    <meta name="keywords"
+        content="новости, статьи, поверка счетчиков, дистанционный съем, законодательство, Беларусь">
+    <meta name="author" content="Система дистанционного съема">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Новости - Meter.by">
+    <meta property="og:description"
+        content="Актуальные новости и статьи о системе дистанционного съема показаний счетчиков">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://meter.by/news/">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/dark-theme.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+    <link href="../css/image-optimization.css" rel="stylesheet">
+    <link href="../css/glassmorphism-services.css" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Новости - Meter.by",
+        "description": "Актуальные новости и статьи о системе дистанционного съема показаний счетчиков",
+        "url": "https://meter.by/news/",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Meter.by",
+            "url": "https://meter.by"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <i class="bi bi-broadcast-pin me-2"></i>
+                Meter.by
+            </a>
+
+            <div class="d-flex align-items-center order-lg-3">
+                <!-- Theme Switcher -->
+                <button class="theme-switcher me-3" x-data="themeSwitch" @click="toggle()" x-init="init()">
+                    <i :class="isDark ? 'bi bi-sun' : 'bi bi-moon'"></i>
+                </button>
+
+                <!-- Messenger Buttons -->
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-primary btn-sm me-2 telegram-btn">
+                        <i class="bi bi-telegram me-1"></i><span class="btn-text">Telegram</span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm viber-btn">
+                        <i class="bi bi-chat-dots me-1"></i><span class="btn-text">Viber</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" title="Главная">
+                            <i class="bi bi-house-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../documents.html">Документы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../prices.html">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../videos.html">Видео</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section py-5 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h1 class="display-4 fw-bold mb-4">
+                            Новости и статьи
+                        </h1>
+                        <p class="lead mb-4">
+                            Актуальная информация о сфере учета ресурсов, изменениях в законодательстве
+                            и современных технологиях дистанционного съема показаний.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Listing Section -->
+        <section id="news-listing" class="py-5">
+            <div class="container">
+                <!-- News articles will be loaded here by Alpine.js -->
+                <div x-data="newsListing" x-init="init()">
+                    <!-- Loading indicator -->
+                    <div class="row" x-show="loading">
+                        <div class="col-12 text-center py-5">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Загрузка новостей...</span>
+                            </div>
+                            <p class="mt-3 text-muted">Загрузка новостей...</p>
+                        </div>
+                    </div>
+
+                    <!-- News Grid -->
+                    <div class="row g-4" x-show="!loading && articles.length > 0">
+                        <template x-for="article in articles" :key="article.id">
+                            <div class="col-md-6 col-lg-4">
+                                <article class="card h-100 news-card glass-effect" 
+                                         @click="navigateToArticle(article.slug)"
+                                         style="cursor: pointer;">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0" x-text="article.title"></h5>
+                                    </div>
+                                    <img :src="'../' + article.image" 
+                                         :alt="article.title" 
+                                         class="card-img-top"
+                                         style="height: 200px; object-fit: cover;">
+                                    <div class="card-body">
+                                        <p class="card-text" x-text="article.excerpt"></p>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <small class="badge">
+                                                <i class="bi bi-calendar me-1"></i>
+                                                <span x-text="formatDate(article.date)"></span>
+                                            </small>
+                                            <span class="text-muted">Читать →</span>
+                                        </div>
+                                        <!-- Tags -->
+                                        <div class="mt-2" x-show="article.tags && article.tags.length > 0">
+                                            <template x-for="tag in article.tags" :key="tag">
+                                                <span class="badge me-1" x-text="tag"></span>
+                                            </template>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </template>
+                    </div>
+
+                    <!-- Empty State -->
+                    <div class="row" x-show="!loading && articles.length === 0">
+                        <div class="col-12 text-center py-5">
+                            <i class="bi bi-newspaper" style="font-size: 4rem; color: var(--text-muted);"></i>
+                            <p class="mt-3 text-muted">Новости пока не добавлены</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Meter.by</h5>
+                    <p>Современные решения для учета ресурсов в Республике Беларусь</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>
+                        <i class="bi bi-telephone me-2"></i>+375 (29) 123-45-67<br>
+                        <i class="bi bi-envelope me-2"></i>info@meter.by
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="bi bi-telegram"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-chat-dots"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <small>&copy; 2024 Meter.by. Все права защищены.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Messenger Buttons -->
+    <div class="messenger-buttons">
+        <a href="#" class="messenger-btn telegram-btn" title="Telegram">
+            <i class="bi bi-telegram"></i>
+        </a>
+        <a href="#" class="messenger-btn viber-btn" title="Viber">
+            <i class="bi bi-chat-dots"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../js/navigation-manager.js"></script>
+
+    <!-- Alpine.js Components -->
+    <script>
+        // Theme Switcher Component
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('themeSwitch', () => ({
+                isDark: localStorage.getItem('theme') === 'dark',
+
+                toggle() {
+                    this.isDark = !this.isDark;
+                    
+                    // Add transition class for smooth animation
+                    document.body.classList.add('theme-transition');
+                    
+                    // Update theme
+                    const newTheme = this.isDark ? 'dark' : 'light';
+                    localStorage.setItem('theme', newTheme);
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    
+                    // Remove transition class after animation completes
+                    setTimeout(() => {
+                        document.body.classList.remove('theme-transition');
+                    }, 300);
+                },
+
+                init() {
+                    // Initialize theme from localStorage
+                    const savedTheme = this.isDark ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                    
+                    // Add transition class for smooth animations
+                    document.body.classList.add('theme-transition');
+                }
+            }));
+
+            // News Listing Component (will be implemented in task 7.4)
+            Alpine.data('newsListing', () => ({
+                articles: [],
+                loading: true,
+
+                async init() {
+                    await this.loadArticles();
+                },
+
+                async loadArticles() {
+                    try {
+                        this.loading = true;
+                        const response = await fetch('data/articles-metadata.json');
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        const data = await response.json();
+                        this.articles = data.articles || [];
+                    } catch (error) {
+                        console.error('Error loading articles:', error);
+                        this.articles = [];
+                    } finally {
+                        this.loading = false;
+                    }
+                },
+
+                formatDate(dateString) {
+                    const options = { 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric' 
+                    };
+                    return new Date(dateString).toLocaleDateString('ru-RU', options);
+                },
+
+                navigateToArticle(slug) {
+                    window.location.href = `articles/${slug}.html`;
+                }
+            }));
+        });
+    </script>
+</body>
+
+</html>

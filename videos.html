@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видео - Meter.by | Система дистанционного съема в Республике Беларусь</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Видео о услугах дистанционного съема показаний счетчиков в Беларуси. Обучающие материалы по поверке, монтажу и обслуживанию приборов учета.">
+    <meta name="keywords"
+        content="видео, дистанционный съем, поверка счетчиков, монтаж счетчиков, Беларусь, учет тепла, учет воды, обучение">
+    <meta name="author" content="Система дистанционного съема">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Видео - Meter.by | Система дистанционного съема">
+    <meta property="og:description"
+        content="Обучающие видео по поверке, монтажу и подключению счетчиков к системе дистанционного съема показаний">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://meter.by/videos.html">
+    <meta property="og:image" content="images/og-image.jpg">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/dark-theme.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/image-optimization.css" rel="stylesheet">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGallery",
+        "name": "Видео галерея Meter.by",
+        "description": "Обучающие видео по услугам дистанционного съема показаний счетчиков в Республике Беларусь",
+        "url": "https://meter.by/videos.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Meter.by"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-broadcast-pin me-2"></i>
+                Meter.by
+            </a>
+
+            <div class="d-flex align-items-center order-lg-3">
+                <!-- Theme Switcher -->
+                <button class="theme-switcher me-3" x-data="themeSwitch" @click="toggle()" x-init="init()">
+                    <i :class="isDark ? 'bi bi-sun' : 'bi bi-moon'"></i>
+                </button>
+
+                <!-- Messenger Buttons -->
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-primary btn-sm me-2 telegram-btn">
+                        <i class="bi bi-telegram me-1"></i><span class="btn-text">Telegram</span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm viber-btn">
+                        <i class="bi bi-chat-dots me-1"></i><span class="btn-text">Viber</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" title="Главная">
+                            <i class="bi bi-house-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news/index.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="documents.html">Документы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="prices.html">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html">Видео</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section py-5 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h1 class="display-4 fw-bold mb-4">
+                            Видео галерея
+                        </h1>
+                        <p class="lead mb-4">
+                            Обучающие материалы и демонстрации наших услуг по поверке, монтажу и подключению 
+                            счетчиков к системе дистанционного съема показаний.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Gallery Section -->
+        <section class="py-5">
+            <div class="container">
+                <!-- Video Gallery Component -->
+                <div x-data="videoGallery" x-init="init()">
+                    <!-- Loading indicator -->
+                    <div class="row" x-show="videos.length === 0">
+                        <div class="col-12 text-center py-5">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Загрузка видео...</span>
+                            </div>
+                            <p class="mt-3 text-muted">Загрузка видео...</p>
+                        </div>
+                    </div>
+
+                    <!-- Video Cards Grid -->
+                    <div class="row g-4" x-show="videos.length > 0">
+                        <template x-for="video in videos" :key="video.id">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card video-card h-100" @click="openVideoModal(video.youtubeId, video.title)">
+                                    <div class="video-thumbnail-container position-relative" style="background: #f0f0f0;">
+                                        <img :src="getYoutubeThumbnail(video.youtubeId)" 
+                                             :alt="video.title" 
+                                             class="card-img-top video-thumbnail"
+                                             style="height: 200px; object-fit: cover; width: 100%; display: block;"
+                                             @error="handleThumbnailError($event, video.youtubeId)"
+                                             @load="console.log('Image loaded:', video.title)">
+                                        <div class="play-overlay">
+                                            <i class="bi bi-play-circle-fill"></i>
+                                        </div>
+                                        <div class="video-duration" x-show="video.duration">
+                                            <span x-text="video.duration"></span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title" x-text="video.title"></h5>
+                                        <p class="card-text" x-text="video.description"></p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <small class="text-muted" x-text="formatDate(video.uploadDate)"></small>
+                                        </div>
+                                        <div class="mt-2" x-show="video.featured">
+                                            <span class="badge bg-warning text-dark">
+                                                <i class="bi bi-star-fill me-1"></i>Рекомендуемое
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultation Section -->
+        <section class="py-5 consultation-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="display-5 fw-bold mb-4">Нужна консультация?</h2>
+                        <p class="lead mb-4">
+                            Остались вопросы после просмотра видео? Свяжитесь с нами для получения 
+                            персональной консультации по любым вопросам.
+                        </p>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="#" class="btn btn-primary btn-lg telegram-btn">
+                                <i class="bi bi-telegram me-2"></i>Написать в Telegram
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-lg viber-btn">
+                                <i class="bi bi-chat-dots me-2"></i>Написать в Viber
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Meter.by</h5>
+                    <p>Современные решения для учета ресурсов в Республике Беларусь</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>
+                        <i class="bi bi-telephone me-2"></i>+375 (29) 123-45-67<br>
+                        <i class="bi bi-envelope me-2"></i>info@meter.by
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="bi bi-telegram"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-chat-dots"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <small>&copy; 2024 Meter.by. Все права защищены.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Messenger Buttons -->
+    <div class="messenger-buttons">
+        <a href="#" class="messenger-btn telegram-btn" title="Telegram">
+            <i class="bi bi-telegram"></i>
+        </a>
+        <a href="#" class="messenger-btn viber-btn" title="Viber">
+            <i class="bi bi-chat-dots"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- VanillaTilt.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/placeholder-generator.js"></script>
+    <script src="js/image-optimization.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation-manager.js"></script>
+
+    <!-- Alpine.js Components -->
+    <script>
+        // Theme Switcher Component
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('themeSwitch', () => ({
+                isDark: localStorage.getItem('theme') === 'dark',
+
+                toggle() {
+                    this.isDark = !this.isDark;
+                    
+                    // Add transition class for smooth animation
+                    document.body.classList.add('theme-transition');
+                    
+                    // Update theme
+                    const newTheme = this.isDark ? 'dark' : 'light';
+                    localStorage.setItem('theme', newTheme);
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    
+                    console.log('Theme switched to:', newTheme);
+                    
+                    // Remove transition class after animation completes
+                    setTimeout(() => {
+                        document.body.classList.remove('theme-transition');
+                    }, 300);
+                },
+
+                init() {
+                    // Initialize theme from localStorage
+                    const savedTheme = this.isDark ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                    
+                    // Add transition class for smooth animations
+                    document.body.classList.add('theme-transition');
+                    
+                    console.log('Theme switcher initialized:', savedTheme);
+                }
+            }));
+
+            // Video Gallery Component
+            Alpine.data('videoGallery', () => ({
+                videos: [],
+
+                async init() {
+                    try {
+                        const response = await fetch('data/videos.json');
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        const data = await response.json();
+                        this.videos = data.videos || [];
+                        console.log('Video gallery loaded:', this.videos.length, 'videos');
+                    } catch (error) {
+                        console.error('Error loading videos:', error);
+                        this.videos = [];
+                        
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Ошибка загрузки видео',
+                            text: 'Не удалось загрузить видео. Пожалуйста, попробуйте обновить страницу.',
+                            confirmButtonText: 'Обновить',
+                            showCancelButton: true,
+                            cancelButtonText: 'Закрыть'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.reload();
+                            }
+                        });
+                    }
+                },
+
+                openVideoModal(youtubeId, title) {
+                    // Validate YouTube ID format
+                    if (!youtubeId || typeof youtubeId !== 'string' || youtubeId.trim() === '') {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Ошибка',
+                            text: 'Неверный идентификатор видео',
+                            confirmButtonText: 'OK'
+                        });
+                        return;
+                    }
+
+                    Swal.fire({
+                        title: title,
+                        html: `
+                            <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                                <iframe 
+                                    id="youtube-iframe"
+                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                    src="https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0" 
+                                    frameborder="0" 
+                                    allowfullscreen
+                                    allow="autoplay; encrypted-media"
+                                    onerror="handleVideoError()">
+                                </iframe>
+                            </div>
+                        `,
+                        width: '90%',
+                        maxWidth: '800px',
+                        showCloseButton: true,
+                        showConfirmButton: false,
+                        customClass: {
+                            popup: 'video-modal'
+                        },
+                        didOpen: () => {
+                            // Add custom styles for video modal
+                            const popup = Swal.getPopup();
+                            popup.style.padding = '20px';
+                            
+                            // Add error handler for iframe
+                            const iframe = document.getElementById('youtube-iframe');
+                            if (iframe) {
+                                iframe.addEventListener('error', () => {
+                                    Swal.update({
+                                        html: `
+                                            <div class="text-center py-5">
+                                                <i class="bi bi-exclamation-triangle display-1 text-warning"></i>
+                                                <h4 class="mt-3">Видео временно недоступно</h4>
+                                                <p class="text-muted">Не удалось загрузить видео. Пожалуйста, попробуйте позже.</p>
+                                            </div>
+                                        `
+                                    });
+                                });
+                            }
+                        }
+                    });
+                },
+
+                getYoutubeThumbnail(youtubeId) {
+                    // Return placeholder if youtubeId is invalid
+                    if (!youtubeId || typeof youtubeId !== 'string' || youtubeId.trim() === '') {
+                        return 'images/placeholders/placeholder.jpg';
+                    }
+                    // Use mqdefault - most reliable quality that exists for all videos
+                    return `https://img.youtube.com/vi/${youtubeId}/mqdefault.jpg`;
+                },
+
+                handleThumbnailError(event, youtubeId) {
+                    const img = event.target;
+                    
+                    // Prevent infinite error loop
+                    if (img.dataset.errorAttempts >= 2) {
+                        console.log('Max error attempts reached for:', youtubeId);
+                        img.src = 'images/placeholders/placeholder.jpg';
+                        img.alt = 'Изображение недоступно';
+                        return;
+                    }
+                    
+                    // Track error attempts
+                    img.dataset.errorAttempts = (parseInt(img.dataset.errorAttempts) || 0) + 1;
+                    
+                    console.log('Thumbnail error for:', youtubeId, 'Attempt:', img.dataset.errorAttempts);
+                    
+                    // Try default quality as fallback
+                    if (img.dataset.errorAttempts == 1) {
+                        img.src = `https://img.youtube.com/vi/${youtubeId}/default.jpg`;
+                    } else {
+                        // Use placeholder
+                        img.src = 'images/placeholders/placeholder.jpg';
+                        img.alt = 'Изображение недоступно';
+                    }
+                },
+
+
+
+                formatDate(dateString) {
+                    try {
+                        const date = new Date(dateString);
+                        if (isNaN(date.getTime())) {
+                            return 'Дата неизвестна';
+                        }
+                        return date.toLocaleDateString('ru-RU', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        });
+                    } catch (error) {
+                        console.error('Error formatting date:', error);
+                        return 'Дата неизвестна';
+                    }
+                }
+            }));
+        });
+    </script>
+</body>
+
+</html>

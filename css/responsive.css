@@ -1,0 +1,258 @@
+/* Responsive Design Styles - Mobile First Approach */
+
+/* Navbar messenger buttons responsive */
+@media (max-width: 991.98px) {
+  .navbar .telegram-btn .btn-text,
+  .navbar .viber-btn .btn-text {
+    display: none;
+  }
+  
+  .navbar .telegram-btn i,
+  .navbar .viber-btn i {
+    margin-right: 0 !important;
+  }
+}
+
+/* Call-to-action messenger buttons responsive */
+@media (max-width: 575.98px) {
+  .telegram-btn .btn-text,
+  .viber-btn .btn-text {
+    display: none;
+  }
+  
+  .telegram-btn i,
+  .viber-btn i {
+    margin-right: 0 !important;
+  }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .service-card {
+    margin-bottom: 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1rem;
+  }
+  
+  .messenger-buttons {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .messenger-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .service-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .service-cards .col-md-6 {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+  
+  .service-cards .col-lg-4 {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .hero-section h1 {
+    font-size: 3.5rem;
+  }
+  
+  .container-xl {
+    max-width: 1320px;
+  }
+}
+
+/* Navigation responsive adjustments */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 15px;
+  }
+  
+  [data-theme="dark"] .navbar-collapse {
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(20px);
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 8px 16px;
+    margin: 2px 0;
+    border-radius: 4px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background: rgba(0, 102, 204, 0.1);
+  }
+}
+
+/* Service cards responsive grid */
+.service-cards {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  .service-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .service-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .service-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Blog section responsive */
+@media (max-width: 767.98px) {
+  .blog-post {
+    margin-bottom: 1.5rem;
+  }
+  
+  .blog-post h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Pricing tables responsive */
+@media (max-width: 767.98px) {
+  .table-responsive {
+    font-size: 0.875rem;
+  }
+  
+  .pricing-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Video gallery responsive */
+@media (max-width: 575.98px) {
+  .video-card {
+    margin-bottom: 1rem;
+  }
+  
+  .video-thumbnail {
+    height: 180px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .video-thumbnail {
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .video-thumbnail {
+    height: 220px;
+  }
+}
+
+/* Form responsive adjustments */
+@media (max-width: 575.98px) {
+  .proposal-form .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .proposal-form .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Footer responsive */
+@media (max-width: 767.98px) {
+  .footer .row > div {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Theme switcher responsive */
+@media (max-width: 575.98px) {
+  .theme-switcher {
+    width: 35px;
+    height: 35px;
+    font-size: 0.875rem;
+  }
+}
+
+/* Modal responsive adjustments */
+@media (max-width: 575.98px) {
+  .swal2-popup {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+  
+  .video-container iframe {
+    height: 200px !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .video-container iframe {
+    height: 250px !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .messenger-buttons,
+  .theme-switcher {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .service-card {
+    border: 1px solid #ccc !important;
+    background: white !important;
+    page-break-inside: avoid;
+  }
+}

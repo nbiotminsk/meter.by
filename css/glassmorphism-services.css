@@ -1,0 +1,1218 @@
+/* Glassmorphism Service Cards - Test Styles */
+/* Сохраняет цветовую гамму сайта и добавляет эффект стекла */
+
+/* Основные переменные для glassmorphism эффекта */
+:root {
+  /* Glassmorphism цвета с улучшенным контрастом */
+  --glass-bg-light: rgba(255, 255, 255, 0.4);
+  --glass-border-light: rgba(218, 119, 86, 0.4);
+  --glass-shadow-light: rgba(218, 119, 86, 0.25);
+  --glass-hover-bg-light: rgba(255, 255, 255, 0.6);
+  --glass-header-bg-light: rgba(218, 119, 86, 0.2);
+}
+
+[data-theme="dark"] {
+  --glass-bg-dark: rgba(255, 255, 255, 0.15);
+  --glass-border-dark: rgba(0, 212, 255, 0.4);
+  --glass-shadow-dark: rgba(0, 212, 255, 0.3);
+  --glass-hover-bg-dark: rgba(255, 255, 255, 0.25);
+  --glass-header-bg-dark: rgba(0, 212, 255, 0.2);
+}
+
+/* Glassmorphism стили для карточек услуг */
+.service-card.glass-effect {
+  /* Основной glassmorphism эффект */
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 2px solid var(--glass-border-light);
+  border-radius: 20px;
+  box-shadow:
+    0 10px 40px var(--glass-shadow-light),
+    0 2px 8px rgba(218, 119, 86, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+  /* Анимации */
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Псевдоэлемент для дополнительного свечения */
+.service-card.glass-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(218, 119, 86, 0.1) 0%,
+      transparent 50%,
+      rgba(199, 102, 69, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+/* Hover эффекты */
+.service-card.glass-effect:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: var(--glass-hover-bg-light);
+  border-color: rgba(218, 119, 86, 0.7);
+  box-shadow:
+    0 25px 50px var(--glass-shadow-light),
+    0 5px 15px rgba(218, 119, 86, 0.2),
+    0 0 0 1px rgba(218, 119, 86, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.service-card.glass-effect:hover::before {
+  opacity: 1;
+}
+
+/* Заголовок карточки */
+.service-card.glass-effect .card-header {
+  background: var(--glass-header-bg-light);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: none;
+  border-bottom: 2px solid var(--glass-border-light);
+  border-radius: 20px 20px 0 0;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.service-card.glass-effect .card-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(218, 119, 86, 0.5),
+      transparent);
+}
+
+/* Заголовок текста */
+.service-card.glass-effect .card-title {
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .service-card.glass-effect .card-title {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Тело карточки */
+.service-card.glass-effect .card-body {
+  background: transparent;
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* Изображение в карточке */
+.service-card.glass-effect .card-img-top {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card.glass-effect:hover .card-img-top {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Текст описания */
+.service-card.glass-effect .card-text {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .service-card.glass-effect .card-text {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Бейдж категории - теперь как простой текст */
+.service-card.glass-effect .badge {
+  background: transparent !important;
+  color: var(--text-secondary) !important;
+  border: none !important;
+  font-weight: 400 !important;
+  font-size: 0.875rem !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Стрелка "Подробнее" - теперь как кнопка с градиентными переливами */
+.service-card.glass-effect .text-muted {
+  background: linear-gradient(135deg,
+      rgba(218, 119, 86, 0.9),
+      rgba(199, 102, 69, 0.9),
+      rgba(218, 119, 86, 0.9)) !important;
+  background-size: 200% 200% !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(218, 119, 86, 0.3) !important;
+  color: #ffffff !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
+  transition: all 0.4s ease !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 15px rgba(218, 119, 86, 0.2) !important;
+  display: inline-block !important;
+  position: relative !important;
+  overflow: hidden !important;
+  animation: gradientShift 3s ease-in-out infinite !important;
+}
+
+/* Псевдоэлемент для дополнительного свечения */
+.service-card.glass-effect .text-muted::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent);
+  transition: left 0.6s ease;
+}
+
+.service-card.glass-effect .text-muted:hover {
+  background: linear-gradient(135deg,
+      rgba(199, 102, 69, 0.95),
+      rgba(218, 119, 86, 0.95),
+      rgba(240, 140, 100, 0.95)) !important;
+  background-size: 200% 200% !important;
+  border-color: rgba(199, 102, 69, 0.5) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) translateX(5px) !important;
+  box-shadow: 0 6px 20px rgba(218, 119, 86, 0.4) !important;
+  animation: gradientShiftHover 1.5s ease-in-out infinite !important;
+}
+
+.service-card.glass-effect .text-muted:hover::before {
+  left: 100%;
+}
+
+/* Анимации градиентных переливов */
+@keyframes gradientShift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradientShiftHover {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 100% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  75% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Темная тема */
+[data-theme="dark"] .service-card.glass-effect {
+  background: var(--glass-bg-dark);
+  border-color: var(--glass-border-dark);
+  box-shadow:
+    0 12px 40px var(--glass-shadow-dark),
+    0 2px 8px rgba(0, 212, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .service-card.glass-effect::before {
+  background: linear-gradient(135deg,
+      rgba(0, 212, 255, 0.1) 0%,
+      transparent 50%,
+      rgba(255, 107, 107, 0.1) 100%);
+}
+
+[data-theme="dark"] .service-card.glass-effect:hover {
+  background: var(--glass-hover-bg-dark);
+  border-color: rgba(0, 212, 255, 0.7);
+  box-shadow:
+    0 25px 50px var(--glass-shadow-dark),
+    0 5px 15px rgba(0, 212, 255, 0.25),
+    0 0 0 1px rgba(0, 212, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .service-card.glass-effect .card-header {
+  background: var(--glass-header-bg-dark);
+  border-bottom-color: var(--glass-border-dark);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .service-card.glass-effect .card-header::after {
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(0, 212, 255, 0.5),
+      transparent);
+}
+
+[data-theme="dark"] .service-card.glass-effect .badge {
+  background: transparent !important;
+  color: rgba(232, 232, 232, 0.7) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .service-card.glass-effect .text-muted {
+  background: linear-gradient(135deg,
+      rgba(0, 212, 255, 0.3),
+      rgba(255, 107, 107, 0.3),
+      rgba(0, 212, 255, 0.3)) !important;
+  background-size: 200% 200% !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(0, 212, 255, 0.3) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2) !important;
+  animation: gradientShiftDark 3s ease-in-out infinite !important;
+}
+
+[data-theme="dark"] .service-card.glass-effect .text-muted::before {
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(0, 212, 255, 0.4),
+      transparent);
+}
+
+[data-theme="dark"] .service-card.glass-effect .text-muted:hover {
+  background: linear-gradient(135deg,
+      rgba(0, 184, 230, 0.4),
+      rgba(255, 82, 82, 0.4),
+      rgba(0, 255, 200, 0.4)) !important;
+  background-size: 200% 200% !important;
+  border-color: rgba(0, 184, 230, 0.5) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4) !important;
+  animation: gradientShiftDarkHover 1.2s ease-in-out infinite !important;
+}
+
+/* Анимации градиентных переливов для темной темы */
+@keyframes gradientShiftDark {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  33% {
+    background-position: 50% 0%;
+  }
+
+  66% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradientShiftDarkHover {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  20% {
+    background-position: 100% 0%;
+  }
+
+  40% {
+    background-position: 100% 100%;
+  }
+
+  60% {
+    background-position: 50% 100%;
+  }
+
+  80% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Дополнительные эффекты для улучшения glassmorphism */
+
+/* Анимация появления карточек */
+@keyframes glassCardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.service-card.glass-effect {
+  animation: glassCardFadeIn 0.6s ease-out;
+}
+
+/* Задержка анимации для каждой карточки */
+.service-card.glass-effect:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.service-card.glass-effect:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.service-card.glass-effect:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.service-card.glass-effect:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.service-card.glass-effect:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.service-card.glass-effect:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Эффект пульсации при загрузке */
+.service-card.glass-effect.loading {
+  animation: glassPulse 2s ease-in-out infinite;
+}
+
+@keyframes glassPulse {
+
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+/* Дополнительные эффекты для кнопок */
+.service-card.glass-effect .text-muted:active {
+  transform: translateY(-1px) translateX(3px) scale(0.98) !important;
+  transition: all 0.1s ease !important;
+}
+
+[data-theme="dark"] .service-card.glass-effect .text-muted:active {
+  transform: translateY(-1px) translateX(3px) scale(0.98) !important;
+}
+
+/* Пульсирующий эффект при загрузке */
+.service-card.glass-effect.loading .text-muted {
+  animation: buttonPulse 2s ease-in-out infinite !important;
+}
+
+@keyframes buttonPulse {
+
+  0%,
+  100% {
+    box-shadow: 0 4px 15px rgba(218, 119, 86, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 6px 25px rgba(218, 119, 86, 0.4);
+  }
+}
+
+[data-theme="dark"] .service-card.glass-effect.loading .text-muted {
+  animation: buttonPulseDark 2s ease-in-out infinite !important;
+}
+
+@keyframes buttonPulseDark {
+
+  0%,
+  100% {
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 6px 25px rgba(0, 212, 255, 0.4);
+  }
+}
+
+/* Улучшенный фокус для доступности */
+.service-card.glass-effect:focus {
+  outline: none;
+  box-shadow:
+    0 20px 40px var(--glass-shadow-light),
+    0 0 0 3px rgba(218, 119, 86, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .service-card.glass-effect:focus {
+  box-shadow:
+    0 20px 40px var(--glass-shadow-dark),
+    0 0 0 3px rgba(0, 212, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .service-card.glass-effect {
+    border-radius: 16px;
+  }
+
+  .service-card.glass-effect .card-header {
+    padding: 1.25rem;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .service-card.glass-effect .card-body {
+    padding: 1.25rem;
+  }
+
+  .service-card.glass-effect:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card.glass-effect {
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+
+  .service-card.glass-effect .card-header {
+    border-radius: 12px 12px 0 0;
+  }
+}
+
+/* Дополнительные утилиты для тестирования */
+.glass-test-mode .service-card {
+  /* Временно скрываем обычные карточки */
+  display: none;
+}
+
+.glass-test-mode .service-card.glass-effect {
+  /* Показываем только glassmorphism карточки */
+  display: block;
+}
+
+/* Переключатель для тестирования */
+.glass-toggle-btn {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border-light);
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--glass-shadow-light);
+}
+
+.glass-toggle-btn:hover {
+  background: var(--glass-hover-bg-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--glass-shadow-light);
+}
+
+[data-theme="dark"] .glass-toggle-btn {
+  background: var(--glass-bg-dark);
+  border-color: var(--glass-border-dark);
+  color: var(--accent-neon);
+  box-shadow: 0 4px 15px var(--glass-shadow-dark);
+}
+
+[data-theme="dark"] .glass-toggle-btn:hover {
+  background: var(--glass-hover-bg-dark);
+  box-shadow: 0 8px 25px var(--glass-shadow-dark);
+}
+
+/*
+ Glassmorphism стили для формы предложения */
+.proposal-form.glass-effect {
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 2px solid var(--glass-border-light);
+  border-radius: 20px;
+  box-shadow:
+    0 15px 35px var(--glass-shadow-light),
+    0 5px 15px rgba(218, 119, 86, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.proposal-form.glass-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(218, 119, 86, 0.05) 0%,
+      transparent 50%,
+      rgba(199, 102, 69, 0.05) 100%);
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+/* Glassmorphism инпуты */
+.glass-input {
+  background: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(218, 119, 86, 0.3) !important;
+  border-radius: 12px !important;
+  color: var(--text-color) !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(218, 119, 86, 0.1) !important;
+}
+
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border-color: rgba(218, 119, 86, 0.6) !important;
+  box-shadow:
+    0 6px 20px rgba(218, 119, 86, 0.2) !important,
+    0 0 0 3px rgba(218, 119, 86, 0.1) !important;
+  outline: none !important;
+}
+
+.glass-input::placeholder {
+  color: rgba(0, 0, 0, 0.5) !important;
+  font-weight: 400 !important;
+}
+
+/* Glassmorphism кнопка */
+.glass-btn {
+  background: linear-gradient(135deg,
+      rgba(218, 119, 86, 0.9),
+      rgba(199, 102, 69, 0.9),
+      rgba(218, 119, 86, 0.9)) !important;
+  background-size: 200% 200% !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 2px solid rgba(218, 119, 86, 0.4) !important;
+  border-radius: 15px !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  padding: 1rem 2rem !important;
+  transition: all 0.4s ease !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  box-shadow:
+    0 8px 25px rgba(218, 119, 86, 0.3) !important,
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  animation: gradientShift 4s ease-in-out infinite !important;
+}
+
+.glass-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent);
+  transition: left 0.6s ease;
+}
+
+.glass-btn:hover {
+  background: linear-gradient(135deg,
+      rgba(199, 102, 69, 0.95),
+      rgba(218, 119, 86, 0.95),
+      rgba(240, 140, 100, 0.95)) !important;
+  background-size: 200% 200% !important;
+  border-color: rgba(199, 102, 69, 0.6) !important;
+  color: #ffffff !important;
+  transform: translateY(-3px) !important;
+  box-shadow:
+    0 12px 35px rgba(218, 119, 86, 0.4) !important,
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  animation: gradientShiftHover 2s ease-in-out infinite !important;
+}
+
+.glass-btn:hover::before {
+  left: 100%;
+}
+
+.glass-btn:active {
+  transform: translateY(-1px) scale(0.98) !important;
+  transition: all 0.1s ease !important;
+}
+
+.glass-btn:disabled {
+  background: rgba(150, 150, 150, 0.3) !important;
+  border-color: rgba(150, 150, 150, 0.3) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: 0 4px 15px rgba(150, 150, 150, 0.2) !important;
+  animation: none !important;
+}
+
+/* Glassmorphism текст */
+.glass-text-muted {
+  color: rgba(0, 0, 0, 0.7) !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Лейблы форм */
+.proposal-form.glass-effect .form-label {
+  color: var(--text-color) !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Темная тема для формы предложения */
+[data-theme="dark"] .proposal-form.glass-effect {
+  background: var(--glass-bg-dark);
+  border-color: var(--glass-border-dark);
+  box-shadow:
+    0 15px 35px var(--glass-shadow-dark),
+    0 5px 15px rgba(0, 212, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .proposal-form.glass-effect::before {
+  background: linear-gradient(135deg,
+      rgba(0, 212, 255, 0.05) 0%,
+      transparent 50%,
+      rgba(255, 107, 107, 0.05) 100%);
+}
+
+[data-theme="dark"] .glass-input {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(0, 212, 255, 0.3) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .glass-input:focus {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(0, 212, 255, 0.6) !important;
+  box-shadow:
+    0 6px 20px rgba(0, 212, 255, 0.2) !important,
+    0 0 0 3px rgba(0, 212, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="dark"] .glass-btn {
+  background: linear-gradient(135deg,
+      rgba(0, 212, 255, 0.3),
+      rgba(255, 107, 107, 0.3),
+      rgba(0, 212, 255, 0.3)) !important;
+  background-size: 200% 200% !important;
+  border-color: rgba(0, 212, 255, 0.4) !important;
+  box-shadow:
+    0 8px 25px rgba(0, 212, 255, 0.3) !important,
+    inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  animation: gradientShiftDark 4s ease-in-out infinite !important;
+}
+
+[data-theme="dark"] .glass-btn::before {
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(0, 212, 255, 0.4),
+      transparent);
+}
+
+[data-theme="dark"] .glass-btn:hover {
+  background: linear-gradient(135deg,
+      rgba(0, 184, 230, 0.4),
+      rgba(255, 82, 82, 0.4),
+      rgba(0, 255, 200, 0.4)) !important;
+  background-size: 200% 200% !important;
+  border-color: rgba(0, 184, 230, 0.6) !important;
+  box-shadow:
+    0 12px 35px rgba(0, 212, 255, 0.4) !important,
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  animation: gradientShiftDarkHover 1.5s ease-in-out infinite !important;
+}
+
+[data-theme="dark"] .glass-btn:disabled {
+  background: rgba(100, 100, 100, 0.2) !important;
+  border-color: rgba(100, 100, 100, 0.3) !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 4px 15px rgba(100, 100, 100, 0.2) !important;
+}
+
+[data-theme="dark"] .glass-text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .proposal-form.glass-effect .form-label {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Анимация появления формы */
+@keyframes proposalFormFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.proposal-form.glass-effect {
+  animation: proposalFormFadeIn 0.8s ease-out;
+}
+
+/* Адаптивность для формы */
+@media (max-width: 768px) {
+  .proposal-form.glass-effect {
+    border-radius: 16px;
+    padding: 1.5rem !important;
+  }
+
+  .glass-input {
+    border-radius: 10px !important;
+  }
+
+  .glass-btn {
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    padding: 0.875rem 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .proposal-form.glass-effect {
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-input {
+    border-radius: 8px !important;
+  }
+
+  .glass-btn {
+    border-radius: 10px !important;
+  }
+}
+
+/* Эффект пульсации для кнопки при загрузке */
+.glass-btn:disabled .spinner-border {
+  animation: spinnerGlow 1.5s ease-in-out infinite !important;
+}
+
+@keyframes spinnerGlow {
+
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+  }
+}
+
+[data-theme="dark"] .glass-btn:disabled .spinner-border {
+  animation: spinnerGlowDark 1.5s ease-in-out infinite !important;
+}
+
+@keyframes spinnerGlowDark {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.8));
+  }
+}
+/* Glassm
+orphism стили для карточек новостей */
+.news-card.glass-effect {
+  /* Наследует все стили от .service-card.glass-effect */
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 2px solid var(--glass-border-light);
+  border-radius: 20px;
+  box-shadow:
+    0 10px 40px var(--glass-shadow-light),
+    0 2px 8px rgba(218, 119, 86, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.news-card.glass-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(218, 119, 86, 0.1) 0%,
+      transparent 50%,
+      rgba(199, 102, 69, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+.news-card.glass-effect:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: var(--glass-hover-bg-light);
+  border-color: rgba(218, 119, 86, 0.7);
+  box-shadow:
+    0 25px 50px var(--glass-shadow-light),
+    0 5px 15px rgba(218, 119, 86, 0.2),
+    0 0 0 1px rgba(218, 119, 86, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.news-card.glass-effect:hover::before {
+  opacity: 1;
+}
+
+.news-card.glass-effect .card-header {
+  background: var(--glass-header-bg-light);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: none;
+  border-bottom: 2px solid var(--glass-border-light);
+  border-radius: 20px 20px 0 0;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.news-card.glass-effect .card-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(218, 119, 86, 0.5),
+      transparent);
+}
+
+.news-card.glass-effect .card-title {
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.news-card.glass-effect .card-body {
+  background: transparent;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.news-card.glass-effect .card-img-top {
+  border-radius: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-card.glass-effect:hover .card-img-top {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.news-card.glass-effect .card-text {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Бейдж даты - простой текст */
+.news-card.glass-effect .badge {
+  background: transparent !important;
+  color: var(--text-secondary) !important;
+  border: none !important;
+  font-weight: 400 !important;
+  font-size: 0.875rem !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Кнопка "Читать →" с градиентными переливами */
+.news-card.glass-effect .text-muted {
+  background: linear-gradient(135deg,
+      rgba(218, 119, 86, 0.9),
+      rgba(199, 102, 69, 0.9),
+      rgba(218, 119, 86, 0.9)) !important;
+  background-size: 200% 200% !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(218, 119, 86, 0.3) !important;
+  color: #ffffff !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
+  transition: all 0.4s ease !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 15px rgba(218, 119, 86, 0.2) !important;
+  display: inline-block !important;
+  position: relative !important;
+  overflow: hidden !important;
+  animation: gradientShift 3s ease-in-out infinite !important;
+}
+
+.news-card.glass-effect .text-muted::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent);
+  transition: left 0.6s ease;
+}
+
+.news-card.glass-effect .text-muted:hover {
+  background: linear-gradient(135deg,
+      rgba(199, 102, 69, 0.95),
+      rgba(218, 119, 86, 0.95),
+      rgba(240, 140, 100, 0.95)) !important;
+  background-size: 200% 200% !important;
+  border-color: rgba(199, 102, 69, 0.5) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) translateX(5px) !important;
+  box-shadow: 0 6px 20px rgba(218, 119, 86, 0.4) !important;
+  animation: gradientShiftHover 1.5s ease-in-out infinite !important;
+}
+
+.news-card.glass-effect .text-muted:hover::before {
+  left: 100%;
+}
+
+.news-card.glass-effect .text-muted:active {
+  transform: translateY(-1px) translateX(3px) scale(0.98) !important;
+  transition: all 0.1s ease !important;
+}
+
+/* Темная тема для карточек новостей */
+[data-theme="dark"] .news-card.glass-effect {
+  background: var(--glass-bg-dark);
+  border-color: var(--glass-border-dark);
+  box-shadow:
+    0 12px 40px var(--glass-shadow-dark),
+    0 2px 8px rgba(0, 212, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .news-card.glass-effect::before {
+  background: linear-gradient(135deg,
+      rgba(0, 212, 255, 0.1) 0%,
+      transparent 50%,
+      rgba(255, 107, 107, 0.1) 100%);
+}
+
+[data-theme="dark"] .news-card.glass-effect:hover {
+  background: var(--glass-hover-bg-dark);
+  border-color: rgba(0, 212, 255, 0.7);
+  box-shadow:
+    0 25px 50px var(--glass-shadow-dark),
+    0 5px 15px rgba(0, 212, 255, 0.25),
+    0 0 0 1px rgba(0, 212, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .news-card.glass-effect .card-header {
+  background: var(--glass-header-bg-dark);
+  border-bottom-color: var(--glass-border-dark);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .news-card.glass-effect .card-header::after {
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(0, 212, 255, 0.5),
+      transparent);
+}
+
+[data-theme="dark"] .news-card.glass-effect .card-title {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .news-card.glass-effect .card-text {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .news-card.glass-effect .badge {
+  color: rgba(232, 232, 232, 0.7) !important;
+}
+
+[data-theme="dark"] .news-card.glass-effect .text-muted {
+  background: linear-gradient(135deg,
+      rgba(0, 212, 255, 0.3),
+      rgba(255, 107, 107, 0.3),
+      rgba(0, 212, 255, 0.3)) !important;
+  background-size: 200% 200% !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(0, 212, 255, 0.3) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2) !important;
+  animation: gradientShiftDark 3s ease-in-out infinite !important;
+}
+
+[data-theme="dark"] .news-card.glass-effect .text-muted::before {
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(0, 212, 255, 0.4),
+      transparent);
+}
+
+[data-theme="dark"] .news-card.glass-effect .text-muted:hover {
+  background: linear-gradient(135deg,
+      rgba(0, 184, 230, 0.4),
+      rgba(255, 82, 82, 0.4),
+      rgba(0, 255, 200, 0.4)) !important;
+  background-size: 200% 200% !important;
+  border-color: rgba(0, 184, 230, 0.5) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4) !important;
+  animation: gradientShiftDarkHover 1.2s ease-in-out infinite !important;
+}
+
+[data-theme="dark"] .news-card.glass-effect .text-muted:active {
+  transform: translateY(-1px) translateX(3px) scale(0.98) !important;
+}
+
+/* Анимация появления карточек новостей */
+.news-card.glass-effect {
+  animation: glassCardFadeIn 0.6s ease-out;
+}
+
+.news-card.glass-effect:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.news-card.glass-effect:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.news-card.glass-effect:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.news-card.glass-effect:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.news-card.glass-effect:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.news-card.glass-effect:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Адаптивность для карточек новостей */
+@media (max-width: 768px) {
+  .news-card.glass-effect {
+    border-radius: 16px;
+  }
+
+  .news-card.glass-effect .card-header {
+    padding: 1.25rem;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .news-card.glass-effect .card-body {
+    padding: 1.25rem;
+  }
+
+  .news-card.glass-effect:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}
+
+@media (max-width: 576px) {
+  .news-card.glass-effect {
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+
+  .news-card.glass-effect .card-header {
+    border-radius: 12px 12px 0 0;
+  }
+}
