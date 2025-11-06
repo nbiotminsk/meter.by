@@ -277,6 +277,10 @@
     border-radius: 12px !important;
     font-size: 1rem !important;
     padding: 0.875rem 1.5rem !important;
+    white-space: normal !important;
+    height: auto !important;
+    min-height: 54px !important;
+    line-height: 1.3 !important;
   }
 }
 
@@ -293,6 +297,17 @@
   
   .glass-btn {
     border-radius: 10px !important;
+    white-space: normal !important;
+    height: auto !important;
+    min-height: 56px !important;
+    line-height: 1.3 !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .glass-btn span {
+    display: inline !important;
+    word-wrap: break-word !important;
   }
 }
 
