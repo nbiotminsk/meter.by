@@ -1,43 +1,35 @@
-<div style="text-align: center; margin-bottom: 30px;">
-  <img src="images/logo.png" alt="Meter.by Logo" style="max-width: 200px; height: auto;">
-</div>
-
-# КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ
-
-**Дата:** {{DATE}}
-
----
-
 <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
   <tr>
-    <td style="width: 50%; vertical-align: top; padding-right: 20px;">
-      <h3>Исполнитель</h3>
-      <p>
-        <strong>ООО "Хессер-Групп"</strong><br>
-        УНП: 193065571<br>
-        Юридический адрес: 220017, Беларусь,<br>
-        г. Минск, ул. Кальварийская, 25, 420<br>
-        Директор: Грузд Евгений Владимирович<br><br>
-        Телефон: +375 29 252-49-88<br>
-        Доп. телефон: +375 29 365-22-10<br>
-        Email: gruzd.e.v@mail.ru<br>
-        Сайт: www.meter.by<br><br>
-        Расчётный счёт:<br>
-        BY18 ALFA 3012 2337 1900 1027 0000<br>
-        Банк: ЗАО «Альфа-банк»<br>
-        Код банка: ALFABY2X
-      </p>
+    <td style="width: 30%; vertical-align: top;">
+      <img src="images/logo.png" alt="Hesser Group Logo" style="max-width: 180px; height: auto;">
     </td>
-    <td style="width: 50%; vertical-align: top; padding-left: 20px; border-left: 1px solid #ddd;">
-      <h3>Заказчик</h3>
-      <p>
-        <strong>{{COMPANY_NAME}}</strong><br>
-        УНП: {{UNP}}<br>
-        Адрес: {{ADDRESS}}
-      </p>
+    <td style="width: 70%; vertical-align: top; text-align: right; font-size: 11px; line-height: 1.4;">
+      <strong>Общество с ограниченной ответственностью<br>"Хессер-Групп"</strong><br>
+      УНП 193065571 Р-с BY18 ALFA 3012 2337 1900 1027 0000 в ЗАО<br>
+      "Альфа-банк" 220013, г.Минск, ул.Сурганова, 43 БИК: ALFABY2X<br>
+      Юр. адрес: 220045, г. Минск, ул. Кальварийская, д. 25, пом. 420,<br>
+      тел. +375 (29) 252-49-88
     </td>
   </tr>
 </table>
+
+**Исх. № ___ от {{DATE}}**
+
+<div style="text-align: center; margin: 30px 0;">
+  <strong>{{COMPANY_NAME}}</strong>
+</div>
+
+<div style="text-align: center; margin: 20px 0;">
+  <p><strong>Ценовое предложение на услуги по поверке, монтажу и подключению<br>
+  приборов учета к системе дистанционного съема показаний</strong></p>
+</div>
+
+<div style="margin: 20px 0;">
+  <strong>Заказчик:</strong><br>
+  {{COMPANY_NAME}}<br>
+  УНП: {{UNP}}<br>
+  Адрес: {{ADDRESS}}
+</div>
 
 ---
 
@@ -129,27 +121,31 @@ Email: gruzd.e.v@mail.ru
 
 ---
 
-**Предложение действительно до:** {{VALID_UNTIL}}
-
-Данное коммерческое предложение не является публичной офертой. Окончательная стоимость услуг определяется после выезда специалиста на объект и составления технического задания.
-
 ---
+
+**Итого:** __________ (сумма прописью) без НДС согласно Главы 32 раздела 7 особенной части налогового кодекса Республики Беларусь.
+
+**Срок выполнения работ:** с {{DATE}} по {{VALID_UNTIL}}  
+**Условия оплаты:** по факту поставки товара  
+**Место проведения работ:** Республика Беларусь, г. Минск, {{ADDRESS}}
 
 <table style="width: 100%; margin-top: 40px;">
   <tr>
-    <td style="width: 50%; vertical-align: bottom;">
+    <td style="width: 30%; vertical-align: bottom;">
       <p>
-        <strong>Директор ООО "Хессер-Групп"</strong><br><br>
-        Грузд Е.В.
+        <strong>Директор</strong><br>
+        М.П.
       </p>
     </td>
-    <td style="width: 50%; text-align: right; vertical-align: bottom;">
-      <img src="images/pechat.jpg" alt="Печать и подпись" style="max-width: 200px; height: auto;">
+    <td style="width: 40%; text-align: center; vertical-align: bottom;">
+      <img src="images/pechat.jpg" alt="Печать и подпись" style="max-width: 150px; height: auto;">
+    </td>
+    <td style="width: 30%; text-align: right; vertical-align: bottom;">
+      <p><strong>Е.В. Грузд</strong></p>
     </td>
   </tr>
 </table>
 
-<p style="text-align: center; margin-top: 30px; font-style: italic;">
-  С уважением,<br>
-  Команда "Meter.by"
+<p style="margin-top: 30px; font-size: 11px;">
+Данное коммерческое предложение не является публичной офертой. Окончательная стоимость услуг определяется после выезда специалиста на объект и составления технического задания.
 </p>
