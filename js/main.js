@@ -108,8 +108,8 @@ function initializeMessengerButtons() {
     if (telegramBtn) {
         telegramBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            // Replace with actual Telegram channel URL
-            window.open('https://t.me/your_channel', '_blank');
+            // Open Telegram channel
+            window.open('https://t.me/meter_by', '_blank');
         });
     }
     
@@ -118,8 +118,8 @@ function initializeMessengerButtons() {
     if (viberBtn) {
         viberBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            // Replace with actual phone number
-            window.open('viber://chat?number=+375291234567', '_blank');
+            // Open Viber chat
+            window.open('viber://chat?number=+375292524988', '_blank');
         });
     }
 }
