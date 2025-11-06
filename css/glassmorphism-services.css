@@ -159,11 +159,7 @@
 
 /* Стрелка "Подробнее" - теперь как кнопка с градиентными переливами */
 .service-card.glass-effect .text-muted {
-  background: linear-gradient(135deg,
-      rgba(218, 119, 86, 0.9),
-      rgba(199, 102, 69, 0.9),
-      rgba(218, 119, 86, 0.9)) !important;
-  background-size: 200% 200% !important;
+  background: rgba(218, 119, 86, 0.9) !important;
   backdrop-filter: blur(10px) !important;
   border: 1px solid rgba(218, 119, 86, 0.3) !important;
   color: #ffffff !important;
@@ -171,14 +167,19 @@
   border-radius: 8px !important;
   font-weight: 500 !important;
   font-size: 0.875rem !important;
-  transition: all 0.4s ease !important;
+  line-height: 1.2 !important;
+  min-height: 36px !important;
+  transition: all 0.3s ease !important;
   cursor: pointer !important;
   text-decoration: none !important;
   box-shadow: 0 4px 15px rgba(218, 119, 86, 0.2) !important;
-  display: inline-block !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   position: relative !important;
   overflow: hidden !important;
-  animation: gradientShift 3s ease-in-out infinite !important;
+  white-space: nowrap !important;
+  opacity: 1 !important;
 }
 
 /* Псевдоэлемент для дополнительного свечения */
@@ -197,16 +198,11 @@
 }
 
 .service-card.glass-effect .text-muted:hover {
-  background: linear-gradient(135deg,
-      rgba(199, 102, 69, 0.95),
-      rgba(218, 119, 86, 0.95),
-      rgba(240, 140, 100, 0.95)) !important;
-  background-size: 200% 200% !important;
+  background: rgba(199, 102, 69, 0.95) !important;
   border-color: rgba(199, 102, 69, 0.5) !important;
   color: #ffffff !important;
   transform: translateY(-2px) translateX(5px) !important;
   box-shadow: 0 6px 20px rgba(218, 119, 86, 0.4) !important;
-  animation: gradientShiftHover 1.5s ease-in-out infinite !important;
 }
 
 .service-card.glass-effect .text-muted:hover::before {
@@ -294,16 +290,11 @@
 }
 
 [data-theme="dark"] .service-card.glass-effect .text-muted {
-  background: linear-gradient(135deg,
-      rgba(0, 212, 255, 0.3),
-      rgba(255, 107, 107, 0.3),
-      rgba(0, 212, 255, 0.3)) !important;
-  background-size: 200% 200% !important;
+  background: rgba(0, 212, 255, 0.3) !important;
   backdrop-filter: blur(15px) !important;
   border: 1px solid rgba(0, 212, 255, 0.3) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2) !important;
-  animation: gradientShiftDark 3s ease-in-out infinite !important;
 }
 
 [data-theme="dark"] .service-card.glass-effect .text-muted::before {
@@ -314,15 +305,10 @@
 }
 
 [data-theme="dark"] .service-card.glass-effect .text-muted:hover {
-  background: linear-gradient(135deg,
-      rgba(0, 184, 230, 0.4),
-      rgba(255, 82, 82, 0.4),
-      rgba(0, 255, 200, 0.4)) !important;
-  background-size: 200% 200% !important;
-  border-color: rgba(0, 184, 230, 0.5) !important;
+  background: rgba(0, 184, 230, 0.5) !important;
+  border-color: rgba(0, 184, 230, 0.6) !important;
   color: #ffffff !important;
   box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4) !important;
-  animation: gradientShiftDarkHover 1.2s ease-in-out infinite !important;
 }
 
 /* Анимации градиентных переливов для темной темы */
@@ -505,6 +491,12 @@
 
   .service-card.glass-effect:hover {
     transform: translateY(-4px) scale(1.01);
+  }
+
+  /* Фиксированная высота кнопки на мобильных */
+  .service-card.glass-effect .text-muted {
+    min-height: 38px !important;
+    padding: 0.6rem 1rem !important;
   }
 }
 
