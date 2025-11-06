@@ -275,6 +275,27 @@ img.loaded {
   opacity: 0;
 }
 
+/* Progressive loading states */
+img.progressive-loading {
+  opacity: 1;
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+img.min-loaded {
+  filter: blur(8px);
+  transform: scale(1.02);
+}
+
+img.loaded {
+  filter: blur(0) !important;
+  transform: scale(1) !important;
+}
+
+img.min-only {
+  filter: blur(4px) !important;
+  opacity: 0.95;
+}
+
 /* Image error states */
 .img-error {
   background: linear-gradient(135deg, #f8d7da, #f5c6cb);

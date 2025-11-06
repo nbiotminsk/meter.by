@@ -128,7 +128,7 @@ function initializeMessengerButtons() {
 function initializeServiceCards() {
     // This function serves as a fallback for service cards that aren't handled by Alpine.js
     // The main service modal functionality is now handled by the Alpine.js servicesComponent
-    console.log('Service cards initialization - handled by Alpine.js servicesComponent');
+    // Currently no fallback logic needed - all handled by Alpine.js
 }
 
 // Initialize active navigation tracking
@@ -249,43 +249,15 @@ window.BelarusRemoteMetering = {
     smoothScrollTo,
     formatDate,
     initializeTiltEffects
-};// 
+};
+
 // Pricing page specific functionality
 const PricingHelpers = {
-    // Initialize tilt effects (reusable function)
-    initializeTiltEffects: function() {
-        setTimeout(() => {
-            const serviceCards = document.querySelectorAll('.service-card[data-tilt]');
-            if (serviceCards.length > 0 && typeof VanillaTilt !== 'undefined') {
-                VanillaTilt.init(serviceCards, {
-                    max: 15,
-                    speed: 400,
-                    glare: true,
-                    'max-glare': 0.2,
-                    scale: 1.05,
-                    perspective: 1000,
-                    transition: true,
-                    'reset-to-start': false,
-                    easing: "cubic-bezier(.03,.98,.52,.99)"
-                });
-                console.log('VanillaTilt initialized for', serviceCards.length, 'cards');
-            }
-        }, 100);
-    },
+    // Use existing initializeTiltEffects function
+    initializeTiltEffects: initializeTiltEffects,
 
-    // Load JSON data with error handling
-    loadJSONData: async function(url) {
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return await response.json();
-        } catch (error) {
-            console.error(`Error loading ${url}:`, error);
-            throw error;
-        }
-    },
+    // Use existing loadJSONData function (with null return on error)
+    loadJSONData: loadJSONData,
 
     // Format currency for display
     formatCurrency: function(amount) {
@@ -297,7 +269,7 @@ const PricingHelpers = {
         return Math.round(((original - discounted) / original) * 100);
     },
 
-    // Smooth scroll to element
+    // Smooth scroll to element with offset support
     scrollToElement: function(elementId, offset = 100) {
         const element = document.getElementById(elementId);
         if (element) {
@@ -308,6 +280,9 @@ const PricingHelpers = {
                 top: offsetPosition,
                 behavior: 'smooth'
             });
+        } else {
+            // Fallback to smoothScrollTo if element not found
+            smoothScrollTo(elementId);
         }
     },
 
@@ -1053,7 +1028,6 @@ function optimizeExistingImages() {
 
 function generateAltText(img) {
     const src = img.src || img.dataset.src || '';
-    const className = img.className || '';
     const parentText = img.closest('.card')?.querySelector('.card-title')?.textContent || '';
     
     // Generate meaningful alt text based on context
@@ -1158,13 +1132,11 @@ function setupResponsiveImages() {
 function getResponsiveImagePath(originalPath, size, format) {
     // For now, return original path since we don't have multiple sizes
     // In a real implementation, you would have different sized images
-    const extension = format === 'webp' ? '.webp' : '.jpg';
-    
-    // Try to construct responsive path
-    const basePath = originalPath.replace(/\.(jpe?g|png|webp)$/i, '');
-    const responsivePath = `${basePath}-${size}${extension}`;
-    
-    // For development, return original path
+    // TODO: Implement responsive image paths when multiple sizes are available
+    // const extension = format === 'webp' ? '.webp' : '.jpg';
+    // const basePath = originalPath.replace(/\.(jpe?g|png|webp)$/i, '');
+    // const responsivePath = `${basePath}-${size}${extension}`;
+    // return responsivePath;
     return originalPath;
 }
 

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /documents/
+Disallow: /*.pdf$
+
+# Sitemap
+Sitemap: https://meter.by/sitemap.xml
+
+# Crawl-delay для ботов (опционально)
+Crawl-delay: 1
+

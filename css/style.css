@@ -308,6 +308,53 @@ body {
   box-shadow: 0 4px 12px rgba(147, 112, 219, 0.3);
 }
 
+/* Square messenger buttons in navbar */
+.telegram-btn-square,
+.viber-btn-square {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.telegram-btn-square {
+  background: #0088CC;
+  border-color: #0088CC;
+  color: white;
+}
+
+.telegram-btn-square:hover {
+  background: #006BA3;
+  border-color: #006BA3;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 136, 204, 0.4);
+}
+
+.viber-btn-square {
+  background: #9370DB;
+  border-color: #9370DB;
+  color: white;
+}
+
+.viber-btn-square:hover {
+  background: #7B68EE;
+  border-color: #7B68EE;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(147, 112, 219, 0.4);
+}
+
+.telegram-btn-square i,
+.viber-btn-square i {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
 /* Footer styles */
 .footer {
   background: var(--footer-bg);
@@ -503,6 +550,29 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
+  /* Hide theme switcher, messenger buttons and cart button in navbar on mobile */
+  .navbar .theme-switcher,
+  .navbar .telegram-btn-square,
+  .navbar .viber-btn-square {
+    display: none !important;
+  }
+
+  /* Hide only cart button, not the menu toggler */
+  .navbar .btn-outline-success.position-relative {
+    display: none !important;
+  }
+
+  /* Ensure navbar toggler is always visible */
+  .navbar-toggler {
+    display: block !important;
+    margin-left: 0.5rem !important;
+  }
+
+  /* Adjust navbar flex container on mobile */
+  .navbar .d-flex.align-items-center.order-lg-3 {
+    justify-content: flex-end !important;
+  }
+
   .messenger-buttons {
     bottom: 10px;
     right: 10px;

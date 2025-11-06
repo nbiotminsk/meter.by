@@ -3,15 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Цены - Meter.by | Стоимость услуг дистанционного съема в Беларуси</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Актуальные цены на услуги поверки, монтажа счетчиков и подключения к системе дистанционного съема в Беларуси. Прозрачное ценообразование и выгодные пакетные предложения.">
+        content="Актуальные цены на услуги поверки, монтажа счетчиков и подключения к системе дистанционного съема в Беларуси. Прозрачное ценообразование и выгодные пакетные предложения. Стоимость поверки теплосчетчиков и водосчетчиков.">
     <meta name="keywords"
-        content="цены поверка счетчиков, стоимость монтажа, дистанционный съем цены, Беларусь, тарифы учет тепла воды">
-    <meta name="author" content="Система дистанционного съема">
+        content="цены поверка счетчиков, стоимость монтажа, дистанционный съем цены, Беларусь, тарифы учет тепла воды, цена поверки счетчиков, стоимость монтажа теплосчетчиков, цена дистанционного съема, прайс-лист счетчиков">
+    <meta name="author" content="Meter.by - Система дистанционного съема">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://meter.by/prices.html">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Цены - Meter.by | Стоимость услуг дистанционного съема в Беларуси">
+    <meta property="og:description"
+        content="Актуальные цены на услуги поверки, монтажа счетчиков и подключения к системе дистанционного съема в Беларуси. Прозрачное ценообразование.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://meter.by/prices.html">
+    <meta property="og:image" content="https://meter.by/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ru_BY">
+    <meta property="og:site_name" content="Meter.by">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Цены - Meter.by | Стоимость услуг">
+    <meta name="twitter:description" content="Актуальные цены на услуги поверки, монтажа счетчиков и подключения к системе дистанционного съема">
+    <meta name="twitter:image" content="https://meter.by/images/og-image.jpg">
 
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,58 +47,120 @@
     <link href="css/glassmorphism-form.css" rel="stylesheet">
     <link href="css/glassmorphism-services.css" rel="stylesheet">
     <link href="css/glassmorphism-packages.css" rel="stylesheet">
+    <link href="css/mobile-fixes.css" rel="stylesheet">
 
 
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Услуги дистанционного съема показаний счетчиков",
-        "provider": {
+        "@type": "WebPage",
+        "name": "Цены - Meter.by",
+        "description": "Актуальные цены на услуги поверки, монтажа счетчиков и подключения к системе дистанционного съема в Беларуси",
+        "url": "https://meter.by/prices.html",
+        "inLanguage": "ru-BY",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Meter.by",
+            "url": "https://meter.by"
+        },
+        "about": {
             "@type": "LocalBusiness",
             "name": "Meter.by",
             "address": {
                 "@type": "PostalAddress",
                 "addressCountry": "BY",
-                "addressRegion": "Республика Беларусь"
+                "addressLocality": "Минск",
+                "addressRegion": "Минская область"
             },
             "telephone": "+375291234567",
-            "email": "info@meter.by"
+            "email": "info@meter.by",
+            "url": "https://meter.by"
         },
-        "areaServed": "Республика Беларусь",
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Каталог услуг по учету ресурсов",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
             "itemListElement": [
                 {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Поверка счетчиков тепла"
-                    },
-                    "price": "150",
-                    "priceCurrency": "BYN"
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Главная",
+                    "item": "https://meter.by/"
                 },
                 {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Монтаж счетчиков тепла"
-                    },
-                    "price": "300",
-                    "priceCurrency": "BYN"
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Дистанционный съем показаний"
-                    },
-                    "price": "200",
-                    "priceCurrency": "BYN"
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Цены",
+                    "item": "https://meter.by/prices.html"
                 }
             ]
+        },
+        "mainEntity": {
+            "@type": "Service",
+            "name": "Услуги дистанционного съема показаний счетчиков",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Meter.by"
+            },
+            "areaServed": {
+                "@type": "Country",
+                "name": "Республика Беларусь"
+            },
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Каталог услуг по учету ресурсов",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Поверка счетчиков тепла",
+                            "description": "Профессиональная поверка приборов учета тепловой энергии"
+                        },
+                        "price": "150",
+                        "priceCurrency": "BYN"
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Поверка счетчиков воды",
+                            "description": "Поверка приборов учета холодной и горячей воды"
+                        },
+                        "price": "80",
+                        "priceCurrency": "BYN"
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Монтаж счетчиков тепла",
+                            "description": "Профессиональный монтаж теплосчетчиков"
+                        },
+                        "price": "300",
+                        "priceCurrency": "BYN"
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Монтаж счетчиков воды",
+                            "description": "Установка водосчетчиков холодной и горячей воды"
+                        },
+                        "price": "120",
+                        "priceCurrency": "BYN"
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Дистанционный съем показаний",
+                            "description": "Подключение счетчиков к системе автоматического съема показаний"
+                        },
+                        "price": "200",
+                        "priceCurrency": "BYN"
+                    }
+                ]
+            }
         }
     }
     </script>
@@ -95,31 +177,33 @@
 
             <div class="d-flex align-items-center order-lg-3">
                 <!-- Theme Switcher -->
-                <button class="theme-switcher me-3">
+                <button class="theme-switcher me-2">
                     <i class="bi bi-moon"></i>
                 </button>
 
                 <!-- Cart Button -->
-                <button class="btn btn-outline-success btn-sm me-3 position-relative" onclick="scrollToCalculator()" title="Перейти к корзине">
+                <button class="btn btn-outline-success btn-sm me-2 position-relative" onclick="scrollToCalculator()" title="Перейти к корзине">
                     <i class="bi bi-cart3"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="navbar-cart-count" style="display: none;">
                         0
                     </span>
                 </button>
 
-                <!-- Messenger Buttons -->
-                <div class="d-flex">
-                    <a href="#" class="btn btn-outline-primary btn-sm me-2 telegram-btn">
-                        <i class="bi bi-telegram me-1"></i><span class="btn-text">Telegram</span>
+                <!-- Messenger Buttons - Hidden on mobile -->
+                <div class="d-none d-md-flex me-2">
+                    <a href="#" class="btn btn-outline-primary btn-sm me-2 telegram-btn-square">
+                        <i class="bi bi-telegram"></i>
                     </a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm viber-btn">
-                        <i class="bi bi-chat-dots me-1"></i><span class="btn-text">Viber</span>
+                    <a href="#" class="btn btn-outline-secondary btn-sm viber-btn-square">
+                        <i class="bi bi-chat-dots"></i>
                     </a>
                 </div>
 
                 <!-- Mobile Menu Toggle -->
-                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <span></span>
+                    </span>
                 </button>
             </div>
 
@@ -1267,19 +1351,7 @@
             }
         }
 
-        /* Mobile Responsive */
-        @media (max-width: 767.98px) {
-            .package-card {
-                margin-bottom: 1.5rem;
-            }
-
-
-
-            .popular-badge {
-                font-size: 0.7rem;
-                padding: 4px 10px;
-            }
-        }
+        /* Mobile Responsive - Moved to mobile-fixes.css */
 
         @media (min-width: 768px) and (max-width: 991.98px) {
             .col-md-6:nth-child(odd) {

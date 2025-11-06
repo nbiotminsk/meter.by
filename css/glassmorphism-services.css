@@ -160,28 +160,25 @@
 /* Стрелка "Подробнее" - теперь как кнопка с градиентными переливами */
 .service-card.glass-effect .text-muted {
   background: linear-gradient(135deg,
-      rgba(218, 119, 86, 0.95),
-      rgba(199, 102, 69, 0.95),
-      rgba(218, 119, 86, 0.95)) !important;
+      rgba(218, 119, 86, 0.9),
+      rgba(199, 102, 69, 0.9),
+      rgba(218, 119, 86, 0.9)) !important;
   background-size: 200% 200% !important;
   backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  border: 1px solid rgba(218, 119, 86, 0.5) !important;
+  border: 1px solid rgba(218, 119, 86, 0.3) !important;
   color: #ffffff !important;
   padding: 0.5rem 1rem !important;
   border-radius: 8px !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   font-size: 0.875rem !important;
   transition: all 0.4s ease !important;
   cursor: pointer !important;
   text-decoration: none !important;
-  box-shadow: 0 4px 15px rgba(218, 119, 86, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(218, 119, 86, 0.2) !important;
   display: inline-block !important;
   position: relative !important;
   overflow: hidden !important;
   animation: gradientShift 3s ease-in-out infinite !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
-  white-space: nowrap !important;
 }
 
 /* Псевдоэлемент для дополнительного свечения */
@@ -298,17 +295,15 @@
 
 [data-theme="dark"] .service-card.glass-effect .text-muted {
   background: linear-gradient(135deg,
-      rgba(0, 212, 255, 0.5),
-      rgba(255, 107, 107, 0.5),
-      rgba(0, 212, 255, 0.5)) !important;
+      rgba(0, 212, 255, 0.3),
+      rgba(255, 107, 107, 0.3),
+      rgba(0, 212, 255, 0.3)) !important;
   background-size: 200% 200% !important;
   backdrop-filter: blur(15px) !important;
-  -webkit-backdrop-filter: blur(15px) !important;
-  border: 1px solid rgba(0, 212, 255, 0.5) !important;
+  border: 1px solid rgba(0, 212, 255, 0.3) !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2) !important;
   animation: gradientShiftDark 3s ease-in-out infinite !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
 }
 
 [data-theme="dark"] .service-card.glass-effect .text-muted::before {
@@ -320,15 +315,14 @@
 
 [data-theme="dark"] .service-card.glass-effect .text-muted:hover {
   background: linear-gradient(135deg,
-      rgba(0, 184, 230, 0.7),
-      rgba(255, 82, 82, 0.7),
-      rgba(0, 255, 200, 0.7)) !important;
+      rgba(0, 184, 230, 0.4),
+      rgba(255, 82, 82, 0.4),
+      rgba(0, 255, 200, 0.4)) !important;
   background-size: 200% 200% !important;
-  border-color: rgba(0, 184, 230, 0.7) !important;
+  border-color: rgba(0, 184, 230, 0.5) !important;
   color: #ffffff !important;
-  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5) !important;
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4) !important;
   animation: gradientShiftDarkHover 1.2s ease-in-out infinite !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* Анимации градиентных переливов для темной темы */
@@ -892,6 +886,7 @@
     filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.8));
   }
 }
+
 /* Glassm
 orphism стили для карточек новостей */
 .news-card.glass-effect {

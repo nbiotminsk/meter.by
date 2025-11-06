@@ -1,0 +1,386 @@
+/* Mobile Fixes for prices.html */
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body {
+    position: relative;
+}
+
+/* Fix container overflow - only on mobile */
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+/* Global button focus fixes */
+button:focus,
+button:active,
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Prevent buttons from expanding on tap (mobile) */
+button,
+.btn {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Navbar specific button fixes */
+.navbar button,
+.navbar .btn {
+    flex-shrink: 0;
+    min-width: auto;
+}
+
+.navbar-toggler {
+    border: 1px solid rgba(0,0,0,.1) !important;
+    box-shadow: none !important;
+    outline: none !important;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:hover,
+.navbar-toggler.collapsed {
+    border: 1px solid rgba(0,0,0,.1) !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: transparent !important;
+}
+
+/* Hamburger to X animation */
+.navbar-toggler-icon {
+    position: relative;
+    transition: background-color 0.3s ease;
+    background-image: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon span {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: all 0.3s ease;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-toggler-icon::before {
+    top: 12px;
+}
+
+.navbar-toggler-icon::after {
+    bottom: 12px;
+}
+
+.navbar-toggler-icon span {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* When menu is open (toggler is NOT collapsed) */
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+    bottom: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon span {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+/* Dark theme colors */
+[data-theme="dark"] .navbar-toggler-icon::before,
+[data-theme="dark"] .navbar-toggler-icon::after,
+[data-theme="dark"] .navbar-toggler-icon span {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* Mobile Navigation Fixes */
+@media (max-width: 991.98px) {
+    /* Ensure navbar items are visible */
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .navbar .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Make sure toggler is visible */
+    .navbar-toggler {
+        display: block !important;
+        border: 1px solid rgba(0,0,0,.1) !important;
+        padding: 0.25rem 0.5rem !important;
+        font-size: 1rem;
+        z-index: 1050;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    /* Remove focus/active states that cause expansion */
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler:hover {
+        border: 1px solid rgba(0,0,0,.1) !important;
+        box-shadow: none !important;
+        outline: none !important;
+        transform: none !important;
+    }
+
+    /* Prevent toggler icon from growing */
+    .navbar-toggler-icon {
+        width: 1.25em !important;
+        height: 1.25em !important;
+    }
+
+    /* Cart button visibility */
+    .btn.btn-outline-success {
+        display: inline-block !important;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    /* Remove focus outline from cart button */
+    .btn.btn-outline-success:focus,
+    .btn.btn-outline-success:active {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    /* Theme switcher */
+    .theme-switcher {
+        display: inline-block !important;
+        padding: 0.25rem 0.5rem;
+    }
+
+    /* Remove focus outline from theme switcher */
+    .theme-switcher:focus,
+    .theme-switcher:active {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    /* Navbar brand */
+    .navbar-brand {
+        font-size: 1.1rem;
+        margin-right: auto;
+    }
+
+    /* Fix button group spacing */
+    .d-flex.align-items-center {
+        gap: 0.25rem;
+    }
+}
+
+/* Fix for all sections */
+@media (max-width: 767.98px) {
+    /* Hero section */
+    .hero-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hero-section .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Button groups */
+    .d-flex.gap-3 {
+        gap: 0.5rem !important;
+    }
+
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    /* Package cards */
+    .package-card {
+        margin-bottom: 1rem;
+        max-width: 100%;
+    }
+
+    .card {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    /* Tables */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    /* Pricing category cards */
+    .pricing-category-card {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    /* Calculator section */
+    .calculator-summary {
+        position: static !important;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Fix row overflow */
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .col, [class*="col-"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Display adjustments */
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .display-5 {
+        font-size: 1.75rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    /* Popular badge */
+    .popular-badge {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+        right: 10px;
+    }
+
+    /* Footer */
+    footer .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Messenger buttons */
+    .messenger-buttons {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .messenger-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .btn-sm {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .theme-switcher {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    /* Ensure no element causes overflow */
+    * {
+        max-width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Fix button text wrapping */
+    .btn {
+        white-space: nowrap;
+    }
+
+    /* Adjust hero buttons */
+    .hero-section .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    /* Package card adjustments */
+    .package-card .card-header h4 {
+        font-size: 1.1rem;
+    }
+
+    .package-card .card-text {
+        font-size: 0.9rem;
+    }
+
+    .pricing-info .h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Landscape mobile */
+@media (max-width: 767.98px) and (orientation: landscape) {
+    .hero-section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .display-4 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Dark theme navbar toggler */
+[data-theme="dark"] .navbar-toggler {
+    border-color: rgba(255,255,255,.3) !important;
+}
+
+[data-theme="dark"] .navbar-toggler:focus,
+[data-theme="dark"] .navbar-toggler:active,
+[data-theme="dark"] .navbar-toggler:hover {
+    border-color: rgba(255,255,255,.3) !important;
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
