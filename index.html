@@ -8,18 +8,31 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Дистанционный съем показаний счетчиков в Беларуси. Поверка, монтаж, ПНР счетчиков тепла и воды. Современные решения для автоматической передачи показаний.">
+        content="Дистанционный съем показаний счетчиков в Беларуси. Поверка, монтаж, ПНР счетчиков тепла и воды. Современные решения для автоматической передачи показаний. Профессиональные услуги по поверке, монтажу и подключению счетчиков к системе дистанционного съема показаний в Республике Беларусь.">
     <meta name="keywords"
-        content="дистанционный съем, поверка счетчиков, монтаж счетчиков, Беларусь, учет тепла, учет воды, Вега NB-11">
-    <meta name="author" content="Система дистанционного съема">
+        content="дистанционный съем, поверка счетчиков, монтаж счетчиков, Беларусь, учет тепла, учет воды, Вега NB-11, счетчики тепла, счетчики воды, поверка приборов учета, монтаж теплосчетчиков, дистанционный съем показаний, автоматический съем, система учета, Беларусь поверка">
+    <meta name="author" content="Meter.by - Система дистанционного съема">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://meter.by/">
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Meter.by - Подключение к системе дистанционного съема в Республике Беларусь">
     <meta property="og:description"
-        content="Профессиональные услуги по поверке, монтажу и подключению счетчиков к системе дистанционного съема показаний">
+        content="Профессиональные услуги по поверке, монтажу и подключению счетчиков к системе дистанционного съема показаний. Поверка, монтаж, ПНР счетчиков тепла и воды в Беларуси.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://meter.by">
-    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://meter.by/">
+    <meta property="og:image" content="https://meter.by/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ru_BY">
+    <meta property="og:site_name" content="Meter.by">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meter.by - Дистанционный съем показаний счетчиков в Беларуси">
+    <meta name="twitter:description"
+        content="Профессиональные услуги по поверке, монтажу и подключению счетчиков к системе дистанционного съема показаний">
+    <meta name="twitter:image" content="https://meter.by/images/og-image.jpg">
 
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -34,6 +47,7 @@
     <link href="css/image-optimization.css" rel="stylesheet">
     <link href="css/glassmorphism-services.css" rel="stylesheet">
     <link href="css/glassmorphism-form.css" rel="stylesheet">
+    <link href="css/mobile-fixes.css" rel="stylesheet">
 
 
     <!-- Structured Data -->
@@ -42,16 +56,71 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Meter.by",
-        "description": "Услуги по поверке, монтажу счетчиков и подключению к системе дистанционного съема в Республике Беларусь",
+        "alternateName": "Система дистанционного съема показаний счетчиков",
+        "description": "Профессиональные услуги по поверке, монтажу счетчиков и подключению к системе дистанционного съема показаний в Республике Беларусь. Поверка, монтаж, ПНР счетчиков тепла и воды.",
+        "image": "https://meter.by/images/og-image.jpg",
+        "logo": "https://meter.by/images/company-seal.png",
         "address": {
             "@type": "PostalAddress",
             "addressCountry": "BY",
-            "addressLocality": "Минск"
+            "addressLocality": "Минск",
+            "addressRegion": "Минская область"
         },
         "telephone": "+375291234567",
+        "email": "info@meter.by",
         "url": "https://meter.by",
-        "serviceArea": "Республика Беларусь",
-        "priceRange": "$$"
+        "sameAs": [
+            "https://t.me/meter_by",
+            "viber://chat?number=+375291234567"
+        ],
+        "serviceArea": {
+            "@type": "Country",
+            "name": "Республика Беларусь"
+        },
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "areaServed": {
+            "@type": "Country",
+            "name": "Республика Беларусь"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Услуги по дистанционному съему показаний счетчиков",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Поверка счетчиков тепла",
+                        "description": "Профессиональная поверка приборов учета тепловой энергии"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Поверка счетчиков воды",
+                        "description": "Поверка приборов учета холодной и горячей воды"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Монтаж счетчиков",
+                        "description": "Профессиональный монтаж счетчиков тепла и воды"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Дистанционный съем показаний",
+                        "description": "Подключение счетчиков к системе автоматического съема показаний"
+                    }
+                }
+            ]
+        }
     }
     </script>
 </head>
@@ -67,28 +136,26 @@
 
             <div class="d-flex align-items-center order-lg-3">
                 <!-- Theme Switcher -->
-                <button class="theme-switcher me-3" x-data="themeSwitch" @click="toggle()" x-init="init()">
+                <button class="theme-switcher me-2" x-data="themeSwitch" @click="toggle()" x-init="init()">
                     <i :class="isDark ? 'bi bi-sun' : 'bi bi-moon'"></i>
                 </button>
 
-                <!-- Glass Effect Toggle (for testing) -->
-                <button class="glass-toggle-btn me-3" onclick="toggleGlassEffect()" title="Переключить Glassmorphism">
-                    <i class="bi bi-magic"></i>
-                </button>
-
-                <!-- Messenger Buttons -->
-                <div class="d-flex">
-                    <a href="#" class="btn btn-outline-primary btn-sm me-2 telegram-btn">
-                        <i class="bi bi-telegram me-1"></i><span class="btn-text">Telegram</span>
+                <!-- Messenger Buttons - Hidden on mobile -->
+                <div class="d-none d-md-flex me-2">
+                    <a href="#" class="btn btn-outline-primary btn-sm me-2 telegram-btn-square">
+                        <i class="bi bi-telegram"></i>
                     </a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm viber-btn">
-                        <i class="bi bi-chat-dots me-1"></i><span class="btn-text">Viber</span>
+                    <a href="#" class="btn btn-outline-secondary btn-sm viber-btn-square">
+                        <i class="bi bi-chat-dots"></i>
                     </a>
                 </div>
 
                 <!-- Mobile Menu Toggle -->
-                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <span></span>
+                    </span>
                 </button>
             </div>
 
@@ -155,38 +222,176 @@
                     </div>
                 </div>
 
-                <!-- Service Cards will be loaded here by Alpine.js -->
-                <div x-data="servicesComponent" x-init="loadServices()">
-                    <!-- Loading indicator -->
-                    <div class="row" x-show="services.length === 0">
-                        <div class="col-12 text-center py-5">
-                            <div class="spinner-border text-primary" role="status">
-                                <span class="visually-hidden">Загрузка услуг...</span>
+                <div class="row g-4">
+                    <!-- Service Card 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card service-card glass-effect h-100" data-tilt data-service-id="verification-heat">
+                            <div class="card-header text-center">
+                                <h5 class="card-title">Поверка счетчиков тепла</h5>
                             </div>
-                            <p class="mt-3 text-muted">Загрузка услуг...</p>
-                        </div>
-                    </div>
-                    
-                    <div class="row g-4" x-show="services.length > 0">
-                        <template x-for="service in services" :key="service.id">
-                            <div class="col-md-6 col-lg-4">
-                                <div class="card service-card glass-effect h-100" data-tilt @click="openServiceModal(service)">
-                                    <div class="card-header text-center">
-                                        <h5 class="card-title" x-text="service.title"></h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <img :src="service.image" :alt="service.title" class="card-img-top mb-3"
-                                            style="height: 150px; object-fit: cover;">
-                                        <p class="card-text" x-text="service.description"></p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="badge bg-primary"
-                                                x-text="getCategoryName(service.category)"></span>
-                                            <small class="text-muted">Подробнее →</small>
-                                        </div>
-                                    </div>
+                            <div class="card-body">
+                                <img src="images/placeholders/min/heat-meter-verification.webp"
+                                    alt="Поверка счетчиков тепла" class="card-img-top mb-3"
+                                    style="height: 150px; object-fit: cover;">
+                                <p class="card-text">Профессиональная поверка приборов учета тепловой энергии</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">Поверка приборов</span>
+                                    <small class="text-muted">Подробнее →</small>
                                 </div>
                             </div>
-                        </template>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card service-card glass-effect h-100" data-tilt
+                            data-service-id="verification-water">
+                            <div class="card-header text-center">
+                                <h5 class="card-title">Поверка счетчиков воды</h5>
+                            </div>
+                            <div class="card-body">
+                                <img src="images/placeholders/water-meter-verification.jpg"
+                                    alt="Поверка счетчиков воды" class="card-img-top mb-3"
+                                    style="height: 150px; object-fit: cover;">
+                                <p class="card-text">Поверка приборов учета холодной и горячей воды</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">Поверка приборов</span>
+                                    <small class="text-muted">Подробнее →</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card service-card glass-effect h-100" data-tilt data-service-id="installation-heat">
+                            <div class="card-header text-center">
+                                <h5 class="card-title">Монтаж счетчиков тепла</h5>
+                            </div>
+                            <div class="card-body">
+                                <img src="images/placeholders/min/heat-meter-installation.webp"
+                                    alt="Монтаж счетчиков тепла" class="card-img-top mb-3"
+                                    style="height: 150px; object-fit: cover;">
+                                <p class="card-text">Профессиональный монтаж теплосчетчиков</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">Монтаж счетчиков</span>
+                                    <small class="text-muted">Подробнее →</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card service-card glass-effect h-100" data-tilt
+                            data-service-id="installation-water">
+                            <div class="card-header text-center">
+                                <h5 class="card-title">Монтаж счетчиков воды</h5>
+                            </div>
+                            <div class="card-body">
+                                <img src="images/placeholders/min/water-meter-installation.webp"
+                                    alt="Монтаж счетчиков воды" class="card-img-top mb-3"
+                                    style="height: 150px; object-fit: cover;">
+                                <p class="card-text">Установка водосчетчиков холодной и горячей воды</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">Монтаж счетчиков</span>
+                                    <small class="text-muted">Подробнее →</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card service-card glass-effect h-100" data-tilt data-service-id="pnr-balancing">
+                            <div class="card-header text-center">
+                                <h5 class="card-title">Балансировка системы отопления</h5>
+                            </div>
+                            <div class="card-body">
+                                <img src="images/placeholders/min/heating-balancing.webp"
+                                    alt="Балансировка системы отопления" class="card-img-top mb-3"
+                                    style="height: 150px; object-fit: cover;">
+                                <p class="card-text">Настройка и балансировка отопительных систем</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">ПНР</span>
+                                    <small class="text-muted">Подробнее →</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card service-card glass-effect h-100" data-tilt data-service-id="pnr-startup">
+                            <div class="card-header text-center">
+                                <h5 class="card-title">Запуск системы отопления</h5>
+                            </div>
+                            <div class="card-body">
+                                <img src="images/placeholders/min/heating-startup.webp" alt="Запуск системы отопления"
+                                    class="card-img-top mb-3" style="height: 150px; object-fit: cover;">
+                                <p class="card-text">Пуско-наладочные работы систем отопления</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">ПНР</span>
+                                    <small class="text-muted">Подробнее →</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 7 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card service-card glass-effect h-100" data-tilt data-service-id="remote-heat">
+                            <div class="card-header text-center">
+                                <h5 class="card-title">Дистанционный съем тепла</h5>
+                            </div>
+                            <div class="card-body">
+                                <img src="images/placeholders/remote-heat-reading.jpg"
+                                    alt="Дистанционный съем тепла" class="card-img-top mb-3"
+                                    style="height: 150px; object-fit: cover;">
+                                <p class="card-text">Подключение счетчиков тепла к системе дистанционного съема</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">Дистанционный съем</span>
+                                    <small class="text-muted">Подробнее →</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 8 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card service-card glass-effect h-100" data-tilt data-service-id="remote-water">
+                            <div class="card-header text-center">
+                                <h5 class="card-title">Дистанционный съем воды</h5>
+                            </div>
+                            <div class="card-body">
+                                <img src="images/placeholders/min/remote-water-reading.webp"
+                                    alt="Дистанционный съем воды" class="card-img-top mb-3"
+                                    style="height: 150px; object-fit: cover;">
+                                <p class="card-text">Подключение водосчетчиков к системе дистанционного съема</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">Дистанционный съем</span>
+                                    <small class="text-muted">Подробнее →</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 9 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card service-card glass-effect h-100" data-tilt data-service-id="equipment-vega">
+                            <div class="card-header text-center">
+                                <h5 class="card-title">Вега NB-11</h5>
+                            </div>
+                            <div class="card-body">
+                                <img src="images/placeholders/min/vega-nb11.webp" alt="Вега NB-11"
+                                    class="card-img-top mb-3" style="height: 150px; object-fit: cover;">
+                                <p class="card-text">Продажа современных приборов учета Вега NB-11</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">Продажа оборудования</span>
+                                    <small class="text-muted">Подробнее →</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -211,45 +416,32 @@
                                 <div class="row g-3">
                                     <div class="col-md-4">
                                         <label for="companyName" class="form-label small">Название организации *</label>
-                                        <input type="text" 
-                                               id="companyName"
-                                               class="form-control glass-input" 
-                                               placeholder="ООО 'Ваша компания'"
-                                               x-model="formData.companyName" 
-                                               :disabled="isGenerating"
-                                               required>
+                                        <input type="text" id="companyName" class="form-control glass-input"
+                                            placeholder="ООО 'Ваша компания'" x-model="formData.companyName"
+                                            :disabled="isGenerating" required>
                                     </div>
                                     <div class="col-md-4">
                                         <label for="unp" class="form-label small">УНП *</label>
-                                        <input type="text" 
-                                               id="unp"
-                                               class="form-control glass-input" 
-                                               placeholder="123456789" 
-                                               x-model="formData.unp"
-                                               :disabled="isGenerating"
-                                               pattern="[0-9]{9}"
-                                               maxlength="9"
-                                               required>
+                                        <input type="text" id="unp" class="form-control glass-input"
+                                            placeholder="123456789" x-model="formData.unp" :disabled="isGenerating"
+                                            pattern="[0-9]{9}" maxlength="9" required>
                                     </div>
                                     <div class="col-md-4">
                                         <label for="address" class="form-label small">Адрес *</label>
-                                        <input type="text" 
-                                               id="address"
-                                               class="form-control glass-input" 
-                                               placeholder="г. Минск, ул. Примерная, д. 1"
-                                               x-model="formData.address" 
-                                               :disabled="isGenerating"
-                                               required>
+                                        <input type="text" id="address" class="form-control glass-input"
+                                            placeholder="г. Минск, ул. Примерная, д. 1" x-model="formData.address"
+                                            :disabled="isGenerating" required>
                                     </div>
                                     <div class="col-12">
-                                        <button type="submit" 
-                                                class="btn glass-btn btn-lg w-100"
-                                                :disabled="isGenerating">
+                                        <button type="submit" class="btn glass-btn btn-lg w-100"
+                                            :disabled="isGenerating">
                                             <i class="bi bi-file-pdf me-2"></i>
-                                            <span x-text="isGenerating ? 'Создание предложения...' : 'Скачать коммерческое предложение'">
+                                            <span
+                                                x-text="isGenerating ? 'Создание предложения...' : 'Скачать коммерческое предложение'">
                                                 Скачать коммерческое предложение
                                             </span>
-                                            <span x-show="isGenerating" class="spinner-border spinner-border-sm ms-2" role="status"></span>
+                                            <span x-show="isGenerating" class="spinner-border spinner-border-sm ms-2"
+                                                role="status"></span>
                                         </button>
                                         <div class="mt-3">
                                             <small class="glass-text-muted">
@@ -335,7 +527,7 @@
         function toggleGlassEffect() {
             const cards = document.querySelectorAll('.service-card');
             glassEffectEnabled = !glassEffectEnabled;
-            
+
             cards.forEach(card => {
                 if (glassEffectEnabled) {
                     card.classList.add('glass-effect');
@@ -343,7 +535,7 @@
                     card.classList.remove('glass-effect');
                 }
             });
-            
+
             // Обновляем иконку кнопки
             const btn = document.querySelector('.glass-toggle-btn i');
             if (btn) {
@@ -356,7 +548,7 @@
         }
 
         // Инициализация при загрузке страницы
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Убеждаемся, что glassmorphism включен по умолчанию
             const cards = document.querySelectorAll('.service-card');
             cards.forEach(card => {
@@ -376,17 +568,17 @@
 
                 toggle() {
                     this.isDark = !this.isDark;
-                    
+
                     // Add transition class for smooth animation
                     document.body.classList.add('theme-transition');
-                    
+
                     // Update theme
                     const newTheme = this.isDark ? 'dark' : 'light';
                     localStorage.setItem('theme', newTheme);
                     document.documentElement.setAttribute('data-theme', newTheme);
-                    
+
                     console.log('Theme switched to:', newTheme);
-                    
+
                     // Remove transition class after animation completes
                     setTimeout(() => {
                         document.body.classList.remove('theme-transition');
@@ -397,10 +589,10 @@
                     // Initialize theme from localStorage
                     const savedTheme = this.isDark ? 'dark' : 'light';
                     document.documentElement.setAttribute('data-theme', savedTheme);
-                    
+
                     // Add transition class for smooth animations
                     document.body.classList.add('theme-transition');
-                    
+
                     console.log('Theme switcher initialized:', savedTheme);
                 }
             }));
@@ -441,7 +633,7 @@
 
                         // Load template
                         const template = await fetch('data/proposal-template.md').then(r => r.text());
-                        
+
                         // Show preview with print/save options
                         await this.showPDFPreview(template);
 
@@ -462,7 +654,7 @@
                     // Fill template with data
                     const currentDate = new Date().toLocaleDateString('ru-RU');
                     const validUntil = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString('ru-RU');
-                    
+
                     const filledTemplate = template
                         .replace(/\{\{DATE\}\}/g, currentDate)
                         .replace(/\{\{COMPANY_NAME\}\}/g, this.formData.companyName)
@@ -517,7 +709,7 @@
                 printPDF(htmlContent) {
                     // Create print window
                     const printWindow = window.open('', '_blank');
-                    
+
                     printWindow.document.write(`
                         <!DOCTYPE html>
                         <html>
@@ -587,11 +779,11 @@
                         </body>
                         </html>
                     `);
-                    
+
                     printWindow.document.close();
-                    
+
                     // Wait for content to load, then print
-                    printWindow.onload = function() {
+                    printWindow.onload = function () {
                         setTimeout(() => {
                             printWindow.print();
                             // Don't close automatically - let user close after printing
@@ -625,21 +817,21 @@
                                 inTable = true;
                                 tableHTML = '<table style="width:100%; border-collapse:collapse; margin:10px 0; color:#000;">';
                             }
-                            
+
                             const cells = line.split('|').slice(1, -1).map(cell => cell.trim());
-                            
+
                             // Skip separator rows
                             if (cells[0].startsWith('---')) {
                                 continue;
                             }
-                            
+
                             // Determine if header or data row
-                            const isHeader = i === 0 || (i > 0 && !lines[i-1].startsWith('|'));
+                            const isHeader = i === 0 || (i > 0 && !lines[i - 1].startsWith('|'));
                             const tag = isHeader ? 'th' : 'td';
-                            const style = isHeader ? 
+                            const style = isHeader ?
                                 'style="border:1px solid #333; padding:8px; background:#f2f2f2; font-weight:bold; text-align:left; color:#000;"' :
                                 'style="border:1px solid #333; padding:8px; text-align:left; color:#000;"';
-                            
+
                             tableHTML += '<tr>';
                             cells.forEach(cell => {
                                 tableHTML += `<${tag} ${style}>${cell}</${tag}>`;
@@ -690,9 +882,9 @@
 
 
                 validateForm() {
-                    return this.formData.companyName.trim() !== '' && 
-                           this.formData.unp.trim() !== '' && 
-                           this.formData.address.trim() !== '';
+                    return this.formData.companyName.trim() !== '' &&
+                        this.formData.unp.trim() !== '' &&
+                        this.formData.address.trim() !== '';
                 },
 
                 resetForm() {
@@ -704,193 +896,129 @@
                 }
             }));
 
-            // Services Component
-            Alpine.data('servicesComponent', () => ({
-                services: [],
-                categories: [],
-
-                async loadServices() {
-                    try {
-                        const data = await BelarusRemoteMetering.loadJSONData('data/services.json');
-                        if (data && data.services) {
-                            this.services = data.services;
-                            this.categories = data.categories;
-
-                            // Initialize VanillaTilt after services are loaded
-                            this.$nextTick(() => {
-                                BelarusRemoteMetering.initializeTiltEffects();
-                            });
-                        } else {
-                            await this.loadFallbackServices();
-                        }
-                    } catch (error) {
-                        console.error('Error loading services:', error);
-                        await this.loadFallbackServices();
+            // Service Modal Handler
+            document.addEventListener('DOMContentLoaded', function () {
+                const serviceData = {
+                    'verification-heat': {
+                        title: 'Поверка счетчиков тепла',
+                        icon: 'bi-thermometer-half',
+                        image: 'images/placeholders/heat-meter-verification.jpg',
+                        category: 'Поверка приборов',
+                        detailedInfo: 'Выполняем поверку счетчиков тепла в соответствии с требованиями Республики Беларусь. Используем современное оборудование и сертифицированные методики. Предоставляем официальные документы о поверке.',
+                        price: 150,
+                        unit: 'шт'
+                    },
+                    'verification-water': {
+                        title: 'Поверка счетчиков воды',
+                        icon: 'bi-droplet',
+                        image: 'images/placeholders/water-meter-verification.jpg',
+                        category: 'Поверка приборов',
+                        detailedInfo: 'Проводим поверку водосчетчиков с выездом на объект или в лабораторных условиях. Быстрое оформление документов, соответствие всем стандартам качества.',
+                        price: 80,
+                        unit: 'шт'
+                    },
+                    'installation-heat': {
+                        title: 'Монтаж счетчиков тепла',
+                        icon: 'bi-tools',
+                        image: 'images/placeholders/heat-meter-installation.jpg',
+                        category: 'Монтаж счетчиков',
+                        detailedInfo: 'Выполняем монтаж счетчиков тепла любой сложности. Работаем с различными типами систем отопления. Гарантия на выполненные работы.',
+                        price: 300,
+                        unit: 'шт'
+                    },
+                    'installation-water': {
+                        title: 'Монтаж счетчиков воды',
+                        icon: 'bi-wrench',
+                        image: 'images/placeholders/water-meter-installation.jpg',
+                        category: 'Монтаж счетчиков',
+                        detailedInfo: 'Качественная установка счетчиков воды с соблюдением всех технических требований. Работаем быстро и аккуратно.',
+                        price: 120,
+                        unit: 'шт'
+                    },
+                    'pnr-balancing': {
+                        title: 'Балансировка системы отопления',
+                        icon: 'bi-gear',
+                        image: 'images/placeholders/heating-balancing.jpg',
+                        category: 'ПНР',
+                        detailedInfo: 'Профессиональная балансировка системы отопления для обеспечения равномерного распределения тепла. Повышение эффективности работы системы.',
+                        price: 500,
+                        unit: 'услуга'
+                    },
+                    'pnr-startup': {
+                        title: 'Запуск системы отопления',
+                        icon: 'bi-play-circle',
+                        image: 'images/placeholders/heating-startup.jpg',
+                        category: 'ПНР',
+                        detailedInfo: 'Комплексный запуск и настройка систем отопления. Проверка всех узлов, настройка параметров, составление протоколов испытаний.',
+                        price: 400,
+                        unit: 'услуга'
+                    },
+                    'remote-heat': {
+                        title: 'Дистанционный съем тепла',
+                        icon: 'bi-wifi',
+                        image: 'images/placeholders/remote-heat-reading.jpg',
+                        category: 'Дистанционный съем',
+                        detailedInfo: 'Современная система дистанционного съема показаний теплосчетчиков. Автоматическая передача данных, удобный личный кабинет для контроля потребления.',
+                        price: 200,
+                        unit: 'подключение'
+                    },
+                    'remote-water': {
+                        title: 'Дистанционный съем воды',
+                        icon: 'bi-broadcast',
+                        image: 'images/placeholders/remote-water-reading.jpg',
+                        category: 'Дистанционный съем',
+                        detailedInfo: 'Автоматический съем показаний счетчиков воды. Исключение человеческого фактора, точность учета, своевременная передача данных.',
+                        price: 150,
+                        unit: 'подключение'
+                    },
+                    'equipment-vega': {
+                        title: 'Вега NB-11',
+                        icon: 'bi-cpu',
+                        image: 'images/placeholders/vega-nb11.jpg',
+                        category: 'Продажа оборудования',
+                        detailedInfo: 'Высокоточные счетчики Вега NB-11 с возможностью дистанционного съема показаний. Надежность, долговечность, соответствие всем стандартам.',
+                        price: 450,
+                        unit: 'шт'
                     }
-                },
+                };
 
-                async loadFallbackServices() {
-                    // Small delay to show loading indicator
-                    await new Promise(resolve => setTimeout(resolve, 500));
-                    
-                    // Fallback data in case JSON loading fails
-                    this.services = [
-                        {
-                            "id": "verification-heat",
-                            "title": "Поверка счетчиков тепла",
-                            "category": "verification",
-                            "subcategory": "heat",
-                            "description": "Профессиональная поверка приборов учета тепловой энергии",
-                            "detailedInfo": "Выполняем поверку счетчиков тепла в соответствии с требованиями Республики Беларусь. Используем современное оборудование и сертифицированные методики. Предоставляем официальные документы о поверке.",
-                            "icon": "bi-thermometer-half",
-                            "image": "images/placeholders/heat-meter-verification.jpg",
-                            "price": 150,
-                            "unit": "шт"
-                        },
-                        {
-                            "id": "verification-water",
-                            "title": "Поверка счетчиков воды",
-                            "category": "verification",
-                            "subcategory": "water",
-                            "description": "Поверка приборов учета холодной и горячей воды",
-                            "detailedInfo": "Проводим поверку водосчетчиков с выездом на объект или в лабораторных условиях. Быстрое оформление документов, соответствие всем стандартам качества.",
-                            "icon": "bi-droplet",
-                            "image": "images/placeholders/water-meter-verification.jpg",
-                            "price": 80,
-                            "unit": "шт"
-                        },
-                        {
-                            "id": "installation-heat",
-                            "title": "Монтаж счетчиков тепла",
-                            "category": "installation",
-                            "subcategory": "heat",
-                            "description": "Профессиональный монтаж теплосчетчиков",
-                            "detailedInfo": "Выполняем монтаж счетчиков тепла любой сложности. Работаем с различными типами систем отопления. Гарантия на выполненные работы.",
-                            "icon": "bi-tools",
-                            "image": "images/placeholders/heat-meter-installation.jpg",
-                            "price": 300,
-                            "unit": "шт"
-                        },
-                        {
-                            "id": "installation-water",
-                            "title": "Монтаж счетчиков воды",
-                            "category": "installation",
-                            "subcategory": "water",
-                            "description": "Установка водосчетчиков холодной и горячей воды",
-                            "detailedInfo": "Качественная установка счетчиков воды с соблюдением всех технических требований. Работаем быстро и аккуратно.",
-                            "icon": "bi-wrench",
-                            "image": "images/placeholders/water-meter-installation.jpg",
-                            "price": 120,
-                            "unit": "шт"
-                        },
-                        {
-                            "id": "pnr-balancing",
-                            "title": "Балансировка системы отопления",
-                            "category": "pnr",
-                            "subcategory": "balancing",
-                            "description": "Настройка и балансировка отопительных систем",
-                            "detailedInfo": "Профессиональная балансировка системы отопления для обеспечения равномерного распределения тепла. Повышение эффективности работы системы.",
-                            "icon": "bi-gear",
-                            "image": "images/placeholders/heating-balancing.jpg",
-                            "price": 500,
-                            "unit": "услуга"
-                        },
-                        {
-                            "id": "pnr-startup",
-                            "title": "Запуск системы отопления",
-                            "category": "pnr",
-                            "subcategory": "startup",
-                            "description": "Пуско-наладочные работы систем отопления",
-                            "detailedInfo": "Комплексный запуск и настройка систем отопления. Проверка всех узлов, настройка параметров, составление протоколов испытаний.",
-                            "icon": "bi-play-circle",
-                            "image": "images/placeholders/heating-startup.jpg",
-                            "price": 400,
-                            "unit": "услуга"
-                        },
-                        {
-                            "id": "remote-heat",
-                            "title": "Дистанционный съем тепла",
-                            "category": "remote",
-                            "subcategory": "heat",
-                            "description": "Подключение счетчиков тепла к системе дистанционного съема",
-                            "detailedInfo": "Современная система дистанционного съема показаний теплосчетчиков. Автоматическая передача данных, удобный личный кабинет для контроля потребления.",
-                            "icon": "bi-wifi",
-                            "image": "images/placeholders/remote-heat-reading.jpg",
-                            "price": 200,
-                            "unit": "подключение"
-                        },
-                        {
-                            "id": "remote-water",
-                            "title": "Дистанционный съем воды",
-                            "category": "remote",
-                            "subcategory": "water",
-                            "description": "Подключение водосчетчиков к системе дистанционного съема",
-                            "detailedInfo": "Автоматический съем показаний счетчиков воды. Исключение человеческого фактора, точность учета, своевременная передача данных.",
-                            "icon": "bi-broadcast",
-                            "image": "images/placeholders/remote-water-reading.jpg",
-                            "price": 150,
-                            "unit": "подключение"
-                        },
-                        {
-                            "id": "equipment-vega",
-                            "title": "Вега NB-11",
-                            "category": "equipment",
-                            "subcategory": "meters",
-                            "description": "Продажа современных приборов учета Вега NB-11",
-                            "detailedInfo": "Высокоточные счетчики Вега NB-11 с возможностью дистанционного съема показаний. Надежность, долговечность, соответствие всем стандартам.",
-                            "icon": "bi-cpu",
-                            "image": "images/placeholders/vega-nb11.jpg",
-                            "price": 450,
-                            "unit": "шт"
-                        }
-                    ];
+                function getServiceFeatures(category) {
+                    const features = {
+                        'Поверка приборов': [
+                            '<li><i class="bi bi-check text-success me-2"></i>Аккредитованная лаборатория</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Свидетельство о поверке</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Соответствие ГОСТ</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Гарантия качества</li>'
+                        ],
+                        'Монтаж счетчиков': [
+                            '<li><i class="bi bi-check text-success me-2"></i>Профессиональный монтаж</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Настройка и калибровка</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Гарантия на работы 2 года</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Акт выполненных работ</li>'
+                        ],
+                        'ПНР': [
+                            '<li><i class="bi bi-check text-success me-2"></i>Комплексная настройка</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Оптимизация параметров</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Протокол испытаний</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Техническая поддержка</li>'
+                        ],
+                        'Дистанционный съем': [
+                            '<li><i class="bi bi-check text-success me-2"></i>Автоматическая передача данных</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Интеграция с системой учета</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Мониторинг 24/7</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Техническое обслуживание</li>'
+                        ],
+                        'Продажа оборудования': [
+                            '<li><i class="bi bi-check text-success me-2"></i>Сертифицированное оборудование</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Гарантия производителя</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Техническая документация</li>',
+                            '<li><i class="bi bi-check text-success me-2"></i>Консультации по эксплуатации</li>'
+                        ]
+                    };
+                    return features[category] ? features[category].join('') : '<li><i class="bi bi-check text-success me-2"></i>Профессиональное выполнение</li>';
+                }
 
-                    this.categories = [
-                        {
-                            "id": "verification",
-                            "name": "Поверка приборов",
-                            "description": "Поверка счетчиков тепла и воды",
-                            "icon": "bi-check-circle"
-                        },
-                        {
-                            "id": "installation",
-                            "name": "Монтаж счетчиков",
-                            "description": "Установка приборов учета",
-                            "icon": "bi-tools"
-                        },
-                        {
-                            "id": "pnr",
-                            "name": "ПНР",
-                            "description": "Пуско-наладочные работы",
-                            "icon": "bi-gear"
-                        },
-                        {
-                            "id": "remote",
-                            "name": "Дистанционный съем",
-                            "description": "Системы автоматического съема показаний",
-                            "icon": "bi-wifi"
-                        },
-                        {
-                            "id": "equipment",
-                            "name": "Продажа оборудования",
-                            "description": "Современные приборы учета",
-                            "icon": "bi-cart"
-                        }
-                    ];
-
-                    // Initialize VanillaTilt after fallback services are loaded
-                    this.$nextTick(() => {
-                        BelarusRemoteMetering.initializeTiltEffects();
-                    });
-                },
-
-                getCategoryName(categoryId) {
-                    const category = this.categories.find(cat => cat.id === categoryId);
-                    return category ? category.name : categoryId;
-                },
-
-                openServiceModal(service) {
-                    // Enhanced modal with comprehensive service information
+                function openServiceModal(service) {
                     Swal.fire({
                         title: `<i class="${service.icon} me-2"></i>${service.title}`,
                         html: `
@@ -903,7 +1031,7 @@
                                         <div class="service-category-badge">
                                             <span class="badge bg-primary fs-6 px-3 py-2">
                                                 <i class="${service.icon} me-1"></i>
-                                                ${this.getCategoryName(service.category)}
+                                                ${service.category}
                                             </span>
                                         </div>
                                     </div>
@@ -923,7 +1051,7 @@
                                                     Что включено
                                                 </h6>
                                                 <ul class="list-unstyled mb-0">
-                                                    ${this.getServiceFeatures(service)}
+                                                    ${getServiceFeatures(service.category)}
                                                 </ul>
                                             </div>
                                             
@@ -988,7 +1116,6 @@
                             title: 'service-modal-title'
                         },
                         didOpen: () => {
-                            // Add custom styling when modal opens
                             const modal = document.querySelector('.service-modal-enhanced');
                             if (modal) {
                                 modal.style.borderRadius = '15px';
@@ -997,56 +1124,31 @@
                         }
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            // Open Telegram with service-specific message
                             const message = encodeURIComponent(`Здравствуйте! Меня интересует услуга: ${service.title}`);
                             window.open(`https://t.me/meter_by?text=${message}`, '_blank');
                         } else if (result.dismiss === Swal.DismissReason.cancel) {
-                            // Open Viber with service-specific message
                             const message = encodeURIComponent(`Здравствуйте! Меня интересует услуга: ${service.title}`);
                             window.open(`viber://chat?number=+375291234567&text=${message}`, '_blank');
                         }
                     });
-                },
-
-                getServiceFeatures(service) {
-                    // Generate service-specific features based on category
-                    const features = {
-                        'verification': [
-                            '<li><i class="bi bi-check text-success me-2"></i>Аккредитованная лаборатория</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Свидетельство о поверке</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Соответствие ГОСТ</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Гарантия качества</li>'
-                        ],
-                        'installation': [
-                            '<li><i class="bi bi-check text-success me-2"></i>Профессиональный монтаж</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Настройка и калибровка</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Гарантия на работы 2 года</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Акт выполненных работ</li>'
-                        ],
-                        'pnr': [
-                            '<li><i class="bi bi-check text-success me-2"></i>Комплексная настройка</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Оптимизация параметров</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Протокол испытаний</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Техническая поддержка</li>'
-                        ],
-                        'remote': [
-                            '<li><i class="bi bi-check text-success me-2"></i>Автоматическая передача данных</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Интеграция с системой учета</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Мониторинг 24/7</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Техническое обслуживание</li>'
-                        ],
-                        'equipment': [
-                            '<li><i class="bi bi-check text-success me-2"></i>Сертифицированное оборудование</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Гарантия производителя</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Техническая документация</li>',
-                            '<li><i class="bi bi-check text-success me-2"></i>Консультации по эксплуатации</li>'
-                        ]
-                    };
-                    
-                    return features[service.category] ? features[service.category].join('') : 
-                           '<li><i class="bi bi-check text-success me-2"></i>Профессиональное выполнение</li>';
                 }
-            }));
+
+                // Attach click handlers to service cards
+                document.querySelectorAll('.service-card').forEach(card => {
+                    card.addEventListener('click', function () {
+                        const serviceId = this.getAttribute('data-service-id');
+                        const service = serviceData[serviceId];
+                        if (service) {
+                            openServiceModal(service);
+                        }
+                    });
+                });
+
+                // Initialize VanillaTilt
+                if (typeof BelarusRemoteMetering !== 'undefined' && BelarusRemoteMetering.initializeTiltEffects) {
+                    BelarusRemoteMetering.initializeTiltEffects();
+                }
+            });
 
             // Documents Component
             Alpine.data('documentsComponent', () => ({
@@ -1059,7 +1161,7 @@
 
                 toggleShowAll() {
                     this.showAll = !this.showAll;
-                    
+
                     // Smooth scroll to show new documents
                     if (this.showAll) {
                         this.$nextTick(() => {
@@ -1090,7 +1192,7 @@
                 async loadFallbackDocuments() {
                     // Small delay to show loading indicator
                     await new Promise(resolve => setTimeout(resolve, 500));
-                    
+
                     // Fallback data in case JSON loading fails
                     this.documents = [
                         {
