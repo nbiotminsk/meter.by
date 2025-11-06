@@ -6,7 +6,7 @@
       "slug": "2024-01-15-new-verification-requirements-2024",
       "date": "2024-01-15",
       "excerpt": "Изменения в законодательстве Республики Беларусь касательно поверки приборов учета. Что нужно знать потребителям.",
-      "image": "images/placeholders/blog-verification-2024.jpg",
+      "image": "images/placeholders/min/blog-verification-2024.webp",
       "tags": ["поверка", "законодательство", "2024"]
     },
     {
@@ -15,7 +15,7 @@
       "slug": "2024-01-10-remote-reading-advantages",
       "date": "2024-01-10",
       "excerpt": "Почему стоит перейти на автоматический съем показаний счетчиков. Экономия времени и повышение точности учета.",
-      "image": "images/placeholders/blog-remote-reading.jpg",
+      "image": "images/placeholders/min/blog-remote-reading.webp",
       "tags": ["дистанционный съем", "автоматизация", "технологии"]
     },
     {
@@ -24,7 +24,7 @@
       "slug": "2024-01-05-heat-meter-choice",
       "date": "2024-01-05",
       "excerpt": "Руководство по выбору теплосчетчика для квартиры или дома. Основные характеристики и критерии выбора.",
-      "image": "images/placeholders/blog-heat-meter-choice.jpg",
+      "image": "images/placeholders/min/blog-heat-meter-choice.webp",
       "tags": ["счетчики тепла", "выбор", "монтаж"]
     },
     {
@@ -33,7 +33,7 @@
       "slug": "2023-12-28-energy-saving-apartments",
       "date": "2023-12-28",
       "excerpt": "Практические советы по снижению расходов на отопление и горячую воду в квартире. Простые способы экономии.",
-      "image": "images/placeholders/blog-energy-saving.jpg",
+      "image": "images/placeholders/min/blog-energy-saving.webp",
       "tags": ["энергосбережение", "экономия", "коммунальные услуги"]
     },
     {
@@ -42,7 +42,7 @@
       "slug": "2023-12-20-meter-maintenance",
       "date": "2023-12-20",
       "excerpt": "Важность регулярного обслуживания счетчиков. Как продлить срок службы приборов учета и обеспечить их точность.",
-      "image": "images/placeholders/blog-maintenance.jpg",
+      "image": "images/placeholders/min/blog-maintenance.webp",
       "tags": ["обслуживание", "ремонт", "техподдержка"]
     },
     {
@@ -51,7 +51,7 @@
       "slug": "2023-12-15-digitalization-utilities",
       "date": "2023-12-15",
       "excerpt": "Развитие цифровых технологий в сфере ЖКХ. Как современные решения улучшают качество коммунальных услуг.",
-      "image": "images/placeholders/blog-digitalization.jpg",
+      "image": "images/placeholders/min/blog-digitalization.webp",
       "tags": ["цифровизация", "технологии", "ЖКХ", "инновации"]
     }
   ]

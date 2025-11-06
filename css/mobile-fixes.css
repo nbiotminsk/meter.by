@@ -179,6 +179,9 @@ button,
     .theme-switcher {
         display: inline-block !important;
         padding: 0.25rem 0.5rem;
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 0.9rem !important;
     }
 
     /* Remove focus outline from theme switcher */
@@ -320,7 +323,9 @@ button,
 
     .theme-switcher {
         padding: 0.2rem 0.4rem;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        width: 32px !important;
+        height: 32px !important;
     }
 
     /* Ensure no element causes overflow */
