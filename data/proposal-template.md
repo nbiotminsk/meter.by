@@ -140,8 +140,7 @@ Email: gruzd.e.v@mail.ru
     <td style="width: 50%; vertical-align: bottom;">
       <p>
         <strong>Директор ООО "Хессер-Групп"</strong><br><br>
-        _________________ Грузд Е.В.<br>
-        <small>(подпись)</small>
+        Грузд Е.В.
       </p>
     </td>
     <td style="width: 50%; text-align: right; vertical-align: bottom;">
