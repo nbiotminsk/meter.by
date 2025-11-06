@@ -273,14 +273,16 @@
     border-radius: 10px !important;
   }
   
-  .glass-btn {
+  .proposal-form .glass-btn,
+  .proposal-section .glass-btn {
     border-radius: 12px !important;
-    font-size: 1rem !important;
-    padding: 0.875rem 1.5rem !important;
+    font-size: 0.95rem !important;
+    padding: 0.75rem 1rem !important;
     white-space: normal !important;
     height: auto !important;
     min-height: 54px !important;
-    line-height: 1.3 !important;
+    line-height: 1.4 !important;
+    overflow: visible !important;
   }
 }
 
@@ -295,19 +297,34 @@
     border-radius: 8px !important;
   }
   
-  .glass-btn {
+  .proposal-form .glass-btn,
+  .proposal-section .glass-btn {
     border-radius: 10px !important;
     white-space: normal !important;
     height: auto !important;
-    min-height: 56px !important;
-    line-height: 1.3 !important;
-    padding: 0.75rem 1rem !important;
-    font-size: 0.9rem !important;
+    min-height: 60px !important;
+    line-height: 1.4 !important;
+    padding: 0.65rem 0.85rem !important;
+    font-size: 0.85rem !important;
+    overflow: visible !important;
+    word-wrap: break-word !important;
   }
   
-  .glass-btn span {
+  .proposal-form .glass-btn span,
+  .proposal-section .glass-btn span {
     display: inline !important;
     word-wrap: break-word !important;
+    white-space: normal !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .proposal-form .glass-btn,
+  .proposal-section .glass-btn {
+    font-size: 0.8rem !important;
+    padding: 0.6rem 0.75rem !important;
+    min-height: 64px !important;
+    line-height: 1.35 !important;
   }
 }
 
