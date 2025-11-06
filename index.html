@@ -643,8 +643,8 @@
                             }
                         });
 
-                        // Load template
-                        const template = await fetch('data/proposal-template.md').then(r => r.text());
+                        // Load HTML template
+                        const template = await fetch('data/proposal-template.html').then(r => r.text());
 
                         // Show preview with print/save options
                         await this.showPDFPreview(template);
@@ -667,15 +667,12 @@
                     const currentDate = new Date().toLocaleDateString('ru-RU');
                     const validUntil = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString('ru-RU');
 
-                    const filledTemplate = template
+                    const htmlContent = template
                         .replace(/\{\{DATE\}\}/g, currentDate)
                         .replace(/\{\{COMPANY_NAME\}\}/g, this.formData.companyName)
                         .replace(/\{\{UNP\}\}/g, this.formData.unp)
                         .replace(/\{\{ADDRESS\}\}/g, this.formData.address)
                         .replace(/\{\{VALID_UNTIL\}\}/g, validUntil);
-
-                    // Convert markdown to HTML
-                    const htmlContent = this.markdownToHTML(filledTemplate);
 
                     // Show preview modal
                     Swal.fire({

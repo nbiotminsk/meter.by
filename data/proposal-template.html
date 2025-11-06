@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коммерческое предложение</title>
+    <style>
+        @media print {
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            color: #000;
+            background: #fff;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .header-table td {
+            vertical-align: top;
+        }
+
+        .company-details {
+            text-align: left;
+            font-size: 10pt;
+            line-height: 1.3;
+        }
+
+        .doc-number {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .recipient {
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 13pt;
+        }
+
+        .title {
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 12pt;
+        }
+
+        .customer-info {
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 13pt;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+        }
+
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin: 15px 0 10px 0;
+        }
+
+        table.price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 10pt;
+        }
+
+        table.price-table th,
+        table.price-table td {
+            border: 1px solid #000;
+            padding: 4px 6px;
+            text-align: left;
+        }
+
+        table.price-table th {
+            background: #f0f0f0;
+            font-weight: bold;
+        }
+
+        .package {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .advantages {
+            margin: 15px 0;
+        }
+
+        .advantages p {
+            margin: 5px 0;
+        }
+
+        .footer-info {
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        .signature-table {
+            width: 100%;
+            margin-top: 40px;
+            border-collapse: collapse;
+        }
+
+        .signature-table td {
+            vertical-align: bottom;
+            padding: 10px 0;
+        }
+
+        .disclaimer {
+            margin-top: 30px;
+            font-size: 10pt;
+            line-height: 1.3;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #000;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Шапка документа -->
+    <table class="header-table">
+        <tr>
+            <td style="width: 20%; vertical-align: top;">
+                <img src="../images/logo.png" alt="Hesser Group Logo" style="max-width: 150px; height: auto;">
+            </td>
+            <td style="width: 50%; vertical-align: top; text-align: left; font-size: 10pt; line-height: 1.4;">
+                <strong>Общество с ограниченной ответственностью<br>"Хессер-Групп"</strong><br>
+                УНП 193065571 Р-с BY18 ALFA 3012 2337 1900 1027 0000 в ЗАО
+                "Альфа-банк" 220013, г.Минск, ул.Сурганова, 43 БИК: ALFABY2X
+                Юр. адрес: 220045, г. Минск, ул. Кальварийская, д. 25, пом. 420, тел. +375 (29) 252-49-88
+            </td>
+            <td
+                style="width: 30%; vertical-align: top; padding-left: 15px; border-left: 1px solid #ccc; font-size: 10pt; line-height: 1.4;">
+                <strong>Заказчик:</strong><br>
+                {{COMPANY_NAME}}<br>
+                УНП: {{UNP}}<br>
+                Адрес: {{ADDRESS}}
+            </td>
+        </tr>
+    </table>
+
+    <div class="doc-number">Исх. № ___ от {{DATE}}</div>
+
+    <div class="title">
+        Ценовое предложение на услуги по поверке, монтажу и подключению<br>
+        приборов учета к системе дистанционного съема показаний
+    </div>
+
+    <hr>
+
+    <!-- Основной контент -->
+    <h2>О компании</h2>
+    <p>Наша компания специализируется на предоставлении комплексных услуг в области дистанционного съема показаний
+        приборов учета в Республике Беларусь. Мы предлагаем полный спектр услуг от поверки и монтажа счетчиков до
+        подключения к современным системам автоматической передачи данных.</p>
+
+    <h2>Наши услуги и цены</h2>
+
+    <h3>1. Поверка приборов учета</h3>
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>Услуга</th>
+                <th>Цена</th>
+                <th>Единица измерения</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Поверка индивидуального счетчика тепла</td>
+                <td>150 BYN</td>
+                <td>шт</td>
+            </tr>
+            <tr>
+                <td>Поверка коммерческого счетчика тепла</td>
+                <td>300 BYN</td>
+                <td>шт</td>
+            </tr>
+            <tr>
+                <td>Поверка счетчика холодной воды</td>
+                <td>80 BYN</td>
+                <td>шт</td>
+            </tr>
+            <tr>
+                <td>Поверка счетчика горячей воды</td>
+                <td>90 BYN</td>
+                <td>шт</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2. Монтаж счетчиков</h3>
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>Услуга</th>
+                <th>Цена</th>
+                <th>Единица измерения</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Монтаж квартирного теплосчетчика</td>
+                <td>300 BYN</td>
+                <td>шт</td>
+            </tr>
+            <tr>
+                <td>Монтаж комплекта водосчетчиков</td>
+                <td>200 BYN</td>
+                <td>комплект</td>
+            </tr>
+            <tr>
+                <td>Монтаж одного водосчетчика</td>
+                <td>120 BYN</td>
+                <td>шт</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>3. Пуско-наладочные работы (ПНР)</h3>
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>Услуга</th>
+                <th>Цена</th>
+                <th>Единица измерения</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Балансировка системы отопления квартиры</td>
+                <td>500 BYN</td>
+                <td>квартира</td>
+            </tr>
+            <tr>
+                <td>Балансировка системы частного дома</td>
+                <td>1200 BYN</td>
+                <td>дом</td>
+            </tr>
+            <tr>
+                <td>Запуск системы отопления</td>
+                <td>400 BYN</td>
+                <td>система</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>4. Дистанционный съем показаний</h3>
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>Услуга</th>
+                <th>Цена</th>
+                <th>Единица измерения</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Подключение теплосчетчика к системе</td>
+                <td>200 BYN</td>
+                <td>подключение</td>
+            </tr>
+            <tr>
+                <td>Подключение водосчетчиков к системе</td>
+                <td>150 BYN</td>
+                <td>подключение</td>
+            </tr>
+            <tr>
+                <td>Ежемесячное обслуживание системы</td>
+                <td>50 BYN</td>
+                <td>месяц</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>5. Продажа оборудования</h3>
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>Оборудование</th>
+                <th>Цена</th>
+                <th>Единица измерения</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Устройство Вега NB-11</td>
+                <td>450 BYN</td>
+                <td>шт</td>
+            </tr>
+            <tr>
+                <td>Квартирный теплосчетчик</td>
+                <td>800 BYN</td>
+                <td>шт</td>
+            </tr>
+            <tr>
+                <td>Комплект водосчетчиков</td>
+                <td>180 BYN</td>
+                <td>комплект</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Пакетные предложения со скидкой</h2>
+
+    <div class="package">
+        <h3>Базовый пакет для квартиры</h3>
+        <ul>
+            <li>Установка комплекта водосчетчиков</li>
+            <li>Подключение к дистанционному съему</li>
+            <li>Первый месяц обслуживания бесплатно</li>
+        </ul>
+        <p><strong>Цена: 400 BYN</strong> (вместо 470 BYN)</p>
+    </div>
+
+    <div class="package">
+        <h3>Премиум пакет для квартиры</h3>
+        <ul>
+            <li>Установка теплосчетчика и водосчетчиков</li>
+            <li>Подключение всех приборов к дистанционному съему</li>
+            <li>3 месяца обслуживания бесплатно</li>
+        </ul>
+        <p><strong>Цена: 720 BYN</strong> (вместо 850 BYN)</p>
+    </div>
+
+    <h2>Наши преимущества</h2>
+    <div class="advantages">
+        <p>✓ <strong>Официальная аккредитация</strong> - все работы выполняются в соответствии с требованиями РБ</p>
+        <p>✓ <strong>Современное оборудование</strong> - используем только сертифицированные приборы</p>
+        <p>✓ <strong>Опытные специалисты</strong> - команда профессионалов с многолетним опытом</p>
+        <p>✓ <strong>Гарантия качества</strong> - предоставляем гарантию на все виды работ</p>
+        <p>✓ <strong>Техническая поддержка</strong> - круглосуточная поддержка клиентов</p>
+    </div>
+
+    <h2>Условия сотрудничества</h2>
+    <ul>
+        <li><strong>Выезд специалиста для консультации:</strong> БЕСПЛАТНО</li>
+        <li><strong>Гарантия на работы:</strong> от 2 до 3 лет (в зависимости от пакета)</li>
+        <li><strong>Форма оплаты:</strong> наличный и безналичный расчет</li>
+        <li><strong>Сроки выполнения:</strong> от 1 до 5 рабочих дней</li>
+    </ul>
+
+    <h2>Контактная информация</h2>
+    <p>
+        <strong>Для связи:</strong><br>
+        Телефон: +375 29 252-49-88<br>
+        Доп. телефон: +375 29 365-22-10<br>
+        Email: gruzd.e.v@mail.ru<br><br>
+        <strong>Telegram:</strong> https://t.me/meter_by<br>
+        <strong>Viber:</strong> +375 29 252-49-88
+    </p>
+
+    <hr>
+
+    <!-- Подвал документа -->
+    <div class="footer-info">
+        <p><strong>Итого:</strong> __________ (сумма прописью) без НДС согласно Главы 32 раздела 7 особенной части
+            налогового кодекса Республики Беларусь.</p>
+
+        <p><strong>Срок выполнения работ:</strong> с {{DATE}} по {{VALID_UNTIL}}</p>
+        <p><strong>Условия оплаты:</strong> по факту поставки товара</p>
+        <p><strong>Место проведения работ:</strong> Республика Беларусь, г. Минск, {{ADDRESS}}</p>
+    </div>
+
+    <div style="margin-top: 40px; display: flex; align-items: center; gap: 15px;">
+        <strong>Директор</strong>
+        <img src="../images/pechat.jpg" alt="Печать" style="max-width: 180px; height: auto;">
+        <strong>Е.В. Грузд</strong>
+    </div>
+
+    <div class="disclaimer">
+        Данное коммерческое предложение не является публичной офертой. Окончательная стоимость услуг определяется после
+        выезда специалиста на объект и составления технического задания.
+    </div>
+</body>
+
+</html>

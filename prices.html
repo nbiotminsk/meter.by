@@ -1195,6 +1195,9 @@
     <!-- PDF Proposal Generator -->
     <script src="js/pdf-proposal-generator.js"></script>
     
+    <!-- Calculator Proposal Generator -->
+    <script src="js/calculator-proposal-generator.js"></script>
+    
     <!-- Image Optimization -->
     <script src="js/placeholder-generator.js"></script>
     <script src="js/image-optimization.js"></script>
@@ -1928,13 +1931,6 @@
                         allowOutsideClick: false
                     });
 
-                    // Load proposal template
-                    const templateResponse = await fetch('data/proposal-template.md');
-                    if (!templateResponse.ok) {
-                        throw new Error('Не удалось загрузить шаблон предложения');
-                    }
-                    const template = await templateResponse.text();
-
                     // Prepare services data with quantities
                     const servicesForPDF = this.selectedServices.map(service => ({
                         id: service.id,
@@ -1944,12 +1940,12 @@
                         isPackage: service.isPackage || false
                     }));
 
-                    // Create PDF generator instance
-                    const pdfGenerator = new PDFProposalGenerator(template, servicesForPDF, companyInfo);
+                    // Create Calculator Proposal generator instance
+                    const proposalGenerator = new CalculatorProposalGenerator(servicesForPDF, companyInfo);
 
                     // Close loading and show preview with print/save options
                     Swal.close();
-                    await pdfGenerator.showPreview();
+                    await proposalGenerator.generatePreview();
 
                     // Track analytics
                     if (window.BelarusRemoteMetering && window.BelarusRemoteMetering.analytics) {
