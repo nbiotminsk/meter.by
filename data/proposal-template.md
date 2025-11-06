@@ -1,32 +1,43 @@
+<div style="text-align: center; margin-bottom: 30px;">
+  <img src="images/logo.png" alt="Meter.by Logo" style="max-width: 200px; height: auto;">
+</div>
+
 # КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ
 
 **Дата:** {{DATE}}
 
 ---
 
-## Исполнитель
-
-**ООО "Хессер-Групп"**  
-УНП: 193065571  
-Юридический адрес: 220017, Беларусь, г. Минск, ул. Кальварийская, 25, 420  
-Директор: Грузд Евгений Владимирович  
-
-Телефон: +375 29 252-49-88  
-Доп. телефон: +375 29 365-22-10  
-Email: gruzd.e.v@mail.ru  
-Сайт: www.meter.by  
-
-Расчётный счёт: BY18 ALFA 3012 2337 1900 1027 0000  
-Банк: ЗАО «Альфа-банк»  
-Код банка: ALFABY2X  
-
----
-
-## Заказчик
-
-**{{COMPANY_NAME}}**  
-УНП: {{UNP}}  
-Адрес: {{ADDRESS}}
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+  <tr>
+    <td style="width: 50%; vertical-align: top; padding-right: 20px;">
+      <h3>Исполнитель</h3>
+      <p>
+        <strong>ООО "Хессер-Групп"</strong><br>
+        УНП: 193065571<br>
+        Юридический адрес: 220017, Беларусь,<br>
+        г. Минск, ул. Кальварийская, 25, 420<br>
+        Директор: Грузд Евгений Владимирович<br><br>
+        Телефон: +375 29 252-49-88<br>
+        Доп. телефон: +375 29 365-22-10<br>
+        Email: gruzd.e.v@mail.ru<br>
+        Сайт: www.meter.by<br><br>
+        Расчётный счёт:<br>
+        BY18 ALFA 3012 2337 1900 1027 0000<br>
+        Банк: ЗАО «Альфа-банк»<br>
+        Код банка: ALFABY2X
+      </p>
+    </td>
+    <td style="width: 50%; vertical-align: top; padding-left: 20px; border-left: 1px solid #ddd;">
+      <h3>Заказчик</h3>
+      <p>
+        <strong>{{COMPANY_NAME}}</strong><br>
+        УНП: {{UNP}}<br>
+        Адрес: {{ADDRESS}}
+      </p>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -122,5 +133,24 @@ Email: gruzd.e.v@mail.ru
 
 Данное коммерческое предложение не является публичной офертой. Окончательная стоимость услуг определяется после выезда специалиста на объект и составления технического задания.
 
-*С уважением,*  
-*Команда "Meter.by"*
+---
+
+<table style="width: 100%; margin-top: 40px;">
+  <tr>
+    <td style="width: 50%; vertical-align: bottom;">
+      <p>
+        <strong>Директор ООО "Хессер-Групп"</strong><br><br>
+        _________________ Грузд Е.В.<br>
+        <small>(подпись)</small>
+      </p>
+    </td>
+    <td style="width: 50%; text-align: right; vertical-align: bottom;">
+      <img src="images/pechat.jpg" alt="Печать и подпись" style="max-width: 200px; height: auto;">
+    </td>
+  </tr>
+</table>
+
+<p style="text-align: center; margin-top: 30px; font-style: italic;">
+  С уважением,<br>
+  Команда "Meter.by"
+</p>
