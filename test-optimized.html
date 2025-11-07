@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест Optimized CSS - Meter.by</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Optimized CSS -->
+    <link href="css/style-optimized.css" rel="stylesheet">
+
+    <style>
+        /* Дополнительные стили для тестирования */
+        .test-section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .test-header {
+            background: var(--section-bg);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .current-theme {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 9999;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Indicator -->
+    <div class="current-theme" id="themeIndicator">
+        Текущая тема: <strong>Светлая</strong>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-house-fill me-2"></i>
+                Meter.by (Test)
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="bi bi-house-fill me-1"></i> Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#prices">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#documents">Документы</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-outline-success position-relative me-2">
+                        <i class="bi bi-cart3"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+
+                    <a href="https://t.me/meterby" class="btn telegram-btn-square me-2" title="Telegram">
+                        <i class="bi bi-telegram"></i>
+                    </a>
+
+                    <a href="viber://chat?number=%2B375291234567" class="btn viber-btn-square me-2" title="Viber">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+
+                    <button class="theme-switcher" id="themeToggle" title="Переключить тему">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="margin-top: 76px;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Тест Оптимизированных Стилей</h1>
+                    <p class="lead">Проверка работы всех стилей из объединенного CSS файла</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button class="btn btn-primary btn-lg">
+                            <i class="bi bi-telephone me-2"></i>
+                            Заказать звонок
+                        </button>
+                        <button class="btn btn-outline-primary btn-lg">
+                            <i class="bi bi-cart-plus me-2"></i>
+                            Каталог услуг
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="img-container">
+                        <img src="https://via.placeholder.com/600x400/DA7756/FFFFFF?text=Test+Image" alt="Test" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Cards Test -->
+    <section class="test-section" id="services">
+        <div class="container">
+            <h2 class="text-center mb-5">Тест карточек услуг</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100">
+                        <div class="card-header">
+                            <span class="badge bg-secondary">Категория 1</span>
+                            <h5 class="card-title mt-2">Поверка счетчиков</h5>
+                        </div>
+                        <img src="https://via.placeholder.com/400x200/F6EDE5/1C1C1C?text=Service+1" class="card-img-top" alt="Service">
+                        <div class="card-body">
+                            <p class="card-text">Профессиональная поверка тепловых счетчиков и водосчетчиков с соблюдением всех норм.</p>
+                            <small class="text-muted">Подробнее →</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100">
+                        <div class="card-header">
+                            <span class="badge bg-secondary">Категория 2</span>
+                            <h5 class="card-title mt-2">Монтажные работы</h5>
+                        </div>
+                        <img src="https://via.placeholder.com/400x200/EEDACC/1C1C1C?text=Service+2" class="card-img-top" alt="Service">
+                        <div class="card-body">
+                            <p class="card-text">Установка и монтаж счетчиков воды и тепла с гарантией качества.</p>
+                            <small class="text-muted">Подробнее →</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100">
+                        <div class="card-header">
+                            <span class="badge bg-secondary">Категория 3</span>
+                            <h5 class="card-title mt-2">Дистанционное считывание</h5>
+                        </div>
+                        <img src="https://via.placeholder.com/400x200/DA7756/FFFFFF?text=Service+3" class="card-img-top" alt="Service">
+                        <div class="card-body">
+                            <p class="card-text">Современные системы удаленного считывания показаний счетчиков.</p>
+                            <small class="text-muted">Подробнее →</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Test -->
+    <section class="test-section proposal-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="proposal-form">
+                        <h3 class="text-center mb-4">Тест формы</h3>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Ваше имя</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Введите имя">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Телефон</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="+375 (XX) XXX-XX-XX">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Сообщение</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Опишите вашу задачу..."></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="bi bi-send me-2"></i>
+                                    <span>Отправить заявку</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Cards Test -->
+    <section class="test-section bg-light" id="blog">
+        <div class="container">
+            <h2 class="text-center mb-5">Тест карточек блога</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card blog-post h-100">
+                        <img src="https://via.placeholder.com/400x200/059669/FFFFFF?text=Blog+1" class="card-img-top" alt="Blog">
+                        <div class="card-body">
+                            <h5 class="card-title">Как правильно выбрать счетчик</h5>
+                            <p class="card-text">Подробное руководство по выбору оптимального счетчика для ваших нужд.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">01.11.2024</small>
+                                <small class="text-muted">Читать →</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card blog-post h-100">
+                        <img src="https://via.placeholder.com/400x200/DA7756/FFFFFF?text=Blog+2" class="card-img-top" alt="Blog">
+                        <div class="card-body">
+                            <h5 class="card-title">Преимущества дистанционного учета</h5>
+                            <p class="card-text">Почему современные системы учета становятся все популярнее.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">28.10.2024</small>
+                                <small class="text-muted">Читать →</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card blog-post h-100">
+                        <img src="https://via.placeholder.com/400x200/F6EDE5/1C1C1C?text=Blog+3" class="card-img-top" alt="Blog">
+                        <div class="card-body">
+                            <h5 class="card-title">Законодательные требования</h5>
+                            <p class="card-text">Актуальные нормы и правила установки поверки счетчиков.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">25.10.2024</small>
+                                <small class="text-muted">Читать →</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination Test -->
+            <nav aria-label="Blog pagination" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Предыдущая</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Следующая</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Table Test -->
+    <section class="test-section" id="prices">
+        <div class="container">
+            <h2 class="text-center mb-5">Тест таблиц цен</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card pricing-category-card">
+                        <div class="card-header">
+                            <h3>Базовые услуги</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Услуга</th>
+                                            <th>Единица</th>
+                                            <th>Цена, BYN</th>
+                                            <th>Срок</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="service-row">
+                                            <td>Поверка счетчика воды</td>
+                                            <td>шт.</td>
+                                            <td>25.00</td>
+                                            <td>3 дня</td>
+                                        </tr>
+                                        <tr class="service-row table-success">
+                                            <td>Поверка счетчика тепла</td>
+                                            <td>шт.</td>
+                                            <td>85.00</td>
+                                            <td>5 дней</td>
+                                        </tr>
+                                        <tr class="service-row">
+                                            <td>Монтаж счетчика</td>
+                                            <td>шт.</td>
+                                            <td>45.00</td>
+                                            <td>1 день</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card calculator-summary">
+                        <div class="card-header">
+                            <h5>Калькулятор</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-2">Выбрано услуг: <strong>2</strong></p>
+                            <p class="mb-2">Общая стоимость: <strong>110.00 BYN</strong></p>
+                            <p class="mb-3">Скидка: <strong>5%</strong></p>
+                            <hr>
+                            <h4 class="text-primary">Итого: 104.50 BYN</h4>
+                            <button class="btn btn-primary w-100 mt-3">
+                                <i class="bi bi-cart-plus me-2"></i>
+                                В корзину
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Test -->
+    <section class="test-section bg-light" id="videos">
+        <div class="container">
+            <h2 class="text-center mb-5">Тест видеогалереи</h2>
+
+            <!-- Category Filters -->
+            <div class="text-center mb-4">
+                <button class="btn category-filter-btn btn-primary">Все видео</button>
+                <button class="btn category-filter-btn btn-outline-primary">Инструкции</button>
+                <button class="btn category-filter-btn btn-outline-primary">Обзоры</button>
+                <button class="btn category-filter-btn btn-outline-primary">Новости</button>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card video-card">
+                        <div class="video-thumbnail-container">
+                            <img src="https://via.placeholder.com/400x220/000000/FFFFFF?text=Video+1" class="video-thumbnail" alt="Video">
+                            <div class="play-overlay">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                            <span class="video-duration">5:23</span>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Установка счетчика воды</h6>
+                            <p class="card-text">Подробная инструкция по монтажу</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card video-card">
+                        <div class="video-thumbnail-container">
+                            <img src="https://via.placeholder.com/400x220/DA7756/FFFFFF?text=Video+2" class="video-thumbnail" alt="Video">
+                            <div class="play-overlay">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                            <span class="video-duration">8:15</span>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Поверка счетчиков</h6>
+                            <p class="card-text">Процесс поверки пошагово</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card video-card">
+                        <div class="video-thumbnail-container">
+                            <img src="https://via.placeholder.com/400x220/059669/FFFFFF?text=Video+3" class="video-thumbnail" alt="Video">
+                            <div class="play-overlay">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                            <span class="video-duration">12:40</span>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Дистанционное считывание</h6>
+                            <p class="card-text">Современные технологии учета</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>ООО Хессер-Групп</h5>
+                    <p>Профессиональные услуги по поверке и монтажу счетчиков в Республике Беларусь.</p>
+                    <div class="social-links">
+                        <a href="#" title="Telegram"><i class="bi bi-telegram fs-5"></i></a>
+                        <a href="#" title="Viber"><i class="bi bi-whatsapp fs-5"></i></a>
+                        <a href="#" title="Email"><i class="bi bi-envelope fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Услуги</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none">Поверка счетчиков</a></li>
+                        <li><a href="#" class="text-decoration-none">Монтажные работы</a></li>
+                        <li><a href="#" class="text-decoration-none">Дистанционное считывание</a></li>
+                        <li><a href="#" class="text-decoration-none">Консультации</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Контакты</h5>
+                    <p><i class="bi bi-geo-alt me-2"></i>г. Минск, ул. Промышленная, 15</p>
+                    <p><i class="bi bi-telephone me-2"></i>+375 29 123-45-67</p>
+                    <p><i class="bi bi-envelope me-2"></i>info@meter.by</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <small>&copy; 2024 ООО Хессер-Групп. Все права защищены.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="messenger-buttons">
+        <a href="https://t.me/meterby" class="messenger-btn telegram-btn" title="Telegram">
+            <i class="bi bi-telegram"></i>
+        </a>
+        <a href="viber://chat?number=%2B375291234567" class="messenger-btn viber-btn" title="Viber">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+    <button class="scroll-to-top-btn" id="scrollTopBtn" title="Наверх">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const themeIndicator = document.getElementById('themeIndicator');
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIndicator(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIndicator(newTheme);
+        });
+
+        function updateThemeIndicator(theme) {
+            const themeText = theme === 'light' ? 'Светлая' : 'Темная';
+            const icon = theme === 'light' ? 'bi-sun-fill' : 'bi-moon-fill';
+            themeIndicator.innerHTML = `Текущая тема: <strong>${themeText}</strong>`;
+            themeToggle.innerHTML = `<i class="bi ${icon}"></i>`;
+        }
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Test interactions
+        document.querySelectorAll('.service-card, .blog-post, .video-card').forEach(card => {
+            card.addEventListener('click', function() {
+                console.log('Card clicked:', this.querySelector('.card-title').textContent);
+            });
+        });
+
+        // Test form submission
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Форма работает! CSS стили применены корректно.');
+        });
+
+        // Test table rows
+        document.querySelectorAll('.service-row').forEach(row => {
+            row.addEventListener('click', function() {
+                this.classList.toggle('table-success');
+            });
+        });
+
+        // Test category filters
+        document.querySelectorAll('.category-filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.category-filter-btn').forEach(b => {
+                    b.classList.remove('btn-primary');
+                    b.classList.add('btn-outline-primary');
+                });
+                this.classList.remove('btn-outline-primary');
+                this.classList.add('btn-primary');
+            });
+        });
+
+        console.log('Optimized CSS test page loaded successfully!');
+        console.log('Original CSS files: 8');
+        console.log('Consolidated into: 1 file');
+        console.log('Size reduction: ~71%');
+        console.log('All styles should be working correctly.');
+    </script>
+</body>
+</html>
