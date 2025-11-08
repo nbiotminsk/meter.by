@@ -1,124 +1,34 @@
 {
   "videos": [
     {
-      "id": "verification-heat-demo",
-      "title": "Поверка счетчиков тепла: пошаговый процесс",
-      "description": "Подробная демонстрация процесса поверки теплосчетчиков в лабораторных условиях. Показываем все этапы работы и используемое оборудование.",
-      "youtubeId": "dQw4w9WgXcQ",
-      "category": "verification",
-      "duration": "8:45",
-      "uploadDate": "2024-01-15",
-      "featured": true
-    },
-    {
-      "id": "verification-water-process",
-      "title": "Поверка водосчетчиков: методика и требования",
-      "description": "Обучающее видео о поверке счетчиков воды согласно стандартам Республики Беларусь. Рассматриваем нормативные требования и практические аспекты.",
-      "youtubeId": "dQw4w9WgXcQ",
-      "category": "verification",
-      "duration": "6:30",
-      "uploadDate": "2024-01-20",
-      "featured": false
-    },
-    {
-      "id": "installation-heat-guide",
-      "title": "Монтаж теплосчетчика: от А до Я",
-      "description": "Полное руководство по монтажу счетчиков тепла. Показываем правильную установку, подключение и настройку прибора учета.",
-      "youtubeId": "dQw4w9WgXcQ",
-      "category": "installation",
-      "duration": "12:15",
-      "uploadDate": "2024-02-01",
-      "featured": true
-    },
-    {
-      "id": "installation-water-tips",
-      "title": "Секреты качественного монтажа водосчетчиков",
-      "description": "Профессиональные советы по установке счетчиков воды. Избегаем типичных ошибок и обеспечиваем долговечность установки.",
-      "youtubeId": "dQw4w9WgXcQ",
-      "category": "installation",
-      "duration": "9:20",
-      "uploadDate": "2024-02-05",
-      "featured": false
-    },
-    {
-      "id": "pnr-balancing-system",
-      "title": "Балансировка системы отопления: практические аспекты",
-      "description": "Демонстрация процесса балансировки отопительной системы. Показываем методы настройки и достижения оптимального распределения тепла.",
-      "youtubeId": "dQw4w9WgXcQ",
-      "category": "pnr",
-      "duration": "15:30",
-      "uploadDate": "2024-02-10",
-      "featured": false
-    },
-    {
-      "id": "pnr-startup-procedure",
-      "title": "Запуск системы отопления: пошаговая инструкция",
-      "description": "Подробное руководство по пуско-наладочным работам систем отопления. Все этапы от подготовки до финальных испытаний.",
-      "youtubeId": "dQw4w9WgXcQ",
-      "category": "pnr",
-      "duration": "18:45",
-      "uploadDate": "2024-02-15",
-      "featured": true
-    },
-    {
-      "id": "remote-heat-setup",
-      "title": "Подключение к системе дистанционного съема тепла",
-      "description": "Как подключить теплосчетчик к системе автоматического съема показаний. Настройка оборудования и проверка связи.",
-      "youtubeId": "dQw4w9WgXcQ",
+      "id": "indel-1734-heat-meter",
+      "title": "Опрос прибора учета тепловой энергии через Индел 1734",
+      "description": "Опрос прибора учета тепловой энергии через Индел 1734",
+      "youtubeId": "cZdxLqkwT4I",
       "category": "remote",
-      "duration": "10:15",
-      "uploadDate": "2024-02-20",
+      "duration": "0:59",
+      "uploadDate": "2025-01-08",
       "featured": true
     },
     {
-      "id": "remote-water-connection",
-      "title": "Дистанционный съем показаний водосчетчиков",
-      "description": "Обзор системы автоматического съема показаний счетчиков воды. Преимущества, возможности и процесс подключения.",
-      "youtubeId": "dQw4w9WgXcQ",
-      "category": "remote",
-      "duration": "7:50",
-      "uploadDate": "2024-02-25",
-      "featured": false
-    },
-    {
-      "id": "vega-nb11-overview",
-      "title": "Обзор счетчика Вега NB-11: характеристики и возможности",
-      "description": "Подробный обзор современного прибора учета Вега NB-11. Технические характеристики, функции и преимущества использования.",
-      "youtubeId": "dQw4w9WgXcQ",
+      "id": "vega-nb11-kit",
+      "title": "Комплект Вега NB-11",
+      "description": "Комплект Вега NB-11",
+      "youtubeId": "CdZF2HK5tzo",
       "category": "equipment",
-      "duration": "11:30",
-      "uploadDate": "2024-03-01",
-      "featured": false
-    },
-    {
-      "id": "vega-nb11-installation",
-      "title": "Установка и настройка Вега NB-11",
-      "description": "Практическое руководство по установке и первоначальной настройке счетчика Вега NB-11. Подключение к системе дистанционного съема.",
-      "youtubeId": "dQw4w9WgXcQ",
-      "category": "equipment",
-      "duration": "13:20",
-      "uploadDate": "2024-03-05",
-      "featured": false
-    },
-    {
-      "id": "general-intro",
-      "title": "Meter.by: Ваш надежный партнер в сфере учета ресурсов",
-      "description": "Знакомство с компанией Meter.by. Наши услуги, преимущества работы с нами и подходы к решению задач в сфере учета ресурсов.",
-      "youtubeId": "dQw4w9WgXcQ",
-      "category": "general",
-      "duration": "5:45",
-      "uploadDate": "2024-03-10",
+      "duration": "0:59",
+      "uploadDate": "2025-01-08",
       "featured": true
     },
     {
-      "id": "regulations-belarus",
-      "title": "Нормативные требования к приборам учета в Беларуси",
-      "description": "Обзор действующих нормативных документов и требований к приборам учета тепла и воды в Республике Беларусь.",
-      "youtubeId": "dQw4w9WgXcQ",
-      "category": "general",
-      "duration": "14:10",
-      "uploadDate": "2024-03-15",
-      "featured": false
+      "id": "vega-nb11-cons",
+      "title": "Какие минусы у Вега NB-11",
+      "description": "Какие минусы у Вега NB-11",
+      "youtubeId": "eiul52ovaRU",
+      "category": "equipment",
+      "duration": "0:59",
+      "uploadDate": "2025-01-08",
+      "featured": true
     }
   ],
   "categories": [
