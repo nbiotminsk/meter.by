@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дистанционный съем показаний счетчиков тепла - Meter.by</title>
+    <meta name="description"
+        content="Автоматизированная система дистанционного съема показаний теплосчетчиков. Преимущества технологии NB-IoT, экономия времени и исключение человеческого фактора.">
+    <meta name="keywords"
+        content="дистанционный съем, счетчики тепла, NB-IoT, автоматизация, Вега NB-11, телеметрия, учет тепла">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/dark-theme.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+    <link href="../css/article.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="bi bi-broadcast-pin me-2"></i>
+                Meter.by
+            </a>
+
+            <div class="d-flex align-items-center order-lg-3">
+                <button class="theme-switcher me-2" x-data="themeSwitch" @click="toggle()" x-init="init()">
+                    <i :class="isDark ? 'bi bi-sun' : 'bi bi-moon'"></i>
+                </button>
+
+                <div class="d-none d-md-flex me-2">
+                    <a href="https://t.me/meter_by" class="btn btn-outline-primary btn-sm me-2 telegram-btn-square"
+                        target="_blank" rel="noopener">
+                        <i class="bi bi-telegram"></i>
+                    </a>
+                    <a href="viber://chat?number=+375292524988"
+                        class="btn btn-outline-secondary btn-sm viber-btn-square" target="_blank" rel="noopener">
+                        <i class="bi bi-chat-dots"></i>
+                    </a>
+                </div>
+
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html#home">
+                            <i class="bi bi-house-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../documents.html">Документы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../prices.html">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../videos.html">Видео</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <main class="article-page">
+        <article class="container py-5 mt-5">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../../index.html">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html">Новости</a></li>
+                    <li class="breadcrumb-item active">Дистанционный съем показаний счетчиков тепла</li>
+                </ol>
+            </nav>
+
+            <!-- Article Header -->
+            <header class="article-header mb-5">
+                <h1 class="display-4 fw-bold mb-3">Дистанционный съем показаний счетчиков тепла: современное решение для
+                    учета</h1>
+
+                <div class="article-meta d-flex flex-wrap gap-3 mb-4">
+                    <span class="text-muted">
+                        <i class="bi bi-calendar3 me-1"></i>
+                        8 ноября 2025
+                    </span>
+                    <span class="text-muted">
+                        <i class="bi bi-clock me-1"></i>
+                        5 мин чтения
+                    </span>
+                </div>
+
+                <div class="article-tags mb-4">
+                    <span class="badge bg-primary me-2">дистанционный съем</span>
+                    <span class="badge bg-primary me-2">счетчики тепла</span>
+                    <span class="badge bg-primary me-2">NB-IoT</span>
+                    <span class="badge bg-primary me-2">автоматизация</span>
+                    <span class="badge bg-primary">Вега NB-11</span>
+                </div>
+
+                <img src="../../images/placeholders/remote-heat-reading.webp"
+                    alt="Дистанционный съем показаний счетчиков тепла" class="img-fluid rounded shadow-sm mb-4"
+                    style="width: 100%; max-height: 500px; object-fit: cover;">
+            </header>
+
+            <!-- Article Body -->
+            <div class="article-body">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Что такое дистанционный съем показаний?</h2>
+                            <p class="lead">
+                                Дистанционный съем показаний счетчиков тепла — это современная технология автоматической
+                                передачи данных о потреблении тепловой энергии без необходимости физического присутствия
+                                контролера или жильца.
+                            </p>
+                            <p>
+                                Система работает на базе радиомодулей, которые подключаются к существующим теплосчетчикам
+                                и автоматически передают показания в центральную систему учета. Это исключает человеческий
+                                фактор, повышает точность учета и экономит время всех участников процесса.
+                            </p>
+                        </section>
+
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Как работает система?</h2>
+                            <p>
+                                В основе системы дистанционного съема лежит использование радиомодулей, таких как
+                                <strong>Вега NB-11</strong>, которые устанавливаются на приборы учета. Эти устройства
+                                работают по технологии NB-IoT (Narrowband Internet of Things) — специальному стандарту
+                                сотовой связи для интернета вещей.
+                            </p>
+
+                            <div class="alert alert-info">
+                                <i class="bi bi-info-circle me-2"></i>
+                                <strong>NB-IoT</strong> — это энергоэффективная технология передачи данных, которая
+                                обеспечивает стабильную связь даже в подвалах и технических помещениях, где обычная
+                                сотовая связь может быть недоступна.
+                            </div>
+
+                            <h4 class="h5 mt-4 mb-3">Процесс работы системы:</h4>
+                            <ol class="custom-list">
+                                <li><strong>Сбор данных:</strong> Радиомодуль считывает показания со счетчика тепла через
+                                    интерфейс M-Bus или импульсный выход</li>
+                                <li><strong>Передача данных:</strong> Информация передается по сети NB-IoT на сервер
+                                    системы учета</li>
+                                <li><strong>Обработка:</strong> Данные автоматически обрабатываются и становятся доступны
+                                    в личном кабинете</li>
+                                <li><strong>Контроль:</strong> Управляющая компания и жильцы могут в режиме реального
+                                    времени отслеживать потребление</li>
+                            </ol>
+                        </section>
+
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Преимущества дистанционного съема</h2>
+
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <div class="feature-card p-4 h-100 border rounded">
+                                        <div class="feature-icon text-primary mb-3">
+                                            <i class="bi bi-clock-history" style="font-size: 2rem;"></i>
+                                        </div>
+                                        <h4 class="h5">Экономия времени</h4>
+                                        <p class="mb-0">Не нужно ждать контролера или самостоятельно снимать и передавать
+                                            показания. Все происходит автоматически.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="feature-card p-4 h-100 border rounded">
+                                        <div class="feature-icon text-success mb-3">
+                                            <i class="bi bi-check-circle" style="font-size: 2rem;"></i>
+                                        </div>
+                                        <h4 class="h5">Точность учета</h4>
+                                        <p class="mb-0">Исключается человеческий фактор — ошибки при считывании или
+                                            записи показаний невозможны.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="feature-card p-4 h-100 border rounded">
+                                        <div class="feature-icon text-info mb-3">
+                                            <i class="bi bi-graph-up" style="font-size: 2rem;"></i>
+                                        </div>
+                                        <h4 class="h5">Контроль потребления</h4>
+                                        <p class="mb-0">Возможность отслеживать потребление в режиме реального времени и
+                                            оптимизировать расходы.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="feature-card p-4 h-100 border rounded">
+                                        <div class="feature-icon text-warning mb-3">
+                                            <i class="bi bi-shield-check" style="font-size: 2rem;"></i>
+                                        </div>
+                                        <h4 class="h5">Надежность</h4>
+                                        <p class="mb-0">Автономная работа до 10 лет от батареи, защита IP67, работа при
+                                            температуре от -40°C до +70°C.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Радиомодуль Вега NB-11</h2>
+                            <p>
+                                <strong>Вега NB-11</strong> — это современный радиомодуль для дистанционного сбора данных
+                                с приборов учета, разработанный специально для систем умного учета ресурсов.
+                            </p>
+
+                            <h4 class="h5 mt-4 mb-3">Основные характеристики:</h4>
+                            <ul class="custom-list">
+                                <li>Работа в сетях NB-IoT и LTE-M (Cat-M1)</li>
+                                <li>Подключение до 4 приборов учета по интерфейсу M-Bus</li>
+                                <li>Поддержка протоколов M-Bus, Modbus RTU, импульсный вход</li>
+                                <li>Автономная работа от батареи 3.6В до 10 лет</li>
+                                <li>Диапазон рабочих температур: от -40°C до +70°C</li>
+                                <li>Степень защиты: IP67</li>
+                                <li>Удаленная настройка и обновление ПО</li>
+                                <li>Шифрование данных для безопасности</li>
+                                <li>Компактный корпус для скрытого монтажа</li>
+                            </ul>
+
+                            <div class="alert alert-success mt-4">
+                                <i class="bi bi-star me-2"></i>
+                                Устройство идеально подходит для модернизации существующих систем учета без замены
+                                счетчиков — достаточно установить радиомодуль на имеющийся прибор учета.
+                            </div>
+                        </section>
+
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Для кого подходит эта система?</h2>
+
+                            <h4 class="h5 mb-3">Управляющие компании</h4>
+                            <ul class="custom-list">
+                                <li>Автоматизация процесса сбора показаний</li>
+                                <li>Снижение затрат на контролеров</li>
+                                <li>Оперативное выявление утечек и неисправностей</li>
+                                <li>Прозрачная система учета</li>
+                            </ul>
+
+                            <h4 class="h5 mt-4 mb-3">Жильцы многоквартирных домов</h4>
+                            <ul class="custom-list">
+                                <li>Не нужно ждать контролера или самостоятельно передавать показания</li>
+                                <li>Контроль потребления через личный кабинет</li>
+                                <li>Точные начисления без ошибок</li>
+                                <li>Возможность оптимизировать расходы на отопление</li>
+                            </ul>
+
+                            <h4 class="h5 mt-4 mb-3">Владельцы частных домов</h4>
+                            <ul class="custom-list">
+                                <li>Удобный мониторинг потребления тепла</li>
+                                <li>Автоматическая передача данных теплоснабжающей организации</li>
+                                <li>Контроль эффективности системы отопления</li>
+                            </ul>
+                        </section>
+
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Этапы внедрения системы</h2>
+                            <div class="timeline">
+                                <div class="timeline-item mb-4">
+                                    <div class="timeline-marker bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center"
+                                        style="width: 40px; height: 40px;">
+                                        1
+                                    </div>
+                                    <div class="timeline-content ms-3">
+                                        <h5>Консультация и обследование</h5>
+                                        <p>Наши специалисты проводят обследование объекта, оценивают существующую систему
+                                            учета и подбирают оптимальное решение.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item mb-4">
+                                    <div class="timeline-marker bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center"
+                                        style="width: 40px; height: 40px;">
+                                        2
+                                    </div>
+                                    <div class="timeline-content ms-3">
+                                        <h5>Подбор оборудования</h5>
+                                        <p>Выбираем радиомодули с учетом типа счетчиков, условий эксплуатации и требований
+                                            к системе.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item mb-4">
+                                    <div class="timeline-marker bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center"
+                                        style="width: 40px; height: 40px;">
+                                        3
+                                    </div>
+                                    <div class="timeline-content ms-3">
+                                        <h5>Монтаж и настройка</h5>
+                                        <p>Установка радиомодулей на приборы учета, настройка связи и интеграция с системой
+                                            учета.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item mb-4">
+                                    <div class="timeline-marker bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center"
+                                        style="width: 40px; height: 40px;">
+                                        4
+                                    </div>
+                                    <div class="timeline-content ms-3">
+                                        <h5>Запуск и обучение</h5>
+                                        <p>Запуск системы в эксплуатацию, обучение персонала работе с личным кабинетом и
+                                            системой мониторинга.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-marker bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center"
+                                        style="width: 40px; height: 40px;">
+                                        <i class="bi bi-check"></i>
+                                    </div>
+                                    <div class="timeline-content ms-3">
+                                        <h5>Техническая поддержка</h5>
+                                        <p>Постоянная техническая поддержка, мониторинг работы системы и оперативное
+                                            решение возникающих вопросов.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Стоимость внедрения</h2>
+                            <p>
+                                Стоимость внедрения системы дистанционного съема зависит от количества точек учета,
+                                типа существующих счетчиков и особенностей объекта.
+                            </p>
+
+                            <div class="card border-primary mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Базовая стоимость</h5>
+                                    <ul class="mb-0">
+                                        <li>Радиомодуль Вега NB-11: <strong>450 BYN</strong></li>
+                                        <li>Монтаж и настройка: <strong>от 100 BYN</strong></li>
+                                        <li>Подключение к системе учета: <strong>200 BYN</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <p class="text-muted">
+                                <i class="bi bi-info-circle me-1"></i>
+                                Для получения точного расчета стоимости свяжитесь с нашими специалистами. Мы предоставим
+                                детальное коммерческое предложение с учетом всех особенностей вашего объекта.
+                            </p>
+                        </section>
+
+                        <!-- Call to Action -->
+                        <section class="cta-section bg-light p-5 rounded text-center">
+                            <h3 class="mb-3">Готовы перейти на дистанционный съем показаний?</h3>
+                            <p class="lead mb-4">
+                                Свяжитесь с нами для получения консультации и расчета стоимости внедрения системы на
+                                вашем объекте
+                            </p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a href="tel:+375292524988" class="btn btn-primary btn-lg">
+                                    <i class="bi bi-telephone me-2"></i>
+                                    +375 29 252-49-88
+                                </a>
+                                <a href="https://t.me/meter_by" class="btn btn-outline-primary btn-lg" target="_blank"
+                                    rel="noopener">
+                                    <i class="bi bi-telegram me-2"></i>
+                                    Написать в Telegram
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article Footer -->
+            <footer class="article-footer mt-5 pt-4 border-top">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="../index.html" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i>
+                            Вернуться к новостям
+                        </a>
+                    </div>
+                    <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                        <div class="share-buttons">
+                            <span class="me-2">Поделиться:</span>
+                            <a href="#" class="btn btn-sm btn-outline-primary me-2">
+                                <i class="bi bi-telegram"></i>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-share"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Meter.by</h5>
+                    <p>Современные решения для учета ресурсов в Республике Беларусь</p>
+                    <div class="mt-3">
+                        <small class="text-light opacity-75">
+                            <strong>ООО "Хессер-Групп"</strong><br>
+                            УНП: 193065571<br>
+                            220017, Беларусь, г. Минск,<br>
+                            ул. Кальварийская, 25, 420
+                        </small>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>
+                        <i class="bi bi-telephone me-2"></i><a href="tel:+375292524988"
+                            class="text-light text-decoration-none">+375 29 252-49-88</a><br>
+                        <i class="bi bi-envelope me-2"></i><a href="mailto:Gruzd.e.v@mail.ru"
+                            class="text-light text-decoration-none">Gruzd.e.v@mail.ru</a>
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/meter_by" class="text-light me-3" target="_blank" rel="noopener"><i
+                                class="bi bi-telegram"></i></a>
+                        <a href="viber://chat?number=+375292524988" class="text-light" target="_blank" rel="noopener"><i
+                                class="bi bi-chat-dots"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <small>&copy; 2025 Meter.by. Все права защищены.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

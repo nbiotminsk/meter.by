@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "id": "remote-heat-meter-reading-system",
+      "title": "Дистанционный съем показаний счетчиков тепла: современное решение для учета",
+      "slug": "2025-11-08-remote-heat-meter-reading-system",
+      "date": "2025-11-08",
+      "excerpt": "Автоматизированная система дистанционного съема показаний теплосчетчиков. Преимущества технологии NB-IoT для передачи данных, экономия времени и исключение человеческого фактора.",
+      "image": "images/placeholders/remote-heat-reading.webp",
+      "tags": ["дистанционный съем", "счетчики тепла", "NB-IoT", "автоматизация", "Вега NB-11"]
+    },
+    {
       "id": "new-verification-requirements-2024",
       "title": "Новые требования к поверке счетчиков в 2024 году",
       "slug": "2024-01-15-new-verification-requirements-2024",
