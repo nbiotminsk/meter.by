@@ -9,3 +9,6 @@ Sitemap: https://meter.by/sitemap.xml
 # Crawl-delay для ботов (опционально)
 Crawl-delay: 1
 
+# Yandex-specific directives
+Host: meter.by
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid / 

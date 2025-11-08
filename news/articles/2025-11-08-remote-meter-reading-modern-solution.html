@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дистанционный съем показаний счетчиков: современное решение для вашего дома в Беларуси - Meter.by</title>
+    <meta name="description"
+        content="Узнайте о преимуществах дистанционного съема показаний счетчиков воды и тепла в Беларуси. Автоматизированная система учета энергоресурсов - экономия времени, точность и удобство.">
+    <meta name="keywords"
+        content="дистанционный съем, счетчики воды, счетчики тепла, автоматизация учета, Беларусь, импульсные счетчики, теплосчетчики, M-Bus, LoRaWAN, NB-IoT">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="../../images/favicon-32x32.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="../../images/favicon-16x16.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.svg">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/dark-theme.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="bi bi-broadcast-pin me-2"></i>
+                Meter.by
+            </a>
+
+            <div class="d-flex align-items-center order-lg-3">
+                <button class="theme-switcher me-2" x-data="themeSwitch" @click="toggle()" x-init="init()">
+                    <i :class="isDark ? 'bi bi-sun' : 'bi bi-moon'"></i>
+                </button>
+
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">
+                            <i class="bi bi-house-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../documents.html">Документы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../prices.html">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../videos.html">Видео</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <main class="py-5 mt-5">
+        <div class="container">
+            <article class="row">
+                <div class="col-lg-10 mx-auto">
+                    <!-- Breadcrumb -->
+                    <nav aria-label="breadcrumb" class="mb-4">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="../../index.html">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="../index.html">Новости</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Дистанционный съем показаний счетчиков</li>
+                        </ol>
+                    </nav>
+
+                    <!-- Article Header -->
+                    <header class="mb-4">
+                        <h1 class="display-5 fw-bold mb-3">Дистанционный съем показаний счетчиков: современное решение для вашего дома в Беларуси</h1>
+                        <div class="text-muted mb-3">
+                            <i class="bi bi-calendar3 me-2"></i>
+                            <time datetime="2025-11-08">8 ноября 2025</time>
+                        </div>
+                    </header>
+
+                    <!-- Article Body -->
+                    <div class="article-content">
+                        <p class="lead">В современном мире технологии проникают во все сферы нашей жизни, делая ее комфортнее и эффективнее. Не является исключением и сфера жилищно-коммунального хозяйства. В Беларуси активно внедряются инновационные решения для учета энергоресурсов, среди которых особое место занимает <strong>дистанционный съем показаний счетчиков воды и тепловой энергии</strong>.</p>
+
+                        <h2 class="h3 mt-5 mb-3">Что такое дистанционный съем показаний?</h2>
+                        <p>Дистанционный съем показаний – это автоматизированная система, которая позволяет считывать данные со счетчиков воды и тепла без участия человека. Вместо того чтобы вручную записывать цифры с приборов и передавать их в управляющую компанию, информация собирается и отправляется автоматически, например, через радиосигнал или по проводным сетям.</p>
+
+                        <h2 class="h3 mt-5 mb-3">Преимущества дистанционного съема для жителей Беларуси</h2>
+                        
+                        <div class="row g-4 my-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-body">
+                                        <h3 class="h5 card-title">
+                                            <i class="bi bi-clock-history text-primary me-2"></i>
+                                            Экономия времени и сил
+                                        </h3>
+                                        <p class="card-text">Забудьте о ежемесячной передаче показаний. Система сделает это за вас. Вам больше не нужно подстраиваться под графики визитов контролеров или запоминать сроки подачи данных.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-body">
+                                        <h3 class="h5 card-title">
+                                            <i class="bi bi-check-circle text-primary me-2"></i>
+                                            Точность учета
+                                        </h3>
+                                        <p class="card-text">Автоматизированный сбор данных исключает ошибки, связанные с человеческим фактором. Вы всегда будете уверены в корректности начислений за потребленные ресурсы.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-body">
+                                        <h3 class="h5 card-title">
+                                            <i class="bi bi-phone text-primary me-2"></i>
+                                            Удобство и комфорт
+                                        </h3>
+                                        <p class="card-text">Система позволяет получать актуальные данные о потреблении в любое время, без необходимости доступа к счетчикам. Это особенно актуально для счетчиков, расположенных в труднодоступных местах.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-body">
+                                        <h3 class="h5 card-title">
+                                            <i class="bi bi-exclamation-triangle text-primary me-2"></i>
+                                            Своевременное выявление утечек
+                                        </h3>
+                                        <p class="card-text">Резкое изменение в потреблении, зафиксированное системой, может свидетельствовать о возможной утечке воды или некорректной работе системы отопления. Это позволяет оперативно устранить проблему.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-body">
+                                        <h3 class="h5 card-title">
+                                            <i class="bi bi-graph-up text-primary me-2"></i>
+                                            Прозрачность расчетов
+                                        </h3>
+                                        <p class="card-text">Доступ к детализированной информации о потреблении позволяет лучше контролировать свои расходы и планировать бюджет.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-body">
+                                        <h3 class="h5 card-title">
+                                            <i class="bi bi-award text-primary me-2"></i>
+                                            Современные стандарты
+                                        </h3>
+                                        <p class="card-text">Установка счетчиков с дистанционным съемом – это шаг к современному и энергоэффективному жилью, что соответствует европейским и мировым тенденциям.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="h3 mt-5 mb-3">Оснащение счетчиков воды дистанционным съемом</h2>
+                        <p>Для оснащения счетчиков воды функцией дистанционного съема используются специальные импульсные счетчики или обычные счетчики, на которые устанавливаются дополнительные накладки (модули), генерирующие импульсы. Эти импульсы затем передаются на концентратор данных, который в свою очередь отправляет информацию на сервер управляющей компании.</p>
+
+                        <h3 class="h5 mt-4 mb-3">Процесс установки:</h3>
+                        <ul class="list-group list-group-flush mb-4">
+                            <li class="list-group-item">
+                                <strong>Оценка существующей системы:</strong> Специалисты оценивают тип установленных счетчиков воды.
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Выбор оборудования:</strong> Подбирается наиболее подходящий способ подключения: с заменой счетчиков на импульсные или установкой специальных модулей.
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Монтаж и настройка:</strong> Проводится монтаж нового оборудования или установка модулей, а также настройка системы передачи данных.
+                            </li>
+                        </ul>
+
+                        <h2 class="h3 mt-5 mb-3">Подключение счетчиков тепловой энергии к дистанционному съему показаний</h2>
+                        <p>Счетчики тепловой энергии (теплосчетчики) также могут быть легко интегрированы в систему дистанционного съема. Многие современные теплосчетчики уже имеют встроенные модули для удаленной передачи данных. Если ваш теплосчетчик не оснащен такой функцией, существуют решения для его модернизации.</p>
+
+                        <h3 class="h5 mt-4 mb-3">Особенности подключения теплосчетчиков:</h3>
+                        <ul class="list-group list-group-flush mb-4">
+                            <li class="list-group-item">
+                                <strong>Разнообразие технологий:</strong> Используются различные протоколы связи – M-Bus, LoRaWAN, NB-IoT, GSM/GPRS. Выбор зависит от инфраструктуры здания и потребностей управляющей компании.
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Интеграция с общей системой:</strong> Данные с теплосчетчиков, как и со счетчиков воды, стекаются в единую систему для удобства анализа и формирования квитанций.
+                            </li>
+                        </ul>
+
+                        <h2 class="h3 mt-5 mb-3">Где заказать установку и подключение в Беларуси?</h2>
+                        <p>В Беларуси услуги по оснащению и подключению счетчиков к системе дистанционного съема предлагают специализированные компании. При выборе подрядчика важно обращать внимание на:</p>
+
+                        <ul class="mb-4">
+                            <li>Наличие всех необходимых лицензий и сертификатов.</li>
+                            <li>Опыт работы и репутацию на рынке.</li>
+                            <li>Используемое оборудование и технологии.</li>
+                            <li>Гарантийное и сервисное обслуживание.</li>
+                        </ul>
+
+                        <div class="alert alert-primary mt-5" role="alert">
+                            <h4 class="alert-heading">
+                                <i class="bi bi-lightbulb me-2"></i>
+                                Не откладывайте модернизацию!
+                            </h4>
+                            <p class="mb-0">Не откладывайте модернизацию вашей системы учета энергоресурсов. Переходите на дистанционный съем показаний и ощутите все преимущества современных технологий уже сегодня!</p>
+                        </div>
+
+                        <!-- CTA Section -->
+                        <div class="text-center mt-5 p-4 bg-light rounded">
+                            <h3 class="h4 mb-3">Заинтересованы в установке системы дистанционного съема?</h3>
+                            <p class="mb-4">Свяжитесь с нами для консультации и расчета стоимости</p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a href="tel:+375292524988" class="btn btn-primary">
+                                    <i class="bi bi-telephone me-2"></i>
+                                    +375 29 252-49-88
+                                </a>
+                                <a href="https://t.me/meter_by" class="btn btn-outline-primary" target="_blank">
+                                    <i class="bi bi-telegram me-2"></i>
+                                    Telegram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Back to News -->
+                    <div class="mt-5">
+                        <a href="../index.html" class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left me-2"></i>
+                            Вернуться к новостям
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Meter.by</h5>
+                    <p>Современные решения для учета ресурсов в Республике Беларусь</p>
+                    <div class="mt-3">
+                        <small class="text-light opacity-75">
+                            <strong>ООО "Хессер-Групп"</strong><br>
+                            УНП: 193065571<br>
+                            220017, Беларусь, г. Минск,<br>
+                            ул. Кальварийская, 25, 420
+                        </small>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>
+                        <i class="bi bi-telephone me-2"></i><a href="tel:+375292524988"
+                            class="text-light text-decoration-none">+375 29 252-49-88</a><br>
+                        <i class="bi bi-envelope me-2"></i><a href="mailto:Gruzd.e.v@mail.ru"
+                            class="text-light text-decoration-none">Gruzd.e.v@mail.ru</a>
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/meter_by" class="text-light me-3" target="_blank" rel="noopener">
+                            <i class="bi bi-telegram"></i>
+                        </a>
+                        <a href="viber://chat?number=+375292524988" class="text-light" target="_blank" rel="noopener">
+                            <i class="bi bi-chat-dots"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <small>&copy; 2025 Meter.by. Все права защищены.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

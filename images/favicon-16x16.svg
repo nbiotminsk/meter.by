@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="waterGradient16" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4FC3F7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0288D1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <path d="M16 2C16 2 8 12 8 18C8 22.4183 11.5817 26 16 26C20.4183 26 24 22.4183 24 18C24 12 16 2 16 2Z" 
+        fill="url(#waterGradient16)" 
+        stroke="#01579B" 
+        stroke-width="0.5"/>
+  <ellipse cx="13" cy="16" rx="2" ry="3" fill="rgba(255,255,255,0.3)"/>
+</svg>
