@@ -309,6 +309,25 @@
 
                     <!-- Service Card 5 -->
                     <div class="col-md-6 col-lg-4">
+                        <div class="card service-card glass-effect h-100" data-tilt data-service-id="equipment-vega">
+                            <div class="card-header text-center">
+                                <h5 class="card-title">Вега NB-11</h5>
+                            </div>
+                            <div class="card-body">
+                                <img src="images/placeholders/min/vega-nb11.webp" alt="Вега NB-11"
+                                    class="card-img-top mb-3" style="height: 150px; object-fit: cover;">
+                                <p class="card-text">Модуль сбора данных с приборов
+                                    учета воды и передача на Минскводоканал</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-primary">Продажа оборудования</span>
+                                    <small class="text-muted">Подробнее →</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 6 -->
+                    <div class="col-md-6 col-lg-4">
                         <div class="card service-card glass-effect h-100" data-tilt data-service-id="pnr-balancing">
                             <div class="card-header text-center">
                                 <h5 class="card-title">Балансировка системы отопления</h5>
@@ -326,7 +345,7 @@
                         </div>
                     </div>
 
-                    <!-- Service Card 6 -->
+                    <!-- Service Card 7 -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card service-card glass-effect h-100" data-tilt data-service-id="pnr-startup">
                             <div class="card-header text-center">
@@ -344,7 +363,7 @@
                         </div>
                     </div>
 
-                    <!-- Service Card 7 -->
+                    <!-- Service Card 8 -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card service-card glass-effect h-100" data-tilt data-service-id="remote-heat">
                             <div class="card-header text-center">
@@ -362,7 +381,7 @@
                         </div>
                     </div>
 
-                    <!-- Service Card 8 -->
+                    <!-- Service Card 9 -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card service-card glass-effect h-100" data-tilt data-service-id="remote-water">
                             <div class="card-header text-center">
@@ -375,24 +394,6 @@
                                 <p class="card-text">Подключение водосчетчиков к системе дистанционного съема</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span class="badge bg-primary">Дистанционный съем</span>
-                                    <small class="text-muted">Подробнее →</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 9 -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card service-card glass-effect h-100" data-tilt data-service-id="equipment-vega">
-                            <div class="card-header text-center">
-                                <h5 class="card-title">Вега NB-11</h5>
-                            </div>
-                            <div class="card-body">
-                                <img src="images/placeholders/min/vega-nb11.webp" alt="Вега NB-11"
-                                    class="card-img-top mb-3" style="height: 150px; object-fit: cover;">
-                                <p class="card-text">Продажа современных приборов учета Вега NB-11</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="badge bg-primary">Продажа оборудования</span>
                                     <small class="text-muted">Подробнее →</small>
                                 </div>
                             </div>
@@ -992,9 +993,28 @@
                         icon: 'bi-cpu',
                         image: 'images/placeholders/min/vega-nb11.webp',
                         category: 'Продажа оборудования',
-                        detailedInfo: 'Высокоточные счетчики Вега NB-11 с возможностью дистанционного съема показаний. Надежность, долговечность, соответствие всем стандартам.',
+                        detailedInfo: 'Радиомодуль NB-IoT для дистанционного сбора данных с приборов учета. Работает в сетях NB-IoT/LTE-M, обеспечивает надежную передачу показаний счетчиков воды, тепла, газа и электроэнергии. Поддерживает протоколы M-Bus, Modbus RTU, импульсный вход. Автономная работа от батареи до 10 лет. Диапазон рабочих температур от -40°C до +70°C. Степень защиты IP67. Идеальное решение для систем умного учета ресурсов.',
                         price: 450,
-                        unit: 'шт'
+                        unit: 'шт',
+                        specifications: {
+                            'Тип устройства': 'Радиомодуль NB-IoT/LTE-M',
+                            'Протоколы связи': 'M-Bus, Modbus RTU, импульсный вход',
+                            'Питание': 'Батарея 3.6В, до 10 лет автономной работы',
+                            'Температура': 'от -40°C до +70°C',
+                            'Защита': 'IP67',
+                            'Сеть': 'NB-IoT, LTE-M (Cat-M1)',
+                            'Интерфейсы': 'M-Bus (до 4 устройств), RS-485, импульсный вход'
+                        },
+                        features: [
+                            'Работа в сетях NB-IoT и LTE-M',
+                            'Подключение до 4 приборов учета по M-Bus',
+                            'Автономная работа до 10 лет',
+                            'Защита IP67 для установки в любых условиях',
+                            'Поддержка импульсных счетчиков',
+                            'Удаленная настройка и обновление ПО',
+                            'Шифрование данных',
+                            'Компактный корпус для скрытого монтажа'
+                        ]
                     }
                 };
 
@@ -1035,6 +1055,41 @@
                 }
 
                 function openServiceModal(service) {
+                    // Генерация HTML для технических характеристик
+                    let specificationsHtml = '';
+                    if (service.specifications) {
+                        specificationsHtml = `
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <div class="specifications-section bg-light p-4 rounded">
+                                        <h6 class="text-primary mb-3">
+                                            <i class="bi bi-gear me-1"></i>
+                                            Технические характеристики
+                                        </h6>
+                                        <div class="row">
+                                            ${Object.entries(service.specifications).map(([key, value]) => `
+                                                <div class="col-md-6 mb-2">
+                                                    <small class="text-muted d-block">${key}</small>
+                                                    <strong>${value}</strong>
+                                                </div>
+                                            `).join('')}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
+
+                    // Генерация HTML для особенностей
+                    let featuresListHtml = '';
+                    if (service.features && service.features.length > 0) {
+                        featuresListHtml = service.features.map(feature =>
+                            `<li><i class="bi bi-check text-success me-2"></i>${feature}</li>`
+                        ).join('');
+                    } else {
+                        featuresListHtml = getServiceFeatures(service.category);
+                    }
+
                     Swal.fire({
                         title: `<i class="${service.icon} me-2"></i>${service.title}`,
                         html: `
@@ -1056,7 +1111,7 @@
                                             <div class="service-description mb-4">
                                                 <h6 class="text-muted mb-2">
                                                     <i class="bi bi-info-circle me-1"></i>
-                                                    Описание услуги
+                                                    ${service.specifications ? 'Описание' : 'Описание услуги'}
                                                 </h6>
                                                 <p class="mb-0">${service.detailedInfo}</p>
                                             </div>
@@ -1064,10 +1119,10 @@
                                             <div class="service-features mb-4">
                                                 <h6 class="text-muted mb-2">
                                                     <i class="bi bi-check-circle me-1"></i>
-                                                    Что включено
+                                                    ${service.specifications ? 'Основные возможности' : 'Что включено'}
                                                 </h6>
                                                 <ul class="list-unstyled mb-0">
-                                                    ${getServiceFeatures(service.category)}
+                                                    ${featuresListHtml}
                                                 </ul>
                                             </div>
                                             
@@ -1075,7 +1130,7 @@
                                                 <div class="d-flex justify-content-between align-items-center">
                                                     <div>
                                                         <h6 class="mb-1">
-                                                            Стоимость услуги
+                                                            ${service.specifications ? 'Цена' : 'Стоимость услуги'}
                                                         </h6>
                                                         <h4 class="mb-0 fw-bold">${service.price} BYN</h4>
                                                     </div>
@@ -1087,6 +1142,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                
+                                ${specificationsHtml}
                                 
                                 <div class="row mt-4">
                                     <div class="col-12">
