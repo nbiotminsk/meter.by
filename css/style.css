@@ -381,7 +381,7 @@ body {
 
 /* Hero section light theme */
 .hero-section {
-  background: linear-gradient(135deg, var(--light-bg) 0%, var(--section-bg) 100%);
+  background: #eedacc;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -400,6 +400,11 @@ body {
   background: var(--section-bg) !important;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+}
+
+/* Packages section on prices page */
+#packages.bg-light {
+  background: #f6ede5 !important;
 }
 
 .blog-post {
@@ -431,7 +436,15 @@ body {
 
 /* Proposal section light theme */
 .proposal-section {
-  background: linear-gradient(135deg, var(--primary-color), var(--hover-accent));
+  background: #f0ded1;
+}
+
+.proposal-section h2 {
+  color: var(--text-color);
+}
+
+.proposal-section .lead {
+  color: var(--text-secondary);
 }
 
 .proposal-form {
