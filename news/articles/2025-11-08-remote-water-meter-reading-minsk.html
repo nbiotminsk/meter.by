@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дистанционный съем показаний счетчиков воды - Требования Минскводоканала - Meter.by</title>
+    <meta name="description"
+        content="Требования УП Минскводоканал к системам дистанционного съема показаний водосчетчиков. Нормативная база, технические характеристики и решение Вега NB-11.">
+    <meta name="keywords"
+        content="дистанционный съем, счетчики воды, Минскводоканал, NB-IoT, Вега NB-11, водосчетчики, телеметрия">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/dark-theme.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+    <link href="../css/article.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="bi bi-broadcast-pin me-2"></i>
+                Meter.by
+            </a>
+
+            <div class="d-flex align-items-center order-lg-3">
+                <button class="theme-switcher me-2" x-data="themeSwitch" @click="toggle()" x-init="init()">
+                    <i :class="isDark ? 'bi bi-sun' : 'bi bi-moon'"></i>
+                </button>
+
+                <div class="d-none d-md-flex me-2">
+                    <a href="https://t.me/meter_by" class="btn btn-outline-primary btn-sm me-2 telegram-btn-square"
+                        target="_blank" rel="noopener">
+                        <i class="bi bi-telegram"></i>
+                    </a>
+                    <a href="viber://chat?number=+375292524988"
+                        class="btn btn-outline-secondary btn-sm viber-btn-square" target="_blank" rel="noopener">
+                        <i class="bi bi-chat-dots"></i>
+                    </a>
+                </div>
+
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html#home">
+                            <i class="bi bi-house-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../documents.html">Документы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../prices.html">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../videos.html">Видео</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <main class="article-page">
+        <article class="container py-5 mt-5">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../../index.html">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html">Новости</a></li>
+                    <li class="breadcrumb-item active">Дистанционный съем показаний счетчиков воды</li>
+                </ol>
+            </nav>
+
+            <!-- Article Header -->
+            <header class="article-header mb-5">
+                <h1 class="display-4 fw-bold mb-3">Дистанционный съем показаний счетчиков воды: требования
+                    Минскводоканала</h1>
+
+                <div class="article-meta d-flex flex-wrap gap-3 mb-4">
+                    <span class="text-muted">
+                        <i class="bi bi-calendar3 me-1"></i>
+                        8 ноября 2025
+                    </span>
+                    <span class="text-muted">
+                        <i class="bi bi-clock me-1"></i>
+                        6 мин чтения
+                    </span>
+                </div>
+
+                <div class="article-tags mb-4">
+                    <span class="badge bg-primary me-2">дистанционный съем</span>
+                    <span class="badge bg-primary me-2">счетчики воды</span>
+                    <span class="badge bg-primary me-2">Минскводоканал</span>
+                    <span class="badge bg-primary me-2">NB-IoT</span>
+                    <span class="badge bg-primary">Вега NB-11</span>
+                </div>
+
+                <img src="../../images/placeholders/min/remote-water-reading.webp"
+                    alt="Дистанционный съем показаний счетчиков воды" class="img-fluid rounded shadow-sm mb-4"
+                    style="width: 100%; max-height: 500px; object-fit: cover;">
+            </header>
+
+            <!-- Article Body -->
+            <div class="article-body">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Дистанционный съем показаний счетчиков воды</h2>
+                            <p class="lead">
+                                В настоящее время УП "Минскводоканал" принимает в эксплуатацию приборы учета расхода
+                                воды, только оборудованные системой дистанционного съема.
+                            </p>
+                            <p>
+                                Это требование направлено на автоматизацию процесса сбора показаний, повышение точности
+                                учета и удобство для потребителей. Система дистанционного съема исключает необходимость
+                                ручной передачи показаний и визитов контролеров.
+                            </p>
+                        </section>
+
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Нормативные требования</h2>
+                            <div class="alert alert-primary">
+                                <i class="bi bi-file-text me-2"></i>
+                                <strong>В соответствии с пунктом 44 Правил пользования централизованными системами
+                                    водоснабжения, водоотведения (канализации) в населенных пунктах</strong> (далее -
+                                Правила), утвержденных постановлением Совета Министров Республики Беларусь от 30.09.2016
+                                №788, вновь устанавливаемые приборы учета на объектах абонента (субабонента),
+                                потребителя, а также приборы учета после замены и ремонта оснащаются системой
+                                дистанционного съема показаний.
+                            </div>
+
+                            <div class="alert alert-warning mt-3">
+                                <i class="bi bi-exclamation-triangle me-2"></i>
+                                <strong>Важно!</strong> Все новые счетчики воды и счетчики после замены или ремонта
+                                должны быть оборудованы системой дистанционного съема для приемки Минскводоканалом.
+                            </div>
+                        </section>
+
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Возможности системы диспетчеризации</h2>
+                            <p>
+                                Система диспетчеризации обеспечивает:
+                            </p>
+
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <div class="feature-card p-4 h-100 border rounded">
+                                        <div class="feature-icon text-primary mb-3">
+                                            <i class="bi bi-building" style="font-size: 2rem;"></i>
+                                        </div>
+                                        <h4 class="h5">Групповые приборы учета</h4>
+                                        <p class="mb-0">Дистанционный съем показаний с групповых приборов учета воды
+                                            (общедомовых счетчиков)</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="feature-card p-4 h-100 border rounded">
+                                        <div class="feature-icon text-success mb-3">
+                                            <i class="bi bi-house-door" style="font-size: 2rem;"></i>
+                                        </div>
+                                        <h4 class="h5">Индивидуальные приборы учета</h4>
+                                        <p class="mb-0">Дистанционный съем показаний с индивидуальных приборов учета
+                                            воды (квартирных счетчиков)</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="feature-card p-4 h-100 border rounded">
+                                        <div class="feature-icon text-info mb-3">
+                                            <i class="bi bi-diagram-3" style="font-size: 2rem;"></i>
+                                        </div>
+                                        <h4 class="h5">Сопряженные приборы учета</h4>
+                                        <p class="mb-0">Дистанционный съем показаний с сопряженных приборов учета воды
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="feature-card p-4 h-100 border rounded">
+                                        <div class="feature-icon text-warning mb-3">
+                                            <i class="bi bi-broadcast-pin" style="font-size: 2rem;"></i>
+                                        </div>
+                                        <h4 class="h5">Передача данных</h4>
+                                        <p class="mb-0">Передача показаний в УП "Минскводоканал" по каналам связи GSM
+                                            (3G, NB-IoT)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info">
+                                <i class="bi bi-database me-2"></i>
+                                <strong>Архив данных:</strong> Система обеспечивает возможность запроса и хранения
+                                информации за последние 5 лет.
+                            </div>
+                        </section>
+
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Технологии передачи данных</h2>
+
+                            <h4 class="h5 mb-3">GSM (3G)</h4>
+                            <p>
+                                Традиционная технология передачи данных через сотовую сеть третьего поколения. Обеспечивает
+                                стабильную связь в большинстве населенных пунктов.
+                            </p>
+
+                            <h4 class="h5 mt-4 mb-3">NB-IoT (Narrowband Internet of Things)</h4>
+                            <p>
+                                Современная энергоэффективная технология для интернета вещей. Основные преимущества:
+                            </p>
+                            <ul class="custom-list">
+                                <li><strong>Низкое энергопотребление</strong> — автономная работа от батареи до 10 лет
+                                </li>
+                                <li><strong>Глубокое проникновение сигнала</strong> — работает в подвалах и технических
+                                    помещениях</li>
+                                <li><strong>Надежность</strong> — стабильная передача данных даже при слабом сигнале</li>
+                                <li><strong>Экономичность</strong> — низкая стоимость передачи данных</li>
+                            </ul>
+
+                            <div class="alert alert-success mt-3">
+                                <i class="bi bi-star me-2"></i>
+                                <strong>NB-IoT</strong> — рекомендуемая технология для систем дистанционного съема
+                                показаний счетчиков воды в Минске.
+                            </div>
+                        </section>
+
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Решение: Радиомодуль Вега NB-11</h2>
+                            <p>
+                                <strong>Вега NB-11</strong> — это современный радиомодуль для дистанционного сбора данных
+                                со счетчиков холодной воды, полностью соответствующий требованиям УП "Минскводоканал".
+                            </p>
+
+                            <h4 class="h5 mt-4 mb-3">Технические характеристики:</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="custom-list">
+                                        <li>Работа в сетях NB-IoT и LTE-M (Cat-M1)</li>
+                                        <li>Подключение до 4 счетчиков холодной воды по M-Bus</li>
+                                        <li>Поддержка протоколов M-Bus, Modbus RTU</li>
+                                        <li>Импульсный вход для счетчиков без M-Bus</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="custom-list">
+                                        <li>Автономная работа от батареи 3.6В до 10 лет</li>
+                                        <li>Диапазон температур: от -40°C до +70°C</li>
+                                        <li>Степень защиты: IP67</li>
+                                        <li>Компактный корпус для скрытого монтажа</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h4 class="h5 mt-4 mb-3">Основные возможности:</h4>
+                            <ul class="custom-list">
+                                <li>Автоматическая передача показаний в УП "Минскводоканал"</li>
+                                <li>Удаленная настройка и обновление ПО</li>
+                                <li>Шифрование данных для безопасности</li>
+                                <li>Диагностика состояния счетчика</li>
+                                <li>Архив показаний за 5 лет</li>
+                                <li>Работа в подвалах и технических помещениях</li>
+                            </ul>
+
+                            <div class="card border-success mt-4">
+                                <div class="card-body">
+                                    <h5 class="card-title text-success">
+                                        <i class="bi bi-check-circle me-2"></i>
+                                        Соответствие требованиям
+                                    </h5>
+                                    <p class="mb-0">
+                                        Радиомодуль Вега NB-11 полностью соответствует требованиям УП "Минскводоканал" и
+                                        постановлению Совета Министров РБ №788. Устройство сертифицировано и допущено к
+                                        эксплуатации в системах водоснабжения Минска.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Для кого обязательна установка системы дистанционного съема?</h2>
+
+                            <h4 class="h5 mb-3">Новостройки</h4>
+                            <p>
+                                Все новые многоквартирные дома должны быть оборудованы системой дистанционного съема
+                                показаний счетчиков воды еще на этапе строительства.
+                            </p>
+
+                            <h4 class="h5 mt-4 mb-3">Замена счетчиков</h4>
+                            <p>
+                                При замене счетчиков воды (по истечении срока поверки или при выходе из строя) новый
+                                прибор учета должен быть оснащен системой дистанционного съема.
+                            </p>
+
+                            <h4 class="h5 mt-4 mb-3">Ремонт счетчиков</h4>
+                            <p>
+                                После ремонта прибора учета необходимо оснастить его системой дистанционного съема для
+                                приемки УП "Минскводоканал".
+                            </p>
+
+                            <h4 class="h5 mt-4 mb-3">Модернизация существующих систем</h4>
+                            <p>
+                                Владельцы квартир и домов могут добровольно установить систему дистанционного съема на
+                                существующие счетчики для удобства и автоматизации учета.
+                            </p>
+                        </section>
+
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Преимущества для потребителей</h2>
+
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-check-circle-fill text-success me-3 mt-1"
+                                            style="font-size: 1.5rem;"></i>
+                                        <div>
+                                            <h5 class="mb-1">Не нужно передавать показания вручную</h5>
+                                            <p class="mb-0 text-muted">Система автоматически передает данные в
+                                                Минскводоканал</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-check-circle-fill text-success me-3 mt-1"
+                                            style="font-size: 1.5rem;"></i>
+                                        <div>
+                                            <h5 class="mb-1">Точность начислений</h5>
+                                            <p class="mb-0 text-muted">Исключаются ошибки при ручном вводе показаний</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-check-circle-fill text-success me-3 mt-1"
+                                            style="font-size: 1.5rem;"></i>
+                                        <div>
+                                            <h5 class="mb-1">Контроль потребления</h5>
+                                            <p class="mb-0 text-muted">Возможность отслеживать расход воды и выявлять
+                                                утечки</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-check-circle-fill text-success me-3 mt-1"
+                                            style="font-size: 1.5rem;"></i>
+                                        <div>
+                                            <h5 class="mb-1">Удобство</h5>
+                                            <p class="mb-0 text-muted">Не нужно ждать контролера или самостоятельно
+                                                снимать показания</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-check-circle-fill text-success me-3 mt-1"
+                                            style="font-size: 1.5rem;"></i>
+                                        <div>
+                                            <h5 class="mb-1">Архив данных</h5>
+                                            <p class="mb-0 text-muted">Доступ к истории потребления за последние 5 лет
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mb-5">
+                            <h2 class="h3 mb-3">Стоимость и монтаж</h2>
+
+                            <div class="card border-primary mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Стоимость решения</h5>
+                                    <ul class="mb-0">
+                                        <li>Радиомодуль Вега NB-11: <strong>450 BYN</strong></li>
+                                        <li>Монтаж и настройка: <strong>от 100 BYN</strong></li>
+                                        <li>Подключение к системе Минскводоканала: <strong>200 BYN</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h4 class="h5 mb-3">Этапы установки:</h4>
+                            <ol class="custom-list">
+                                <li>Консультация и подбор оборудования</li>
+                                <li>Монтаж радиомодуля на счетчик воды</li>
+                                <li>Настройка и регистрация в системе Минскводоканала</li>
+                                <li>Тестирование передачи данных</li>
+                                <li>Сдача в эксплуатацию</li>
+                            </ol>
+
+                            <p class="text-muted mt-3">
+                                <i class="bi bi-info-circle me-1"></i>
+                                Монтаж занимает 1-2 часа. После установки система начинает автоматически передавать
+                                показания.
+                            </p>
+                        </section>
+
+                        <!-- Call to Action -->
+                        <section class="cta-section bg-light p-5 rounded text-center">
+                            <h3 class="mb-3">Нужна установка системы дистанционного съема?</h3>
+                            <p class="lead mb-4">
+                                Свяжитесь с нами для консультации и установки радиомодуля Вега NB-11 с подключением к
+                                системе Минскводоканала
+                            </p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a href="tel:+375292524988" class="btn btn-primary btn-lg">
+                                    <i class="bi bi-telephone me-2"></i>
+                                    +375 29 252-49-88
+                                </a>
+                                <a href="https://t.me/meter_by" class="btn btn-outline-primary btn-lg" target="_blank"
+                                    rel="noopener">
+                                    <i class="bi bi-telegram me-2"></i>
+                                    Написать в Telegram
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article Footer -->
+            <footer class="article-footer mt-5 pt-4 border-top">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="../index.html" class="btn btn-outline-primary">
+                            <i class="bi bi-arrow-left me-2"></i>
+                            Вернуться к новостям
+                        </a>
+                    </div>
+                    <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                        <div class="share-buttons">
+                            <span class="me-2">Поделиться:</span>
+                            <a href="#" class="btn btn-sm btn-outline-primary me-2">
+                                <i class="bi bi-telegram"></i>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-share"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Meter.by</h5>
+                    <p>Современные решения для учета ресурсов в Республике Беларусь</p>
+                    <div class="mt-3">
+                        <small class="text-light opacity-75">
+                            <strong>ООО "Хессер-Групп"</strong><br>
+                            УНП: 193065571<br>
+                            220017, Беларусь, г. Минск,<br>
+                            ул. Кальварийская, 25, 420
+                        </small>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>
+                        <i class="bi bi-telephone me-2"></i><a href="tel:+375292524988"
+                            class="text-light text-decoration-none">+375 29 252-49-88</a><br>
+                        <i class="bi bi-envelope me-2"></i><a href="mailto:Gruzd.e.v@mail.ru"
+                            class="text-light text-decoration-none">Gruzd.e.v@mail.ru</a>
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/meter_by" class="text-light me-3" target="_blank" rel="noopener"><i
+                                class="bi bi-telegram"></i></a>
+                        <a href="viber://chat?number=+375292524988" class="text-light" target="_blank" rel="noopener"><i
+                                class="bi bi-chat-dots"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <small>&copy; 2025 Meter.by. Все права защищены.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

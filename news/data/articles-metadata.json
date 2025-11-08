@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "id": "remote-water-meter-reading-minsk",
+      "title": "Дистанционный съем показаний счетчиков воды: требования Минскводоканала",
+      "slug": "2025-11-08-remote-water-meter-reading-minsk",
+      "date": "2025-11-08",
+      "excerpt": "Требования УП Минскводоканал к системам дистанционного съема показаний водосчетчиков. Нормативная база, технические характеристики и особенности внедрения.",
+      "image": "images/placeholders/min/remote-water-reading.webp",
+      "tags": ["дистанционный съем", "счетчики воды", "Минскводоканал", "NB-IoT", "Вега NB-11"]
+    },
+    {
       "id": "remote-heat-meter-reading-system",
       "title": "Дистанционный съем показаний счетчиков тепла: требования и особенности",
       "slug": "2025-11-08-remote-heat-meter-reading-system",
