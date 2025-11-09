@@ -1,0 +1,14 @@
+# Pinegrow backup and info files
+_pgbackup/
+_pginfo/
+pinegrow.json
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
