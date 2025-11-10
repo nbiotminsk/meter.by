@@ -3,6 +3,11 @@ _pgbackup/
 _pginfo/
 pinegrow.json
 
+# IDE and editor files
+.kiro/
+.vscode/
+.idea/
+
 # Node modules
 node_modules/
 
