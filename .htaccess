@@ -1,4 +1,10 @@
-# Redirect HTTP to HTTPS
+# Enable Rewrite Engine
 RewriteEngine On
+
+# Redirect www to non-www (canonical URL)
+RewriteCond %{HTTP_HOST} ^www\.meter\.by$ [NC]
+RewriteRule ^(.*)$ https://meter.by/$1 [L,R=301]
+
+# Redirect HTTP to HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
