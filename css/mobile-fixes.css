@@ -293,17 +293,99 @@ main, section, .container {
         max-width: 100%;
         overflow: hidden;
     }
+    
+    /* Pricing category cards */
+    .pricing-category-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .pricing-category-card .card-header {
+        padding: 1rem;
+    }
+    
+    .pricing-category-card .card-header h3 {
+        font-size: 1.25rem;
+    }
+    
+    .pricing-category-card .card-header p {
+        font-size: 0.85rem;
+    }
 
-    /* Tables */
+    /* Tables - Mobile Optimization */
     .table-responsive {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         max-width: 100%;
         touch-action: pan-x pan-y;
+        margin: 0 -15px;
+        padding: 0 15px;
     }
 
-    table {
-        min-width: 600px;
+    /* Make tables stack vertically on mobile */
+    #pricing-tables table {
+        min-width: 100%;
+        display: block;
+    }
+    
+    #pricing-tables thead {
+        display: none;
+    }
+    
+    #pricing-tables tbody,
+    #pricing-tables tr,
+    #pricing-tables td {
+        display: block;
+        width: 100%;
+    }
+    
+    #pricing-tables tr {
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--border-color, #dee2e6);
+        border-radius: 8px;
+        padding: 1rem;
+        background: var(--card-bg, #fff);
+    }
+    
+    #pricing-tables td {
+        text-align: left !important;
+        padding: 0.5rem 0 !important;
+        border: none !important;
+    }
+    
+    #pricing-tables td:first-child {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.75rem !important;
+        border-bottom: 1px solid var(--border-color, #dee2e6) !important;
+    }
+    
+    #pricing-tables td:nth-child(2) {
+        font-size: 0.9rem;
+        color: var(--text-muted, #6c757d);
+        margin-bottom: 0.75rem;
+    }
+    
+    #pricing-tables td:nth-child(3) {
+        font-size: 1.5rem !important;
+        font-weight: bold;
+        margin: 0.75rem 0;
+    }
+    
+    #pricing-tables td:nth-child(4) {
+        display: inline-block;
+        width: auto;
+        font-size: 0.9rem;
+        color: var(--text-muted, #6c757d);
+        margin-left: 0.5rem;
+    }
+    
+    #pricing-tables td:nth-child(5) {
+        margin-top: 1rem;
+    }
+    
+    #pricing-tables td:nth-child(5) .btn {
+        width: 100%;
+        padding: 0.75rem;
     }
     
     /* Improve card scrolling */
@@ -331,11 +413,7 @@ main, section, .container {
         overscroll-behavior: contain;
     }
 
-    /* Pricing category cards */
-    .pricing-category-card {
-        max-width: 100%;
-        overflow: hidden;
-    }
+
 
     /* Calculator section */
     .calculator-summary {
@@ -484,4 +562,16 @@ main, section, .container {
 
 [data-theme="dark"] .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Dark theme for mobile tables */
+@media (max-width: 767.98px) {
+    [data-theme="dark"] #pricing-tables tr {
+        background: var(--card-bg);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    [data-theme="dark"] #pricing-tables td:first-child {
+        border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+    }
 }
