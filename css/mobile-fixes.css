@@ -8,6 +8,45 @@ html, body {
 
 body {
     position: relative;
+    /* Enable smooth touch scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* Improve touch responsiveness */
+    touch-action: pan-y;
+}
+
+/* Improve scrolling performance on all elements */
+* {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure smooth scrolling on mobile */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Prevent scroll jank on mobile */
+@media (max-width: 767.98px) {
+    body {
+        overscroll-behavior-y: contain;
+    }
+    
+    /* Ensure fixed elements don't interfere with scrolling */
+    .navbar.fixed-top {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        will-change: transform;
+    }
+    
+    /* Optimize messenger buttons for touch */
+    .messenger-buttons {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        pointer-events: auto;
+    }
+    
+    .messenger-btn {
+        pointer-events: auto;
+    }
 }
 
 /* Fix container overflow - only on mobile */
@@ -32,6 +71,16 @@ button,
 .btn {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+}
+
+/* Improve scrolling on mobile - prevent scroll blocking */
+a, button, input, select, textarea {
+    touch-action: manipulation;
+}
+
+/* Allow vertical scrolling on main content */
+main, section, .container {
+    touch-action: pan-y;
 }
 
 /* Navbar specific button fixes */
@@ -250,10 +299,36 @@ button,
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         max-width: 100%;
+        touch-action: pan-x pan-y;
     }
 
     table {
         min-width: 600px;
+    }
+    
+    /* Improve card scrolling */
+    .card, .package-card, .pricing-category-card {
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
+    }
+    
+    /* Optimize all sections for smooth scrolling */
+    section {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    /* Prevent glass effects from blocking scroll */
+    .glass-effect {
+        pointer-events: auto;
+    }
+    
+    /* Ensure content areas are scrollable */
+    .pricing-section,
+    .packages-section,
+    .calculator-section {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
     }
 
     /* Pricing category cards */
