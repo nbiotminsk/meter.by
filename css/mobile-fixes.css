@@ -296,19 +296,33 @@ main, section, .container {
     
     /* Pricing category cards */
     .pricing-category-card {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 12px;
+        overflow: hidden;
     }
     
     .pricing-category-card .card-header {
-        padding: 1rem;
+        padding: 1.25rem 1rem;
     }
     
     .pricing-category-card .card-header h3 {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
+    }
+    
+    .pricing-category-card .card-header h3 i {
+        font-size: 1rem;
     }
     
     .pricing-category-card .card-header p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin-bottom: 0;
+    }
+    
+    .pricing-category-card .card-body {
+        padding: 0 !important;
     }
 
     /* Tables - Mobile Optimization */
@@ -317,14 +331,15 @@ main, section, .container {
         -webkit-overflow-scrolling: touch;
         max-width: 100%;
         touch-action: pan-x pan-y;
-        margin: 0 -15px;
-        padding: 0 15px;
+        margin: 0;
+        padding: 0;
     }
 
     /* Make tables stack vertically on mobile */
     #pricing-tables table {
         min-width: 100%;
         display: block;
+        border: none;
     }
     
     #pricing-tables thead {
@@ -338,54 +353,83 @@ main, section, .container {
         width: 100%;
     }
     
+    #pricing-tables tbody {
+        display: block;
+    }
+    
     #pricing-tables tr {
         margin-bottom: 1.5rem;
         border: 1px solid var(--border-color, #dee2e6);
-        border-radius: 8px;
-        padding: 1rem;
+        border-radius: 12px;
+        padding: 1.25rem;
         background: var(--card-bg, #fff);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
     
     #pricing-tables td {
         text-align: left !important;
         padding: 0.5rem 0 !important;
         border: none !important;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
+    /* Название услуги */
     #pricing-tables td:first-child {
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
-        padding-bottom: 0.75rem !important;
-        border-bottom: 1px solid var(--border-color, #dee2e6) !important;
-    }
-    
-    #pricing-tables td:nth-child(2) {
-        font-size: 0.9rem;
-        color: var(--text-muted, #6c757d);
+        font-size: 1.05rem;
+        font-weight: 600;
         margin-bottom: 0.75rem;
+        padding-bottom: 0.75rem !important;
+        border-bottom: 2px solid var(--border-color, #dee2e6) !important;
+        line-height: 1.4;
+        color: var(--text-primary, #212529);
     }
     
+    #pricing-tables td:first-child i {
+        font-size: 1rem;
+    }
+    
+    /* Описание услуги */
+    #pricing-tables td:nth-child(2) {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        color: var(--text-muted, #6c757d);
+        margin-bottom: 1rem;
+        padding-right: 0 !important;
+    }
+    
+    /* Цена */
     #pricing-tables td:nth-child(3) {
-        font-size: 1.5rem !important;
-        font-weight: bold;
-        margin: 0.75rem 0;
+        font-size: 1.75rem !important;
+        font-weight: 700;
+        color: var(--primary-color, #0066cc);
+        margin: 0.5rem 0;
+        display: inline-block;
+        width: auto;
     }
     
+    /* Единица измерения */
     #pricing-tables td:nth-child(4) {
         display: inline-block;
         width: auto;
-        font-size: 0.9rem;
+        font-size: 0.875rem;
         color: var(--text-muted, #6c757d);
         margin-left: 0.5rem;
+        vertical-align: baseline;
     }
     
+    /* Кнопка добавления */
     #pricing-tables td:nth-child(5) {
         margin-top: 1rem;
+        padding-top: 0.75rem !important;
+        border-top: 1px solid var(--border-color, #dee2e6) !important;
     }
     
     #pricing-tables td:nth-child(5) .btn {
         width: 100%;
         padding: 0.75rem;
+        font-size: 0.95rem;
+        font-weight: 500;
     }
     
     /* Improve card scrolling */
