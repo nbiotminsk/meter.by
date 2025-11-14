@@ -327,19 +327,33 @@ main, section, .container {
 
     /* Tables - Mobile Optimization */
     .table-responsive {
-        overflow-x: auto;
+        overflow-x: visible !important;
         -webkit-overflow-scrolling: touch;
         max-width: 100%;
-        touch-action: pan-x pan-y;
+        width: 100%;
         margin: 0;
         padding: 0;
     }
 
+    /* Pricing category card container */
+    .pricing-category-card {
+        overflow: visible !important;
+        max-width: 100%;
+    }
+
+    .pricing-category-card .card-body {
+        overflow: visible !important;
+        padding: 0 !important;
+    }
+
     /* Make tables stack vertically on mobile */
     #pricing-tables table {
-        min-width: 100%;
+        min-width: 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
         display: block;
         border: none;
+        table-layout: fixed;
     }
     
     #pricing-tables thead {
@@ -350,62 +364,98 @@ main, section, .container {
     #pricing-tables tr,
     #pricing-tables td {
         display: block;
-        width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
     }
     
     #pricing-tables tbody {
         display: block;
+        width: 100%;
     }
     
     #pricing-tables tr {
         margin-bottom: 1.5rem;
         border: 1px solid var(--border-color, #dee2e6);
         border-radius: 12px;
-        padding: 1.25rem;
+        padding: 1rem;
         background: var(--card-bg, #fff);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        overflow: visible !important;
     }
     
     #pricing-tables td {
         text-align: left !important;
-        padding: 0.5rem 0 !important;
+        padding: 0.75rem 0 !important;
         border: none !important;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        overflow: visible !important;
+        white-space: normal !important;
     }
     
     /* Название услуги */
     #pricing-tables td:first-child {
-        font-size: 1.05rem;
+        font-size: 1rem;
         font-weight: 600;
         margin-bottom: 0.75rem;
         padding-bottom: 0.75rem !important;
         border-bottom: 2px solid var(--border-color, #dee2e6) !important;
-        line-height: 1.4;
+        line-height: 1.5 !important;
         color: var(--text-primary, #212529);
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+    
+    #pricing-tables td:first-child strong {
+        display: block;
+        width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     #pricing-tables td:first-child i {
         font-size: 1rem;
+        margin-right: 0.5rem;
+        flex-shrink: 0;
     }
     
     /* Описание услуги */
     #pricing-tables td:nth-child(2) {
         font-size: 0.875rem;
-        line-height: 1.5;
+        line-height: 1.6 !important;
         color: var(--text-muted, #6c757d);
         margin-bottom: 1rem;
         padding-right: 0 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        display: block;
+        width: 100%;
     }
     
     /* Цена */
     #pricing-tables td:nth-child(3) {
-        font-size: 1.75rem !important;
+        font-size: 1.5rem !important;
         font-weight: 700;
         color: var(--primary-color, #0066cc);
-        margin: 0.5rem 0;
+        margin: 0.75rem 0;
         display: inline-block;
         width: auto;
+        white-space: nowrap;
+    }
+    
+    #pricing-tables td:nth-child(3) strong {
+        white-space: nowrap;
     }
     
     /* Единица измерения */
@@ -416,6 +466,7 @@ main, section, .container {
         color: var(--text-muted, #6c757d);
         margin-left: 0.5rem;
         vertical-align: baseline;
+        white-space: nowrap;
     }
     
     /* Кнопка добавления */
@@ -423,6 +474,8 @@ main, section, .container {
         margin-top: 1rem;
         padding-top: 0.75rem !important;
         border-top: 1px solid var(--border-color, #dee2e6) !important;
+        width: 100%;
+        display: block;
     }
     
     #pricing-tables td:nth-child(5) .btn {
@@ -430,6 +483,7 @@ main, section, .container {
         padding: 0.75rem;
         font-size: 0.95rem;
         font-weight: 500;
+        white-space: nowrap;
     }
     
     /* Improve card scrolling */
@@ -474,6 +528,26 @@ main, section, .container {
     .col, [class*="col-"] {
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    /* Ensure containers don't clip table content */
+    #pricing-tables .container,
+    #pricing-tables .row,
+    #pricing-tables .col-12 {
+        overflow: visible !important;
+        max-width: 100% !important;
+    }
+
+    /* Pricing tables section */
+    #pricing-tables {
+        overflow: visible !important;
+        width: 100%;
+    }
+
+    #pricing-tables .pricing-category-card {
+        overflow: visible !important;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     /* Display adjustments */
@@ -579,6 +653,45 @@ main, section, .container {
     .pricing-info .h2 {
         font-size: 1.5rem;
     }
+
+    /* Extra small devices - Table improvements */
+    #pricing-tables tr {
+        padding: 0.875rem !important;
+        margin-bottom: 1.25rem;
+    }
+
+    #pricing-tables td:first-child {
+        font-size: 0.95rem !important;
+        line-height: 1.4 !important;
+    }
+
+    #pricing-tables td:nth-child(2) {
+        font-size: 0.8rem !important;
+        line-height: 1.5 !important;
+    }
+
+    #pricing-tables td:nth-child(3) {
+        font-size: 1.35rem !important;
+    }
+
+    /* Ensure container doesn't clip content */
+    .pricing-category-card,
+    .pricing-category-card .card-body,
+    .pricing-category-card .table-responsive {
+        overflow: visible !important;
+        max-width: 100% !important;
+    }
+
+    /* Container padding adjustments */
+    .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    section .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
 }
 
 /* Landscape mobile */
@@ -617,5 +730,43 @@ main, section, .container {
     
     [data-theme="dark"] #pricing-tables td:first-child {
         border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+/* Additional fixes for table text visibility on all mobile devices */
+@media (max-width: 767.98px) {
+    /* Force text to be visible and wrap properly */
+    #pricing-tables table,
+    #pricing-tables tbody,
+    #pricing-tables tr,
+    #pricing-tables td,
+    #pricing-tables td * {
+        overflow: visible !important;
+        text-overflow: clip !important;
+        white-space: normal !important;
+    }
+
+    /* Ensure all text elements can wrap */
+    #pricing-tables td strong,
+    #pricing-tables td span,
+    #pricing-tables td small {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        max-width: 100% !important;
+        display: inline-block;
+    }
+
+    /* Price and unit should stay on same line if possible */
+    #pricing-tables td:nth-child(3),
+    #pricing-tables td:nth-child(4) {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    /* Make sure description text is fully visible */
+    #pricing-tables td:nth-child(2) {
+        min-height: auto;
+        max-height: none;
+        overflow: visible !important;
     }
 }

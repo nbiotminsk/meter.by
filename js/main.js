@@ -803,13 +803,22 @@ function createImagePlaceholder(img) {
     const height = img.height || 300;
     const src = img.src || img.dataset.src || '';
     
-    // Determine service type from image path
+    // Check for data attributes first (for custom placeholders)
+    const placeholderType = img.dataset.placeholderType;
+    const placeholderTitle = img.dataset.placeholderTitle;
+    
+    // Determine service type from image path or data attributes
     let type = 'default';
-    let title = 'Изображение услуги';
+    let title = placeholderTitle || 'Изображение услуги';
     let color = '#e0e0e0';
     let icon = '📷';
     
-    if (src.includes('heat-meter')) {
+    if (placeholderType === 'comprehensive' || src.includes('comprehensive')) {
+        type = 'comprehensive';
+        title = placeholderTitle || 'Комплексные услуги';
+        color = '#0066cc';
+        icon = '⚙️';
+    } else if (src.includes('heat-meter')) {
         type = 'heat-meter';
         title = 'Счетчик тепла';
         color = '#ff6b6b';
@@ -851,23 +860,30 @@ function createImagePlaceholder(img) {
         icon = '▶️';
     }
     
+    // For comprehensive services, add subtitle
+    const subtitle = (type === 'comprehensive' && !placeholderTitle) ? 'Обслуживание систем учета и автоматики' : '';
+    
     return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`
         <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="grad-${type}" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:${color};stop-opacity:0.8" />
-                    <stop offset="100%" style="stop-color:${color};stop-opacity:0.6" />
+                    <stop offset="0%" style="stop-color:${color};stop-opacity:0.9" />
+                    <stop offset="100%" style="stop-color:${color};stop-opacity:0.7" />
                 </linearGradient>
             </defs>
             <rect width="100%" height="100%" fill="url(#grad-${type})" rx="8"/>
-            <text x="50%" y="40%" text-anchor="middle" font-family="Arial, sans-serif" 
+            <text x="50%" y="35%" text-anchor="middle" font-family="Arial, sans-serif" 
                   font-size="${Math.min(width, height) / 8}" fill="white" opacity="0.9">
                 ${icon}
             </text>
-            <text x="50%" y="65%" text-anchor="middle" font-family="Arial, sans-serif" 
-                  font-size="${Math.min(width, height) / 20}" fill="white" opacity="0.8">
+            <text x="50%" y="50%" text-anchor="middle" font-family="Arial, sans-serif" 
+                  font-size="${Math.min(width, height) / 20}" fill="white" font-weight="bold" opacity="0.9">
                 ${title}
             </text>
+            ${subtitle ? `<text x="50%" y="60%" text-anchor="middle" font-family="Arial, sans-serif" 
+                  font-size="${Math.min(width, height) / 25}" fill="white" opacity="0.8">
+                ${subtitle}
+            </text>` : ''}
         </svg>
     `)}`;
 }
