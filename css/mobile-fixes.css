@@ -264,6 +264,32 @@ main, section, .container {
         padding-left: 15px;
         padding-right: 15px;
     }
+    
+    /* Reduce section padding on mobile */
+    section.py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    /* Packages section - reduce bottom padding and fix scroll */
+    #packages {
+        padding-bottom: 1.5rem !important;
+        overflow: visible !important;
+        height: auto !important;
+        max-height: none !important;
+    }
+    
+    #packages .container,
+    #packages .row {
+        overflow: visible !important;
+        height: auto !important;
+        max-height: none !important;
+    }
+    
+    /* Pricing tables section - reduce top padding */
+    #pricing-tables {
+        padding-top: 1.5rem !important;
+    }
 
     /* Button groups */
     .d-flex.gap-3 {
@@ -285,10 +311,15 @@ main, section, .container {
 
     /* Package cards - Unified mobile styling */
     .package-card {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         max-width: 100%;
         border-radius: 12px;
         overflow: hidden;
+    }
+    
+    /* Last package card - no bottom margin */
+    .row.g-4 > [class*="col-"]:last-child .package-card {
+        margin-bottom: 0;
     }
 
     .card {
@@ -618,12 +649,6 @@ main, section, .container {
         content: "\f26b" !important; /* bi-check-circle-fill - keep as is */
     }
     
-    /* Improve card scrolling */
-    .card, .package-card, .pricing-category-card {
-        -webkit-overflow-scrolling: touch;
-        touch-action: pan-y;
-    }
-    
     /* Optimize all sections for smooth scrolling */
     section {
         -webkit-transform: translateZ(0);
@@ -633,14 +658,6 @@ main, section, .container {
     /* Prevent glass effects from blocking scroll */
     .glass-effect {
         pointer-events: auto;
-    }
-    
-    /* Ensure content areas are scrollable */
-    .pricing-section,
-    .packages-section,
-    .calculator-section {
-        -webkit-overflow-scrolling: touch;
-        overscroll-behavior: contain;
     }
 
 
@@ -772,8 +789,26 @@ main, section, .container {
         display: inline-block;
         word-wrap: break-word;
     }
+    
+    /* Further reduce section padding on extra small screens */
+    section.py-5 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    
+    #packages {
+        padding-bottom: 1rem !important;
+    }
+    
+    #pricing-tables {
+        padding-top: 1rem !important;
+    }
 
     /* Package card adjustments for extra small screens */
+    .package-card {
+        margin-bottom: 0.875rem;
+    }
+    
     .package-card .card-header h4 {
         font-size: 1.05rem;
         line-height: 1.3;
