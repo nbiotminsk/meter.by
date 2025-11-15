@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "id": "automatic-water-meter-reading-minsk",
+      "title": "Как организовать автоматическую передачу показаний счетчиков воды в Минске",
+      "slug": "2025-11-15-automatic-water-meter-reading-minsk",
+      "date": "2025-11-15",
+      "excerpt": "С февраля 2022 года в Минске обязательна автоматическая передача показаний счетчиков воды для организаций. Узнайте, как организовать систему дистанционного съема на базе Vega NB-11 и платформы А1.",
+      "image": "images/articles/water-meter-automatic.jpg",
+      "tags": ["автоматизация", "счетчики воды", "Vega NB-11", "Минскводоканал", "NB-IoT", "дистанционный съем"]
+    },
+    {
       "id": "comprehensive-meter-services",
       "title": "Комплексные услуги по обслуживанию систем учета и автоматики",
       "slug": "2025-11-13-comprehensive-meter-services",
