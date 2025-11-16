@@ -8,3 +8,7 @@ RewriteRule ^(.*)$ https://meter.by/$1 [L,R=301]
 # Redirect HTTP to HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect index.html to root (canonical URL for Yandex)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+index\.html [NC]
+RewriteRule ^index\.html$ https://meter.by/ [L,R=301]
