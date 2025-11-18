@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "id": "lorawan-nbiot-comparison",
+      "title": "LoRaWAN или NB-IoT: какую технологию выбрать для дистанционного съема показаний",
+      "slug": "2025-11-18-lorawan-nbiot-comparison",
+      "date": "2025-11-18",
+      "excerpt": "Простое сравнение технологий LoRaWAN и NB-IoT для дистанционного съема показаний счетчиков. Какую выбрать для подключения счетчиков с передачей данных в Беларуси.",
+      "image": "images/placeholders/min/lorawan-nbiot.webp",
+      "tags": ["LoRaWAN", "NB-IoT", "дистанционный съем", "технологии", "передача данных", "купить счетчик"]
+    },
+    {
       "id": "water-meter-remote-reading-price-guide",
       "title": "Счетчик воды с дистанционным снятием показаний цена: полный обзор",
       "slug": "2025-11-17-water-meter-remote-reading-price-guide",
