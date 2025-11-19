@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "id": "iot-dispatching-systems-lorawan-nbiot",
+      "title": "Система диспетчеризации счетчиков воды на базе LoRaWAN и NB-IoT",
+      "slug": "2025-11-19-iot-dispatching-systems-lorawan-nbiot",
+      "date": "2025-11-19",
+      "excerpt": "Комплексное внедрение систем диспетчеризации для застройщиков, водоканалов и производств. Дистанционный съем показаний LoRaWAN, умные счетчики воды, базовые станции в Беларуси.",
+      "image": "images/placeholders/min/remote-water-reading.webp",
+      "tags": ["LoRaWAN", "NB-IoT", "Диспетчеризация", "IoT", "Умные счетчики", "Застройщики", "Водоканалы", "Производства"]
+    },
+    {
       "id": "lorawan-nbiot-comparison",
       "title": "LoRaWAN или NB-IoT: какую технологию выбрать для дистанционного съема показаний",
       "slug": "2025-11-18-lorawan-nbiot-comparison",
