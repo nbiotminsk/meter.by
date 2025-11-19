@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система диспетчеризации счетчиков воды на базе LoRaWAN и NB-IoT - Meter.by</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Комплексное внедрение систем диспетчеризации для застройщиков, водоканалов и производств. Дистанционный съем показаний LoRaWAN, умные счетчики воды, базовые станции в Беларуси.">
+    <meta name="keywords" content="система диспетчеризации счетчиков воды, дистанционный съем показаний LoRaWAN, IoT решения для производств, умные счетчики воды ETK-м-K, базовые станции LoRaWAN в Беларуси, диспетчеризация для застройщиков, система учета для водоканалов, NB-IoT устройства передачи данных, платформа Meter.by, мониторинг затопления колодцев">
+    <meta name="author" content="Meter.by">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Система диспетчеризации счетчиков воды на базе LoRaWAN и NB-IoT - Meter.by">
+    <meta property="og:description" content="Комплексное внедрение систем диспетчеризации для застройщиков, водоканалов и производств. Дистанционный съем показаний LoRaWAN, умные счетчики воды, базовые станции в Беларуси.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://meter.by/news/articles/2025-11-19-iot-dispatching-systems-lorawan-nbiot.html">
+    <meta property="og:image" content="https://meter.by/images/news/iot-dispatching-cover.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://meter.by/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/dark-theme.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+    <link href="../../css/image-optimization.css" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Система диспетчеризации счетчиков воды на базе LoRaWAN и NB-IoT",
+        "description": "Комплексное внедрение систем диспетчеризации для застройщиков, водоканалов и производств. Дистанционный съем показаний LoRaWAN, умные счетчики воды, базовые станции в Беларуси.",
+        "image": "https://meter.by/images/news/iot-dispatching-cover.jpg",
+        "datePublished": "2025-11-19",
+        "author": {
+            "@type": "Organization",
+            "name": "Meter.by"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Meter.by",
+            "url": "https://meter.by"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="bi bi-broadcast-pin me-2"></i>
+                Meter.by
+            </a>
+
+            <div class="d-flex align-items-center order-lg-3">
+                <!-- Theme Switcher -->
+                <button class="theme-switcher me-3" x-data="themeSwitch" @click="toggle()" x-init="init()">
+                    <i :class="isDark ? 'bi bi-sun' : 'bi bi-moon'"></i>
+                </button>
+
+                <!-- Messenger Buttons -->
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-primary btn-sm me-2 telegram-btn">
+                        <i class="bi bi-telegram me-1"></i><span class="btn-text">Telegram</span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm viber-btn">
+                        <i class="bi bi-chat-dots me-1"></i><span class="btn-text">Viber</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html" title="Главная">
+                            <i class="bi bi-house-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../documents.html">Документы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../prices.html">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../videos.html">Видео</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Article Section -->
+        <article class="article-page py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- Back Button -->
+                        <div class="mb-4">
+                            <a href="../index.html" class="btn btn-outline-primary">
+                                <i class="bi bi-arrow-left me-2"></i>
+                                Вернуться к новостям
+                            </a>
+                        </div>
+
+                        <!-- Article Header -->
+                        <header class="article-header mb-4">
+                            <h1 class="display-4 mb-3">Система диспетчеризации счетчиков воды на базе LoRaWAN и NB-IoT</h1>
+                            <div class="article-meta d-flex align-items-center text-muted mb-3">
+                                <i class="bi bi-calendar3 me-2"></i>
+                                <span class="me-3">19 ноября 2025</span>
+                            </div>
+                            <div class="article-tags mb-3">
+                                <span class="badge bg-primary me-2">LoRaWAN</span>
+                                <span class="badge bg-primary me-2">NB-IoT</span>
+                                <span class="badge bg-primary me-2">Диспетчеризация</span>
+                                <span class="badge bg-primary me-2">IoT</span>
+                                <span class="badge bg-primary me-2">Умные счетчики</span>
+                            </div>
+                        </header>
+
+                        <!-- Article Excerpt -->
+                        <div class="article-excerpt bg-light p-4 rounded mb-4 border-start border-primary border-4">
+                            <p class="lead mb-0">Комплексное внедрение систем диспетчеризации для застройщиков, водоканалов и производств. Узнайте, как технологии LoRaWAN и NB-IoT революционизируют учет энергоресурсов в Беларуси.</p>
+                        </div>
+
+                        <!-- Article Content -->
+                        <div class="article-content" style="line-height: 1.8; font-size: 1.1rem;">
+
+                            <h2>Что такое система диспетчеризации счетчиков воды?</h2>
+                            
+                            <p>Система диспетчеризации счетчиков воды — это комплексное IoT-решение для автоматического сбора, передачи и анализа данных о потреблении водных ресурсов. В отличие от традиционного ручного съема показаний, современные системы на базе <strong>LoRaWAN</strong> и <strong>NB-IoT</strong> обеспечивают непрерывный мониторинг в режиме реального времени.</p>
+
+                            <p>Платформа Meter.by предоставляет полный цикл услуг: от установки умных счетчиков воды до интеграции с корпоративными системами учета. Наши решения успешно внедрены в крупнейших проектах Беларуси, включая ЖК "Новая Боровая" (более 8 000 устройств) и систему Минскводоканала.</p>
+
+                            <h2>Дистанционный съем показаний LoRaWAN: преимущества технологии</h2>
+
+                            <p><strong>LoRaWAN (Long Range Wide Area Network)</strong> — это беспроводная технология передачи данных на большие расстояния с минимальным энергопотреблением. Для систем учета воды это означает:</p>
+
+                            <ul>
+                                <li><strong>Дальность связи до 15 км</strong> в городских условиях</li>
+                                <li><strong>Автономная работа до 10 лет</strong> от одной батареи</li>
+                                <li><strong>Проникновение сигнала</strong> через стены и подвальные помещения</li>
+                                <li><strong>Низкая стоимость</strong> развертывания инфраструктуры</li>
+                                <li><strong>Масштабируемость</strong> — одна базовая станция обслуживает тысячи устройств</li>
+                            </ul>
+
+                            <p>Базовые станции LoRaWAN в Беларуси развернуты в крупных городах и промышленных зонах, обеспечивая надежное покрытие для жилых комплексов, производственных объектов и водоканалов.</p>
+
+                            <h2>NB-IoT: альтернатива для сложных условий</h2>
+
+                            <p><strong>NB-IoT (Narrowband Internet of Things)</strong> — это технология сотовой связи, специально разработанная для IoT-устройств. Устройства передачи данных NB-IoT, такие как <strong>Вега NB-11</strong>, идеально подходят для:</p>
+
+                            <ul>
+                                <li><strong>Закрытых инфраструктур</strong> производственных объектов</li>
+                                <li><strong>Удаленных локаций</strong> без покрытия LoRaWAN</li>
+                                <li><strong>Объектов с высокими требованиями</strong> к надежности связи</li>
+                                <li><strong>Интеграции с существующими</strong> сотовыми сетями</li>
+                            </ul>
+
+                            <p>Пример успешного внедрения — Слуцкий сыродельный комбинат, где система на базе NB-IoT обеспечивает каждодневный контроль потребления воды на производстве.</p>
+
+                            <h2>Умные счетчики воды ETK-м-K и ETW-м-K</h2>
+
+                            <p>Линейка умных счетчиков воды <strong>ETK-м-K</strong> (холодная вода) и <strong>ETW-м-K</strong> (горячая вода) разработана специально для интеграции с системами диспетчеризации:</p>
+
+                            <ul>
+                                <li><strong>Встроенный модуль LoRaWAN</strong> — не требуется дополнительное оборудование</li>
+                                <li><strong>Высокая точность измерений</strong> — класс C по ГОСТ</li>
+                                <li><strong>Межповерочный интервал 6 лет</strong></li>
+                                <li><strong>Защита от магнитного воздействия</strong></li>
+                                <li><strong>Диапазон температур</strong> от +5°C до +90°C (для ГВС)</li>
+                            </ul>
+
+                            <p>Дооснащение приборов учета воды возможно для большинства существующих счетчиков с импульсным выходом, что позволяет модернизировать системы учета без полной замены оборудования.</p>
+
+                            <h2>Комплексное внедрение систем диспетчеризации</h2>
+
+                            <p>Платформа Meter.by предлагает полный цикл услуг для различных сегментов:</p>
+
+                            <h3>Диспетчеризация для застройщиков</h3>
+                            <ul>
+                                <li>Проектирование системы на этапе строительства</li>
+                                <li>Установка базовых станций и умных счетчиков</li>
+                                <li>Интеграция с системами управления зданием</li>
+                                <li>Передача данных в управляющие компании</li>
+                                <li>Техническая поддержка на весь срок эксплуатации</li>
+                            </ul>
+
+                            <h3>Система учета для водоканалов</h3>
+                            <ul>
+                                <li>Автоматизация сбора показаний от абонентов</li>
+                                <li>Мониторинг затопления колодцев и аварийных ситуаций</li>
+                                <li>Выявление несанкционированного водопотребления</li>
+                                <li>Интеграция с биллинговыми системами</li>
+                                <li>Аналитика и прогнозирование потребления</li>
+                            </ul>
+
+                            <h3>IoT решения для производств</h3>
+                            <ul>
+                                <li>Учет воды по цехам и технологическим линиям</li>
+                                <li>Контроль расхода в режиме реального времени</li>
+                                <li>Управление водоснабжением через электромагнитные клапаны</li>
+                                <li>Оптимизация производственных процессов</li>
+                                <li>Снижение потерь и экономия ресурсов</li>
+                            </ul>
+
+                            <h2>Архитектура платформы Meter.by</h2>
+
+                            <p>Отказоустойчивая система Meter.by построена на микросервисной архитектуре, обеспечивающей:</p>
+
+                            <ul>
+                                <li><strong>Высокую доступность</strong> — 99.9% uptime</li>
+                                <li><strong>Масштабируемость</strong> — от десятков до десятков тысяч устройств</li>
+                                <li><strong>Безопасность данных</strong> — шифрование на всех уровнях</li>
+                                <li><strong>Простую интеграцию</strong> через REST API</li>
+                                <li><strong>Визуализацию данных</strong> в личном кабинете и мобильном приложении</li>
+            </ul>
+
+                            <p>Телеграм-бот Meter.by позволяет получать уведомления о критических событиях и просматривать текущие показания прямо в мессенджере.</p>
+
+                            <h2>Монтаж счетчиков воды с дистанционным съемом</h2>
+
+                            <p>Профессиональный монтаж счетчиков включает:</p>
+
+                            <ol>
+                                <li><strong>Замер уровня сигнала сети LoRaWAN</strong> для определения оптимального места установки</li>
+                                <li><strong>Установку счетчиков</strong> с соблюдением всех требований</li>
+                                <li><strong>Подключение к системе Meter.by</strong> и проверку передачи данных</li>
+                                <li><strong>Настройку параметров</strong> съема показаний</li>
+                                <li><strong>Обучение персонала</strong> работе с платформой</li>
+                            </ol>
+
+                            <p>Экспресс-монтаж доступен для типовых объектов и выполняется в течение одного рабочего дня.</p>
+
+                            <h2>Поверка счетчиков воды в Минске с сохранением дистанционного съема</h2>
+
+                            <p>После поверки приборов учета воды важно восстановить работу системы диспетчеризации. Наши специалисты:</p>
+
+                            <ul>
+                                <li>Выполняют поверку с выездом на объект</li>
+                                <li>Сохраняют настройки модулей передачи данных</li>
+                                <li>Проверяют работоспособность системы после поверки</li>
+                                <li>Предоставляют документы для регистрации в Минскводоканале</li>
+                            </ul>
+
+                            <h2>Управление водоснабжением Meter.by Valve Module</h2>
+
+                            <p>Система управления водоснабжением на базе электромагнитных клапанов позволяет:</p>
+
+                            <ul>
+                                <li><strong>Дистанционно перекрывать</strong> подачу воды при авариях</li>
+                                <li><strong>Предотвращать затопления</strong> при обнаружении протечек</li>
+                                <li><strong>Ограничивать потребление</strong> при задолженности</li>
+                                <li><strong>Автоматизировать</strong> технологические процессы</li>
+                            </ul>
+
+                            <p>Особенно актуально для организаций ЖКХ и управляющих компаний.</p>
+
+                            <h2>Стоимость и окупаемость системы</h2>
+
+                            <p>Инвестиции в систему диспетчеризации окупаются за счет:</p>
+
+                            <ul>
+                                <li><strong>Снижения операционных расходов</strong> на съем показаний</li>
+                                <li><strong>Сокращения потерь</strong> от несанкционированного потребления</li>
+                                <li><strong>Оптимизации расхода</strong> водных ресурсов</li>
+                                <li><strong>Предотвращения аварий</strong> и затоплений</li>
+                                <li><strong>Повышения качества</strong> обслуживания абонентов</li>
+                            </ul>
+
+                            <p>Типовая окупаемость для жилых комплексов составляет 2-3 года, для производств — 1-2 года.</p>
+
+                            <h2>Как начать работу с Meter.by?</h2>
+
+                            <p>Для внедрения системы диспетчеризации:</p>
+
+                            <ol>
+                                <li><strong>Оставьте заявку</strong> на бесплатную консультацию</li>
+                                <li><strong>Получите расчет</strong> стоимости для вашего объекта</li>
+                                <li><strong>Проверьте покрытие</strong> LoRaWAN на карте базовых станций</li>
+                                <li><strong>Попробуйте демо</strong> платформы в личном кабинете</li>
+                                <li><strong>Подпишите договор</strong> на комплексное внедрение</li>
+                            </ol>
+
+                            <p>Команда профессионалов Meter.by обеспечит полное сопровождение проекта от проектирования до запуска в эксплуатацию.</p>
+
+                            <div class="alert alert-info mt-4">
+                                <h4><i class="bi bi-info-circle me-2"></i>Полезная информация</h4>
+                                <p class="mb-2"><strong>Контакты:</strong></p>
+                                <p class="mb-1"><i class="bi bi-telephone me-2"></i>Телефон: +375 (29) 252-49-88</p>
+                                <p class="mb-1"><i class="bi bi-envelope me-2"></i>Email: info@meter.by</p>
+                                <p class="mb-1"><i class="bi bi-globe me-2"></i>Сайт: <a href="https://meter.by" target="_blank">meter.by</a></p>
+                                <p class="mb-0"><i class="bi bi-box-arrow-up-right me-2"></i>Личный кабинет: <a href="https://devices.meter.by" target="_blank">devices.meter.by</a></p>
+                            </div>
+
+                        </div>
+
+                        <!-- Article Footer -->
+                        <footer class="article-footer mt-5 pt-4 border-top">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="mb-3">Поделиться статьей</h5>
+                                    <div class="d-flex gap-2">
+                                        <a href="#" class="btn btn-outline-primary" title="Telegram">
+                                            <i class="bi bi-telegram"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-outline-secondary" title="Viber">
+                                            <i class="bi bi-chat-dots"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                                    <h5 class="mb-3">Есть вопросы?</h5>
+                                    <a href="../../prices.html" class="btn btn-primary">
+                                        <i class="bi bi-calculator me-2"></i>
+                                        Рассчитать стоимость
+                                    </a>
+                                </div>
+                            </div>
+                        </footer>
+
+                        <!-- Related Articles Section -->
+                        <div id="related-articles" class="mt-5 pt-4 border-top" x-data="relatedArticles" x-init="init()">
+                            <h3 class="mb-4">Похожие статьи</h3>
+                            <div class="row g-4" x-show="articles.length > 0">
+                                <template x-for="article in articles" :key="article.id">
+                                    <div class="col-md-4">
+                                        <div class="card h-100" style="cursor: pointer;" @click="navigateToArticle(article.slug)">
+                                            <img :src="'../../' + article.image" 
+                                                 :alt="article.title" 
+                                                 class="card-img-top"
+                                                 style="height: 150px; object-fit: cover;">
+                                            <div class="card-body">
+                                                <h6 class="card-title" x-text="article.title"></h6>
+                                                <small class="text-muted">
+                                                    <i class="bi bi-calendar me-1"></i>
+                                                    <span x-text="formatDate(article.date)"></span>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+
+                        <!-- Back Button (bottom) -->
+                        <div class="mt-5 text-center">
+                            <a href="../index.html" class="btn btn-outline-primary btn-lg">
+                                <i class="bi bi-arrow-left me-2"></i>
+                                Вернуться к новостям
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Meter.by</h5>
+                    <p>Современные решения для учета ресурсов в Республике Беларусь</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>
+                        <i class="bi bi-telephone me-2"></i>+375 (29) 252-49-88<br>
+                        <i class="bi bi-envelope me-2"></i>info@meter.by
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="bi bi-telegram"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-chat-dots"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <small>&copy; 2025 Meter.by. Все права защищены.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Messenger Buttons -->
+    <div class="messenger-buttons">
+        <a href="#" class="messenger-btn telegram-btn" title="Telegram">
+            <i class="bi bi-telegram"></i>
+        </a>
+        <a href="#" class="messenger-btn viber-btn" title="Viber">
+            <i class="bi bi-chat-dots"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script src="../../js/navigation-manager.js"></script>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('themeSwitch', () => ({
+                isDark: localStorage.getItem('theme') === 'dark',
+                toggle() {
+                    this.isDark = !this.isDark;
+                    document.body.classList.add('theme-transition');
+                    const newTheme = this.isDark ? 'dark' : 'light';
+                    localStorage.setItem('theme', newTheme);
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    setTimeout(() => {
+                        document.body.classList.remove('theme-transition');
+                    }, 300);
+                },
+                init() {
+                    const savedTheme = this.isDark ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                    document.body.classList.add('theme-transition');
+                }
+            }));
+
+            Alpine.data('relatedArticles', () => ({
+                articles: [],
+                currentArticleTags: ["LoRaWAN", "NB-IoT", "Диспетчеризация", "IoT", "Умные счетчики"],
+                async init() {
+                    await this.loadRelatedArticles();
+                },
+                async loadRelatedArticles() {
+                    try {
+                        const response = await fetch('../data/articles-metadata.json');
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        const data = await response.json();
+                        const allArticles = data.articles || [];
+                        const currentSlug = '2025-11-19-iot-dispatching-systems-lorawan-nbiot';
+                        const related = allArticles
+                            .filter(article => article.slug !== currentSlug)
+                            .map(article => {
+                                const matchingTags = article.tags.filter(tag => 
+                                    this.currentArticleTags.includes(tag)
+                                ).length;
+                                return { ...article, matchingTags };
+                            })
+                            .filter(article => article.matchingTags > 0)
+                            .sort((a, b) => b.matchingTags - a.matchingTags)
+                            .slice(0, 3);
+                        this.articles = related;
+                    } catch (error) {
+                        console.error('Error loading related articles:', error);
+                        this.articles = [];
+                    }
+                },
+                formatDate(dateString) {
+                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                    return new Date(dateString).toLocaleDateString('ru-RU', options);
+                },
+                navigateToArticle(slug) {
+                    window.location.href = `${slug}.html`;
+                }
+            }));
+        });
+    </script>
+</body>
+</html>
