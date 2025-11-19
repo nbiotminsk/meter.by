@@ -1,6 +1,16 @@
 {
   "videos": [
     {
+      "id": "vega-nb11-overview",
+      "title": "Вега NB-11",
+      "description": "Обзор модуля дистанционного съема показаний счетчиков воды Vega NB-11",
+      "youtubeId": "_NUHKNvzBow",
+      "category": "equipment",
+      "duration": "0:59",
+      "uploadDate": "2025-11-19",
+      "featured": true
+    },
+    {
       "id": "indel-1734-heat-meter",
       "title": "Опрос прибора учета тепловой энергии через Индел 1734",
       "description": "Опрос прибора учета тепловой энергии через Индел 1734",
