@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "id": "meter-by-professional-metering-solutions-belarus",
+      "title": "Meter.by: профессиональные системы учета энергоресурсов в Беларуси",
+      "slug": "2025-11-21-meter-by-professional-metering-solutions-belarus",
+      "date": "2025-11-21",
+      "excerpt": "Платформа Meter.by объединяет передовые IoT-технологии и профессиональный подход к учету энергоресурсов. Комплексные решения для застройщиков, водоканалов и производств в Республике Беларусь.",
+      "image": "images/placeholders/min/remote-water-reading.webp",
+      "tags": ["Meter.by", "Диспетчеризация", "LoRaWAN", "Беларусь", "Учет ресурсов", "Минскводоканал", "IoT", "Умные счетчики"]
+    },
+    {
       "id": "iot-dispatching-systems-lorawan-nbiot",
       "title": "Система диспетчеризации счетчиков воды на базе LoRaWAN и NB-IoT",
       "slug": "2025-11-19-iot-dispatching-systems-lorawan-nbiot",
