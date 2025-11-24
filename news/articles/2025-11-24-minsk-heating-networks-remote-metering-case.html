@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кейс: дистанционный съем показаний по требованию Минских Тепловых сетей - Meter.by</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Реальный кейс внедрения системы дистанционного съема показаний счетчиков подпитки и теплосчетчиков по предписанию Минских Тепловых сетей. Замена счетчиков, установка Вега NB-11, подключение ТЭМ-104 через модемы iRZ и Индел.">
+    <meta name="keywords" content="Минские Тепловые сети, дистанционный съем показаний, счетчики подпитки, Вега NB-11, ТЭМ-104, iRZ 485 ATM3, Индел-1734, Индел-1708, IoT платформа A1, импульсный выход">
+    <meta name="author" content="Meter.by">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Кейс: дистанционный съем показаний по требованию Минских Тепловых сетей">
+    <meta property="og:description" content="Реальный опыт внедрения системы дистанционного съема для счетчиков подпитки и теплосчетчиков ТЭМ-104 в Минске.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://meter.by/news/articles/2025-11-24-minsk-heating-networks-remote-metering-case.html">
+    <meta property="og:image" content="https://meter.by/images/comprehensive-services.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://meter.by/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/dark-theme.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Кейс: дистанционный съем показаний по требованию Минских Тепловых сетей",
+        "description": "Реальный опыт внедрения системы дистанционного съема для счетчиков подпитки и теплосчетчиков ТЭМ-104",
+        "image": "https://meter.by/images/comprehensive-services.webp",
+        "datePublished": "2025-11-24",
+        "author": {
+            "@type": "Organization",
+            "name": "Meter.by"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="bi bi-broadcast-pin me-2"></i>
+                Meter.by
+            </a>
+
+            <div class="d-flex align-items-center order-lg-3">
+                <button class="theme-switcher me-3" x-data="themeSwitch" @click="toggle()" x-init="init()">
+                    <i :class="isDark ? 'bi bi-sun' : 'bi bi-moon'"></i>
+                </button>
+
+                <div class="d-flex">
+                    <a href="https://t.me/meter_by" class="btn btn-outline-primary btn-sm me-2 telegram-btn" target="_blank">
+                        <i class="bi bi-telegram me-1"></i><span class="btn-text">Telegram</span>
+                    </a>
+                    <a href="viber://chat?number=+375292524988" class="btn btn-outline-secondary btn-sm viber-btn" target="_blank">
+                        <i class="bi bi-chat-dots me-1"></i><span class="btn-text">Viber</span>
+                    </a>
+                </div>
+
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html" title="Главная">
+                            <i class="bi bi-house-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../documents.html">Документы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../prices.html">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../videos.html">Видео</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <article class="article-page py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- Back Button -->
+                        <div class="mb-4">
+                            <a href="../index.html" class="btn btn-outline-primary">
+                                <i class="bi bi-arrow-left me-2"></i>
+                                Вернуться к новостям
+                            </a>
+                        </div>
+
+                        <!-- Article Header -->
+                        <header class="article-header mb-4">
+                            <h1 class="display-4 mb-3">Кейс: дистанционный съем показаний по требованию Минских Тепловых сетей</h1>
+                            <div class="article-meta d-flex align-items-center text-muted mb-3">
+                                <i class="bi bi-calendar3 me-2"></i>
+                                <span class="me-3">24 ноября 2025</span>
+                            </div>
+                            <div class="article-tags mb-3">
+                                <span class="badge bg-primary me-2">Кейс</span>
+                                <span class="badge bg-primary me-2">Минские Тепловые сети</span>
+                                <span class="badge bg-primary me-2">Дистанционный съем</span>
+                                <span class="badge bg-primary me-2">Вега NB-11</span>
+                                <span class="badge bg-primary me-2">ТЭМ-104</span>
+                            </div>
+                        </header>
+
+                        <!-- Article Excerpt -->
+                        <div class="article-excerpt bg-light p-4 rounded mb-4 border-start border-primary border-4">
+                            <p class="lead mb-0">Реальный опыт внедрения системы дистанционного съема показаний счетчиков подпитки системы отопления и теплосчетчиков по предписанию Минских Тепловых сетей. Подробный разбор технического решения с использованием Вега NB-11, ТЭМ-104 и модемов iRZ.</p>
+                        </div>
+
+                        <!-- Featured Image -->
+                        <div class="article-image mb-4">
+                            <img src="../../images/comprehensive-services.webp" 
+                                 alt="Дистанционный съем показаний по требованию Минских Тепловых сетей" 
+                                 class="img-fluid rounded shadow-sm"
+                                 style="width: 100%; max-height: 500px; object-fit: cover;">
+                        </div>
+
+                        <!-- Article Content -->
+                        <div class="article-content" style="line-height: 1.8; font-size: 1.1rem;">
+
+
+                            <h2>Предписание Минских Тепловых сетей</h2>
+                            
+                            <p>В 2025 году наша компания получила задачу от крупного производственного предприятия в Минске: организовать <strong>дистанционный съем показаний</strong> счетчиков подпитки системы отопления и теплосчетчиков в соответствии с предписанием <strong>Минских Тепловых сетей</strong>. Требования были четкими — обеспечить автоматическую передачу данных о потреблении тепловой энергии и объемах подпитки в режиме реального времени.</p>
+
+                            <p>Объект представлял собой производственное здание с четырьмя точками учета подпитки системы отопления и несколькими теплосчетчиками. Существующие счетчики не имели возможности дистанционной передачи данных, что требовало комплексного технического решения. Минские Тепловые сети установили жесткие сроки на выполнение работ и ввод системы в эксплуатацию.</p>
+
+                            <h2>Техническое задание и анализ объекта</h2>
+
+                            <p>Перед началом работ наши специалисты провели детальное обследование объекта. Основные задачи включали:</p>
+
+                            <ul>
+                                <li><strong>Замена четырех счетчиков подпитки</strong> на приборы с импульсным выходом</li>
+                                <li><strong>Оснащение счетчиков модулями Вега NB-11</strong> для передачи данных по NB-IoT</li>
+                                <li><strong>Подключение к IoT платформе A1</strong> для автоматической передачи показаний</li>
+                                <li><strong>Интеграция теплосчетчиков ТЭМ-104</strong> в единую систему диспетчеризации</li>
+                                <li><strong>Настройка передачи данных</strong> через модемы iRZ 485 ATM3, Индел-1734 и Индел-1708</li>
+                            </ul>
+
+                            <p>Особенность объекта заключалась в том, что счетчики подпитки располагались в подвальных помещениях с ограниченным доступом, а теплосчетчики — в различных точках здания. Требовалось обеспечить надежную связь для всех устройств и организовать единую систему сбора данных.</p>
+
+                            <h2>Этап 1: Замена счетчиков подпитки с импульсным выходом</h2>
+
+                            <p>Первым этапом стала замена четырех обычных счетчиков воды на приборы учета с <strong>импульсным выходом</strong>. Для этого мы использовали сертифицированные водосчетчики класса C, оснащенные герконовыми датчиками. Импульсный выход генерирует электрический сигнал при прохождении определенного объема воды, что позволяет модулю передачи данных считывать показания автоматически.</p>
+
+                            <p>Монтаж счетчиков выполнялся с соблюдением всех требований технических норм:</p>
+
+                            <ul>
+                                <li>Установка запорной арматуры до и после счетчика</li>
+                                <li>Обеспечение прямых участков трубопровода согласно паспорту прибора</li>
+                                <li>Монтаж фильтров механической очистки</li>
+                                <li>Герметизация соединений и проверка на отсутствие протечек</li>
+                                <li>Подключение импульсного кабеля к выходным клеммам счетчика</li>
+                            </ul>
+
+                            <p>После установки все счетчики прошли первичную поверку и были опломбированы. Документы о поверке приборов учета воды были переданы заказчику для регистрации в Минских Тепловых сетях.</p>
+
+
+                            <h2>Этап 2: Установка модулей Вега NB-11</h2>
+
+                            <p>Для организации дистанционного съема показаний счетчиков подпитки мы использовали <strong>устройства передачи данных Вега NB-11</strong>. Это счетчик импульсов с встроенным модулем NB-IoT, который работает в сетях сотовых операторов и обеспечивает надежную передачу данных даже из подвальных помещений.</p>
+
+                            <p>Технические характеристики Вега NB-11, которые сделали его оптимальным выбором для проекта:</p>
+
+                            <ul>
+                                <li><strong>До 4 импульсных входов</strong> — один модуль может обслуживать несколько счетчиков</li>
+                                <li><strong>Работа в сети NB-IoT</strong> — высокая проникающая способность сигнала</li>
+                                <li><strong>Автономная работа до 10 лет</strong> от встроенной батареи</li>
+                                <li><strong>Защита IP67</strong> — устойчивость к влаге и пыли</li>
+                                <li><strong>Диапазон температур</strong> от -40°C до +70°C</li>
+                                <li><strong>Встроенная память</strong> для хранения данных при потере связи</li>
+                            </ul>
+
+                            <p>Процесс установки Вега NB-11 включал несколько этапов:</p>
+
+                            <ol>
+                                <li><strong>Замер уровня сигнала NB-IoT</strong> в местах установки счетчиков</li>
+                                <li><strong>Монтаж модулей</strong> на стену рядом со счетчиками</li>
+                                <li><strong>Подключение импульсных кабелей</strong> от счетчиков к входам модуля</li>
+                                <li><strong>Настройка параметров</strong> передачи данных (интервал, формат)</li>
+                                <li><strong>Регистрация устройств</strong> на IoT платформе A1</li>
+                                <li><strong>Проверка передачи данных</strong> и калибровка показаний</li>
+                            </ol>
+
+                            <p>Особое внимание уделялось качеству сигнала NB-IoT. В одной из точек уровень сигнала был недостаточным, поэтому мы установили внешнюю антенну, что обеспечило стабильную связь с базовой станцией оператора.</p>
+
+                            <h2>Этап 3: Подключение к IoT платформе A1</h2>
+
+                            <p>Для автоматической передачи показаний счетчиков подпитки мы использовали <strong>IoT платформу A1</strong> — одного из ведущих операторов связи в Беларуси. Платформа обеспечивает надежный сбор данных от устройств NB-IoT и предоставляет удобный интерфейс для мониторинга.</p>
+
+                            <p>Преимущества IoT платформы A1 для данного проекта:</p>
+
+                            <ul>
+                                <li><strong>Широкое покрытие NB-IoT</strong> по всей территории Минска</li>
+                                <li><strong>Высокая надежность</strong> передачи данных (99.9% uptime)</li>
+                                <li><strong>Личный кабинет</strong> для просмотра показаний в режиме реального времени</li>
+                                <li><strong>API для интеграции</strong> с корпоративными системами учета</li>
+                                <li><strong>Архив данных</strong> за весь период эксплуатации</li>
+                                <li><strong>Уведомления</strong> о критических событиях (потеря связи, аномалии)</li>
+                            </ul>
+
+                            <p>После регистрации устройств Вега NB-11 на платформе A1, мы настроили автоматическую передачу данных в информационную систему Минских Тепловых сетей. Интеграция выполнялась через REST API, что позволило обеспечить бесшовный обмен данными между системами.</p>
+
+
+                            <h2>Этап 4: Подключение теплосчетчиков ТЭМ-104</h2>
+
+                            <p>Параллельно с организацией дистанционного съема счетчиков подпитки, мы выполнили интеграцию существующих <strong>теплосчетчиков ТЭМ-104</strong> в единую систему диспетчеризации. ТЭМ-104 — это современный вычислитель количества тепловой энергии, который поддерживает протокол M-Bus для передачи данных.</p>
+
+                            <p>Технические характеристики ТЭМ-104:</p>
+
+                            <ul>
+                                <li><strong>Измерение тепловой энергии</strong> в системах отопления и ГВС</li>
+                                <li><strong>Протокол M-Bus</strong> для дистанционного съема показаний</li>
+                                <li><strong>Архив данных</strong> за 12 месяцев с почасовой детализацией</li>
+                                <li><strong>Диагностика</strong> состояния датчиков и системы в целом</li>
+                                <li><strong>Класс точности</strong> в соответствии с требованиями РБ</li>
+                                <li><strong>Межповерочный интервал</strong> 4 года</li>
+                            </ul>
+
+                            <p>Для подключения теплосчетчиков ТЭМ-104 к системе дистанционного съема мы использовали специализированные модемы, которые преобразуют протокол M-Bus в формат, понятный IoT платформе.</p>
+
+                            <h2>Использование модемов iRZ 485 ATM3</h2>
+
+                            <p>Для части теплосчетчиков мы применили <strong>модемы iRZ 485 ATM3</strong> — промышленные GSM/GPRS модемы с интерфейсом RS-485. Эти устройства обеспечивают надежную передачу данных от теплосчетчиков через сотовые сети.</p>
+
+                            <p>Ключевые особенности iRZ 485 ATM3:</p>
+
+                            <ul>
+                                <li><strong>Интерфейс RS-485</strong> для подключения к M-Bus теплосчетчикам</li>
+                                <li><strong>Работа в сетях 2G/3G/4G</strong> всех операторов Беларуси</li>
+                                <li><strong>Промышленное исполнение</strong> с расширенным температурным диапазоном</li>
+                                <li><strong>Встроенный протокол Modbus RTU</strong> для опроса счетчиков</li>
+                                <li><strong>Удаленная настройка</strong> и обновление прошивки</li>
+                                <li><strong>Резервирование данных</strong> при потере связи</li>
+                            </ul>
+
+                            <p>Модемы iRZ 485 ATM3 были установлены в щитах учета рядом с теплосчетчиками. Подключение выполнялось по схеме RS-485, что позволило организовать опрос нескольких счетчиков через один модем. Данные передавались на сервер сбора информации с интервалом 1 час.</p>
+
+                            <h2>Применение преобразователей Индел-1734 и Индел-1708</h2>
+
+                            <p>Для других точек учета мы использовали <strong>преобразователи интерфейса Индел-1734 и Индел-1708</strong>. Эти устройства обеспечивают преобразование протокола M-Bus в RS-485/RS-232 и позволяют интегрировать теплосчетчики в различные системы диспетчеризации.</p>
+
+                            <p><strong>Индел-1734</strong> — преобразователь M-Bus в RS-485:</p>
+
+                            <ul>
+                                <li>Подключение до 20 устройств M-Bus на одну линию</li>
+                                <li>Гальваническая развязка для защиты оборудования</li>
+                                <li>Питание от сети 220В или 12-24В DC</li>
+                                <li>Поддержка скоростей обмена до 9600 бод</li>
+                                <li>Компактное исполнение для монтажа на DIN-рейку</li>
+                            </ul>
+
+                            <p><strong>Индел-1708</strong> — преобразователь M-Bus в Ethernet:</p>
+
+                            <ul>
+                                <li>Прямое подключение к локальной сети предприятия</li>
+                                <li>Веб-интерфейс для настройки и диагностики</li>
+                                <li>Поддержка протоколов TCP/IP, Modbus TCP</li>
+                                <li>Встроенный веб-сервер для просмотра данных</li>
+                                <li>Возможность удаленного доступа через VPN</li>
+                            </ul>
+
+
+                            <p>Использование Индел-1734 позволило объединить несколько теплосчетчиков ТЭМ-104 в одну линию M-Bus и подключить их к модему iRZ для передачи данных. Индел-1708 применялся для теплосчетчиков, расположенных в помещениях с доступом к локальной сети предприятия, что обеспечило более высокую скорость передачи данных и упростило интеграцию с корпоративными системами.</p>
+
+                            <h2>Интеграция всех систем в единую платформу</h2>
+
+                            <p>После завершения монтажных работ мы приступили к интеграции всех компонентов системы в единую платформу диспетчеризации. Задача заключалась в том, чтобы обеспечить централизованный сбор данных от счетчиков подпитки (через Вега NB-11) и теплосчетчиков ТЭМ-104 (через модемы iRZ и преобразователи Индел).</p>
+
+                            <p>Архитектура системы включала:</p>
+
+                            <ul>
+                                <li><strong>Уровень сбора данных</strong> — устройства Вега NB-11, модемы iRZ, преобразователи Индел</li>
+                                <li><strong>Уровень передачи</strong> — IoT платформа A1, сотовые сети, локальная сеть предприятия</li>
+                                <li><strong>Уровень хранения</strong> — сервер базы данных с архивом показаний</li>
+                                <li><strong>Уровень визуализации</strong> — веб-интерфейс для мониторинга и отчетности</li>
+                                <li><strong>Уровень интеграции</strong> — API для передачи данных в систему Минских Тепловых сетей</li>
+                            </ul>
+
+                            <p>Особое внимание уделялось синхронизации данных от различных типов устройств. Мы настроили единый формат передачи показаний, что позволило системе Минских Тепловых сетей получать данные в унифицированном виде независимо от типа счетчика или способа передачи.</p>
+
+                            <h2>Настройка автоматической передачи данных</h2>
+
+                            <p>Согласно требованиям Минских Тепловых сетей, система должна была обеспечивать автоматическую передачу показаний с заданной периодичностью. Мы настроили следующие параметры:</p>
+
+                            <ul>
+                                <li><strong>Счетчики подпитки</strong> — передача данных каждые 4 часа</li>
+                                <li><strong>Теплосчетчики ТЭМ-104</strong> — передача данных каждый час</li>
+                                <li><strong>Архивные данные</strong> — ежесуточная выгрузка за предыдущие сутки</li>
+                                <li><strong>Аварийные события</strong> — немедленная передача при обнаружении</li>
+                            </ul>
+
+                            <p>Для обеспечения надежности передачи данных мы реализовали механизм резервирования. Если устройство не может передать данные в заданное время (например, из-за временной потери связи), информация сохраняется в локальной памяти и передается при восстановлении соединения. Это гарантирует, что ни одно показание не будет потеряно.</p>
+
+                            <h2>Тестирование и ввод в эксплуатацию</h2>
+
+                            <p>После завершения монтажа и настройки всех компонентов системы мы провели комплексное тестирование:</p>
+
+                            <ol>
+                                <li><strong>Проверка точности показаний</strong> — сравнение данных с ручным съемом</li>
+                                <li><strong>Тестирование связи</strong> — проверка стабильности передачи данных в течение недели</li>
+                                <li><strong>Имитация аварийных ситуаций</strong> — проверка работы системы при потере связи</li>
+                                <li><strong>Нагрузочное тестирование</strong> — одновременная передача данных от всех устройств</li>
+                                <li><strong>Проверка интеграции</strong> — корректность передачи данных в систему Минских Тепловых сетей</li>
+                            </ol>
+
+                            <p>Все тесты прошли успешно. Система продемонстрировала стабильную работу, точность передачи показаний составила 100%, задержки в передаче данных не превышали 5 минут. После получения положительных результатов тестирования мы подготовили пакет документов для приемки системы представителями Минских Тепловых сетей.</p>
+
+
+                            <h2>Результаты проекта</h2>
+
+                            <p>Проект по внедрению системы дистанционного съема показаний был успешно завершен в установленные сроки. Основные результаты:</p>
+
+                            <div class="alert alert-success my-4">
+                                <h5 class="alert-heading"><i class="bi bi-check-circle me-2"></i>Достигнутые показатели</h5>
+                                <ul class="mb-0">
+                                    <li><strong>4 счетчика подпитки</strong> с автоматической передачей данных через Вега NB-11</li>
+                                    <li><strong>Несколько теплосчетчиков ТЭМ-104</strong> интегрированы в систему диспетчеризации</li>
+                                    <li><strong>100% надежность</strong> передачи данных на IoT платформу A1</li>
+                                    <li><strong>Полное соответствие</strong> требованиям Минских Тепловых сетей</li>
+                                    <li><strong>Автоматизация учета</strong> — исключен ручной съем показаний</li>
+                                    <li><strong>Единая система мониторинга</strong> для всех приборов учета</li>
+                                </ul>
+                            </div>
+
+                            <p>Заказчик получил современную систему дистанционного съема, которая полностью удовлетворяет требованиям Минских Тепловых сетей и обеспечивает точный учет потребления тепловой энергии и объемов подпитки системы отопления. Система работает в автоматическом режиме, не требуя вмешательства персонала предприятия.</p>
+
+                            <h2>Экономический эффект</h2>
+
+                            <p>Внедрение системы дистанционного съема показаний принесло заказчику ощутимую экономию:</p>
+
+                            <ul>
+                                <li><strong>Снижение трудозатрат</strong> — исключена необходимость ежедневного обхода точек учета</li>
+                                <li><strong>Точность учета</strong> — отсутствие ошибок при ручном съеме показаний</li>
+                                <li><strong>Оперативность</strong> — данные доступны в режиме реального времени</li>
+                                <li><strong>Контроль потребления</strong> — возможность анализа и оптимизации расходов</li>
+                                <li><strong>Соответствие требованиям</strong> — отсутствие штрафов от Минских Тепловых сетей</li>
+                            </ul>
+
+                            <p>По оценкам заказчика, окупаемость инвестиций в систему составит около 18 месяцев за счет снижения операционных расходов и оптимизации потребления тепловой энергии.</p>
+
+                            <h2>Техническая поддержка и обслуживание</h2>
+
+                            <p>После ввода системы в эксплуатацию мы заключили договор на техническое обслуживание, который включает:</p>
+
+                            <ul>
+                                <li><strong>Мониторинг работы системы</strong> — круглосуточный контроль передачи данных</li>
+                                <li><strong>Профилактическое обслуживание</strong> — ежеквартальная проверка оборудования</li>
+                                <li><strong>Оперативное реагирование</strong> — устранение неисправностей в течение 24 часов</li>
+                                <li><strong>Обновление ПО</strong> — установка новых версий прошивок устройств</li>
+                                <li><strong>Консультации</strong> — техническая поддержка персонала заказчика</li>
+                                <li><strong>Поверка приборов учета</strong> — организация поверки по истечении межповерочного интервала</li>
+                            </ul>
+
+                            <p>Наша команда профессионалов обеспечивает бесперебойную работу системы и оперативно решает любые технические вопросы, возникающие в процессе эксплуатации.</p>
+
+                            <h2>Выводы и рекомендации</h2>
+
+                            <p>Реализованный проект продемонстрировал эффективность комплексного подхода к организации дистанционного съема показаний. Использование современных технологий NB-IoT, надежных устройств передачи данных и профессиональных преобразователей интерфейсов позволило создать отказоустойчивую систему, полностью соответствующую требованиям Минских Тепловых сетей.</p>
+
+                            <p>Ключевые факторы успеха проекта:</p>
+
+                            <ul>
+                                <li><strong>Детальное обследование объекта</strong> на этапе проектирования</li>
+                                <li><strong>Правильный подбор оборудования</strong> с учетом условий эксплуатации</li>
+                                <li><strong>Профессиональный монтаж</strong> с соблюдением всех технических норм</li>
+                                <li><strong>Качественная настройка</strong> параметров передачи данных</li>
+                                <li><strong>Комплексное тестирование</strong> перед вводом в эксплуатацию</li>
+                                <li><strong>Документальное сопровождение</strong> на всех этапах проекта</li>
+                            </ul>
+
+
+                            <div class="alert alert-info mt-4">
+                                <h4><i class="bi bi-info-circle me-2"></i>Нужна система дистанционного съема?</h4>
+                                <p class="mb-2">Наша компания имеет богатый опыт внедрения систем дистанционного съема показаний для различных типов объектов. Мы работаем с:</p>
+                                <ul class="mb-3">
+                                    <li>Производственными предприятиями</li>
+                                    <li>Жилыми комплексами и многоквартирными домами</li>
+                                    <li>Коммерческой недвижимостью</li>
+                                    <li>Объектами ЖКХ</li>
+                                </ul>
+                                <p class="mb-2"><strong>Свяжитесь с нами для консультации:</strong></p>
+                                <p class="mb-1"><i class="bi bi-telephone me-2"></i>Телефон: +375 (29) 252-49-88</p>
+                                <p class="mb-1"><i class="bi bi-envelope me-2"></i>Email: info@meter.by</p>
+                                <p class="mb-1"><i class="bi bi-telegram me-2"></i>Telegram: <a href="https://t.me/meter_by" target="_blank">@meter_by</a></p>
+                                <p class="mb-0 mt-3">Выполним проект любой сложности с соблюдением всех требований и в установленные сроки!</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Article Footer -->
+                        <footer class="article-footer mt-5 pt-4 border-top">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="mb-3">Поделиться статьей</h5>
+                                    <div class="d-flex gap-2">
+                                        <a href="https://t.me/share/url?url=https://meter.by/news/articles/2025-11-24-minsk-heating-networks-remote-metering-case.html" 
+                                           class="btn btn-outline-primary" title="Telegram" target="_blank">
+                                            <i class="bi bi-telegram"></i>
+                                        </a>
+                                        <a href="viber://forward?text=https://meter.by/news/articles/2025-11-24-minsk-heating-networks-remote-metering-case.html" 
+                                           class="btn btn-outline-secondary" title="Viber" target="_blank">
+                                            <i class="bi bi-chat-dots"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                                    <h5 class="mb-3">Есть вопросы?</h5>
+                                    <a href="../../prices.html" class="btn btn-primary">
+                                        <i class="bi bi-calculator me-2"></i>
+                                        Рассчитать стоимость
+                                    </a>
+                                </div>
+                            </div>
+                        </footer>
+
+                        <!-- Related Articles Section -->
+                        <div id="related-articles" class="mt-5 pt-4 border-top" x-data="relatedArticles" x-init="init()">
+                            <h3 class="mb-4">Похожие статьи</h3>
+                            <div class="row g-4" x-show="articles.length > 0">
+                                <template x-for="article in articles" :key="article.id">
+                                    <div class="col-md-4">
+                                        <div class="card h-100" style="cursor: pointer;" @click="navigateToArticle(article.slug)">
+                                            <img :src="'../../' + article.image" 
+                                                 :alt="article.title" 
+                                                 class="card-img-top"
+                                                 style="height: 150px; object-fit: cover;">
+                                            <div class="card-body">
+                                                <h6 class="card-title" x-text="article.title"></h6>
+                                                <small class="text-muted">
+                                                    <i class="bi bi-calendar me-1"></i>
+                                                    <span x-text="formatDate(article.date)"></span>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+
+                        <!-- Back Button (bottom) -->
+                        <div class="mt-5 text-center">
+                            <a href="../index.html" class="btn btn-outline-primary btn-lg">
+                                <i class="bi bi-arrow-left me-2"></i>
+                                Вернуться к новостям
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Meter.by</h5>
+                    <p>Современные решения для учета ресурсов в Республике Беларусь</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>
+                        <i class="bi bi-telephone me-2"></i>+375 (29) 252-49-88<br>
+                        <i class="bi bi-envelope me-2"></i>info@meter.by
+                    </p>
+                    <div class="social-links">
+                        <a href="https://t.me/meter_by" class="text-light me-3" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="viber://chat?number=+375292524988" class="text-light" target="_blank"><i class="bi bi-chat-dots"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <small>&copy; 2025 Meter.by. Все права защищены.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Messenger Buttons -->
+    <div class="messenger-buttons">
+        <a href="https://t.me/meter_by" class="messenger-btn telegram-btn" title="Telegram" target="_blank">
+            <i class="bi bi-telegram"></i>
+        </a>
+        <a href="viber://chat?number=+375292524988" class="messenger-btn viber-btn" title="Viber" target="_blank">
+            <i class="bi bi-chat-dots"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script src="../../js/navigation-manager.js"></script>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('themeSwitch', () => ({
+                isDark: localStorage.getItem('theme') === 'dark',
+                toggle() {
+                    this.isDark = !this.isDark;
+                    document.body.classList.add('theme-transition');
+                    const newTheme = this.isDark ? 'dark' : 'light';
+                    localStorage.setItem('theme', newTheme);
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    setTimeout(() => {
+                        document.body.classList.remove('theme-transition');
+                    }, 300);
+                },
+                init() {
+                    const savedTheme = this.isDark ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                    document.body.classList.add('theme-transition');
+                }
+            }));
+
+            Alpine.data('relatedArticles', () => ({
+                articles: [],
+                currentArticleTags: ["Кейс", "Минские Тепловые сети", "Дистанционный съем", "Вега NB-11", "ТЭМ-104"],
+                async init() {
+                    await this.loadRelatedArticles();
+                },
+                async loadRelatedArticles() {
+                    try {
+                        const response = await fetch('../data/articles-metadata.json');
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        const data = await response.json();
+                        const allArticles = data.articles || [];
+                        const currentSlug = '2025-11-24-minsk-heating-networks-remote-metering-case';
+                        const related = allArticles
+                            .filter(article => article.slug !== currentSlug)
+                            .map(article => {
+                                const matchingTags = article.tags.filter(tag => 
+                                    this.currentArticleTags.includes(tag)
+                                ).length;
+                                return { ...article, matchingTags };
+                            })
+                            .filter(article => article.matchingTags > 0)
+                            .sort((a, b) => b.matchingTags - a.matchingTags)
+                            .slice(0, 3);
+                        this.articles = related;
+                    } catch (error) {
+                        console.error('Error loading related articles:', error);
+                        this.articles = [];
+                    }
+                },
+                formatDate(dateString) {
+                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                    return new Date(dateString).toLocaleDateString('ru-RU', options);
+                },
+                navigateToArticle(slug) {
+                    window.location.href = `${slug}.html`;
+                }
+            }));
+        });
+    </script>
+</body>
+</html>

@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "id": "minsk-heating-networks-remote-metering-case",
+      "title": "Кейс: дистанционный съем показаний по требованию Минских Тепловых сетей",
+      "slug": "2025-11-24-minsk-heating-networks-remote-metering-case",
+      "date": "2025-11-24",
+      "excerpt": "Реальный опыт внедрения системы дистанционного съема для счетчиков подпитки и теплосчетчиков ТЭМ-104 по предписанию Минских Тепловых сетей. Замена счетчиков, установка Вега NB-11, подключение через модемы iRZ и преобразователи Индел.",
+      "image": "images/comprehensive-services.webp",
+      "tags": ["Кейс", "Минские Тепловые сети", "Дистанционный съем", "Вега NB-11", "ТЭМ-104", "IoT платформа A1", "Монтаж счетчиков", "Теплосчетчики"]
+    },
+    {
       "id": "meter-by-professional-metering-solutions-belarus",
       "title": "Meter.by: профессиональные системы учета энергоресурсов в Беларуси",
       "slug": "2025-11-21-meter-by-professional-metering-solutions-belarus",
