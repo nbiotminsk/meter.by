@@ -7,8 +7,10 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
+const { exec, spawn } = require('child_process');
+const { promisify } = require('util');
 
+const execAsync = promisify(exec);
 const PORT = 8000;
 
 // MIME types for common file extensions
@@ -30,7 +32,7 @@ const mimeTypes = {
     '.eot': 'application/vnd.ms-fontobject'
 };
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
     // Add CORS headers
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -39,6 +41,12 @@ const server = http.createServer((req, res) => {
     if (req.method === 'OPTIONS') {
         res.writeHead(200);
         res.end();
+        return;
+    }
+
+    // Handle API endpoints
+    if (req.url === '/api/create-article' && req.method === 'POST') {
+        await handleCreateArticle(req, res);
         return;
     }
 
@@ -72,6 +80,114 @@ const server = http.createServer((req, res) => {
         }
     });
 });
+
+/**
+ * Handle article creation API request
+ */
+async function handleCreateArticle(req, res) {
+    let body = '';
+    
+    req.on('data', chunk => {
+        body += chunk.toString();
+    });
+    
+    req.on('end', async () => {
+        try {
+            const data = JSON.parse(body);
+            const { title, excerpt, slug, date, image, tags, content } = data;
+            
+            // Validate required fields
+            if (!title || !excerpt || !slug) {
+                res.writeHead(400, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ error: 'Missing required fields: title, excerpt, slug' }));
+                return;
+            }
+            
+            // Create temporary content file
+            const tempContentPath = path.join(__dirname, 'temp-article-content.html');
+            fs.writeFileSync(tempContentPath, content, 'utf8');
+            
+            // Build command to call create-news-article.js
+            const scriptPath = path.join(__dirname, 'scripts', 'create-news-article.js');
+            const dateValue = date || new Date().toISOString().split('T')[0];
+            const imageValue = image || 'images/placeholders/min/remote-water-reading.webp';
+            
+            // Escape arguments for Windows
+            const escapeArg = (arg) => {
+                if (process.platform === 'win32') {
+                    return `"${arg.replace(/"/g, '\\"')}"`;
+                }
+                return `"${arg.replace(/"/g, '\\"')}"`;
+            };
+            
+            const cmd = [
+                'node',
+                escapeArg(scriptPath),
+                '--title', escapeArg(title),
+                '--excerpt', escapeArg(excerpt),
+                '--slug', escapeArg(slug),
+                '--date', escapeArg(dateValue),
+                '--image', escapeArg(imageValue),
+                '--tags', escapeArg(tags || ''),
+                '--content', escapeArg(tempContentPath)
+            ].join(' ');
+            
+            // Execute script
+            const { stdout, stderr } = await execAsync(cmd);
+            
+            // Clean up temp file
+            try {
+                fs.unlinkSync(tempContentPath);
+            } catch (e) {
+                // Ignore cleanup errors
+            }
+            
+            // Extract file path from output
+            const fileMatch = stdout.match(/File:\s+([^\n]+)/);
+            const filePath = fileMatch ? fileMatch[1] : null;
+            
+            if (stderr && !filePath) {
+                throw new Error(stderr || 'Failed to create article');
+            }
+            
+            // Update the created article file with actual content
+            if (filePath) {
+                // Normalize path separators
+                const normalizedPath = filePath.replace(/\\/g, '/');
+                const articlePath = path.join(__dirname, normalizedPath);
+                
+                if (fs.existsSync(articlePath)) {
+                    let articleHtml = fs.readFileSync(articlePath, 'utf8');
+                    // Replace placeholder content with actual content
+                    // Escape content for HTML insertion
+                    const escapedContent = content
+                        .replace(/\$/g, '$$$$') // Escape $ for replacement
+                        .replace(/\n/g, '\n                            '); // Preserve indentation
+                    
+                    articleHtml = articleHtml.replace(
+                        /(<div class="article-content"[^>]*>)([\s\S]*?)(<\/div>)/,
+                        `$1\n                            ${escapedContent}\n                        $3`
+                    );
+                    fs.writeFileSync(articlePath, articleHtml, 'utf8');
+                }
+            }
+            
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({
+                success: true,
+                file: filePath,
+                message: 'Article created successfully'
+            }));
+            
+        } catch (error) {
+            console.error('Article creation error:', error);
+            res.writeHead(500, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({
+                error: error.message || 'Failed to create article'
+            }));
+        }
+    });
+}
 
 server.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}/`);
