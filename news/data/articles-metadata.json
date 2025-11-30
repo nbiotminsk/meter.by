@@ -228,18 +228,6 @@
       ]
     },
     {
-      "id": "test-article",
-      "title": "Тестовая статья",
-      "slug": "2025-01-20-test-article",
-      "date": "2025-01-20",
-      "excerpt": "Это тестовая статья для проверки работы скрипта",
-      "image": "images/placeholders/min/remote-water-reading.webp",
-      "tags": [
-        "тест",
-        "автоматизация"
-      ]
-    },
-    {
       "id": "new-verification-requirements-2024",
       "title": "Новые требования к поверке счетчиков в 2024 году",
       "slug": "2024-01-15-new-verification-requirements-2024",

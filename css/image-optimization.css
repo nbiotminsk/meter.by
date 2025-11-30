@@ -104,6 +104,7 @@ img.loaded {
   font-size: 1.2rem;
   text-align: center;
   border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
 .placeholder-image::before {
@@ -112,6 +113,26 @@ img.loaded {
   display: block;
   margin-bottom: 0.5rem;
   opacity: 0.6;
+}
+
+/* SVG placeholder images (from image-fallback.js) */
+img.placeholder-image {
+  background: transparent;
+  border: none;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+img.placeholder-image:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+/* Image loading state */
+.image-loading {
+  opacity: 0.5;
+  filter: blur(2px);
+  transition: all 0.3s ease;
 }
 
 /* WebP optimized images indicator */
