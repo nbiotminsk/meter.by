@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NB-IoT: как работает и почему это лучше обычной связи - Meter.by</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Простое объяснение технологии NB-IoT для дистанционного съема показаний счетчиков. Как работает, преимущества перед обычной связью, применение в Беларуси.">
+    <meta name="keywords" content="NB-IoT, технология, как работает, преимущества, дистанционный съем, счетчики, Вега NB-11, IoT, передача данных, Беларусь">
+    <meta name="author" content="Meter.by">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="NB-IoT: как работает и почему это лучше обычной связи - Meter.by">
+    <meta property="og:description" content="Простое объяснение технологии NB-IoT для дистанционного съема показаний счетчиков. Как работает, преимущества перед обычной связью, применение в Беларуси.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://meter.by/news/articles/2025-11-29-nbiot-technology-guide.html">
+    <meta property="og:image" content="https://meter.by/images/distancionni schetchik.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://meter.by/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/dark-theme.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+    <link href="../../css/image-optimization.css" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "NB-IoT: как работает и почему это лучше обычной связи",
+        "description": "Простое объяснение технологии NB-IoT для дистанционного съема показаний счетчиков. Как работает, преимущества перед обычной связью, применение в Беларуси.",
+        "image": "https://meter.by/images/distancionni schetchik.webp",
+        "datePublished": "2025-11-29",
+        "author": {
+            "@type": "Organization",
+            "name": "Meter.by"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Meter.by",
+            "url": "https://meter.by"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="bi bi-broadcast-pin me-2"></i>
+                Meter.by
+            </a>
+
+            <div class="d-flex align-items-center order-lg-3">
+                <!-- Theme Switcher -->
+                <button class="theme-switcher me-3" x-data="themeSwitch" @click="toggle()" x-init="init()">
+                    <i :class="isDark ? 'bi bi-sun' : 'bi bi-moon'"></i>
+                </button>
+
+                <!-- Messenger Buttons -->
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-primary btn-sm me-2 telegram-btn">
+                        <i class="bi bi-telegram me-1"></i><span class="btn-text">Telegram</span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm viber-btn">
+                        <i class="bi bi-chat-dots me-1"></i><span class="btn-text">Viber</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html" title="Главная">
+                            <i class="bi bi-house-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html#services">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../documents.html">Документы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../prices.html">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../videos.html">Видео</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Article Section -->
+        <article class="article-page py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- Back Button -->
+                        <div class="mb-4">
+                            <a href="../index.html" class="btn btn-outline-primary">
+                                <i class="bi bi-arrow-left me-2"></i>
+                                Вернуться к новостям
+                            </a>
+                        </div>
+
+                        <!-- Article Header -->
+                        <header class="article-header mb-4">
+                            <h1 class="display-4 mb-3">NB-IoT: как работает и почему это лучше обычной связи</h1>
+                            <div class="article-meta d-flex align-items-center text-muted mb-3">
+                                <i class="bi bi-calendar3 me-2"></i>
+                                <span class="me-3">29 ноября 2025</span>
+                            </div>
+                            <div class="article-tags mb-3">
+                                <span class="badge bg-primary me-2">NB-IoT</span>
+                                <span class="badge bg-primary me-2">Технология</span>
+                                <span class="badge bg-primary me-2">IoT</span>
+                                <span class="badge bg-primary me-2">Дистанционный съем</span>
+                                <span class="badge bg-primary me-2">Счетчики</span>
+                            </div>
+                        </header>
+
+                        <!-- Article Excerpt -->
+                        <div class="article-excerpt bg-light p-4 rounded mb-4 border-start border-primary border-4">
+                            <p class="lead mb-0">NB-IoT — это специальная технология для устройств, которые передают мало данных, но должны работать долго и надежно. Узнайте, как она работает и почему она лучше обычной мобильной связи для счетчиков воды и тепла.</p>
+                        </div>
+
+                        <!-- Featured Image -->
+                        <div class="article-image mb-4">
+                            <img src="../../images/distancionni schetchik.webp" 
+                                 alt="NB-IoT технология для счетчиков" 
+                                 class="img-fluid rounded shadow-sm"
+                                 style="width: 100%; max-height: 500px; object-fit: cover;">
+                        </div>
+
+                        <!-- Article Content -->
+                        <div class="article-content" style="line-height: 1.8; font-size: 1.1rem;">
+
+                            <h2>Что такое NB-IoT простыми словами?</h2>
+                            
+                            <p><strong>NB-IoT (Narrowband Internet of Things)</strong> — это технология мобильной связи, специально созданная для устройств, которые:</p>
+
+                            <ul>
+                                <li>Передают небольшое количество данных</li>
+                                <li>Должны работать долго без подзарядки</li>
+                                <li>Нужны в местах со слабым сигналом</li>
+                                <li>Требуют надежной и стабильной связи</li>
+                            </ul>
+
+                            <p>Если обычная мобильная сеть — это автомагистраль для больших объемов трафика, то NB-IoT — это узкая, но очень надежная дорога для маленьких посылок данных.</p>
+
+                            <h2>Как работает NB-IoT?</h2>
+
+                            <p>Представьте, что счетчик воды — это маленький посланник, который один раз в день приносит вам записку с показаниями. Ему не нужна широкая дорога, ему нужна надежная тропинка, которая:</p>
+
+                            <ul>
+                                <li><strong>Проходит везде</strong> — даже в подвалах и закрытых помещениях</li>
+                                <li><strong>Экономит батарею</strong> — посланник может ходить годами</li>
+                                <li><strong>Не требует много энергии</strong> — для отправки маленькой записки</li>
+                                <li><strong>Работает стабильно</strong> — записка всегда доходит</li>
+                            </ul>
+
+                            <p>Технически NB-IoT использует узкую полосу частот (всего 180 кГц) в сотовой сети. Это позволяет устройству передавать данные с минимальным энергопотреблением, но с высокой надежностью.</p>
+
+                            <h2>Почему NB-IoT лучше обычной мобильной связи для счетчиков?</h2>
+
+                            <h3>1. Экономия батареи — работает годами</h3>
+
+                            <p>Обычный смартфон с 4G/LTE нужно заряжать каждый день. Счетчик с NB-IoT может работать <strong>5-10 лет</strong> от одной батареи.</p>
+
+                            <p><strong>Почему?</strong> NB-IoT использует меньше энергии для передачи данных. Если смартфон постоянно ищет сильный сигнал и передает большие объемы, то счетчик отправляет одну маленькую посылку в день и спит остальное время.</p>
+
+                            <h3>2. Проникновение сигнала — работает везде</h3>
+
+                            <p>Обычная мобильная сеть может не ловить в подвале или в центре многоэтажного дома. NB-IoT <strong>проходит через стены на 20 дБ лучше</strong>, чем 4G.</p>
+
+                            <p>Это означает, что счетчик в подвале будет передавать данные так же надежно, как счетчик на первом этаже.</p>
+
+                            <h3>3. Стоимость оборудования — дешевле</h3>
+
+                            <p>Модули NB-IoT дешевле, чем модули 4G/LTE. Это потому, что они проще и требуют меньше функций. Вместо полнофункционального модема нужен только узкополосный приемопередатчик.</p>
+
+                            <h3>4. Надежность — данные всегда доходят</h3>
+
+                            <p>NB-IoT специально разработана для надежной передачи. Если сигнал слабый, устройство автоматически повторит попытку. Это гарантирует, что показания счетчика не потеряются.</p>
+
+                            <h3>5. Масштабируемость — одна базовая станция обслуживает тысячи устройств</h3>
+
+                            <p>Одна базовая станция NB-IoT может обслуживать до <strong>50 000 устройств</strong>. Это намного больше, чем для обычной мобильной сети.</p>
+
+                            <h2>Сравнение NB-IoT с другими технологиями</h2>
+
+                            <table class="table table-striped mt-4">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Характеристика</th>
+                                        <th>NB-IoT</th>
+                                        <th>4G/LTE</th>
+                                        <th>LoRaWAN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Время работы батареи</strong></td>
+                                        <td>5-10 лет</td>
+                                        <td>1-2 дня</td>
+                                        <td>5-10 лет</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Проникновение сигнала</strong></td>
+                                        <td>Отличное</td>
+                                        <td>Хорошее</td>
+                                        <td>Отличное</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Скорость передачи</strong></td>
+                                        <td>250 кбит/с</td>
+                                        <td>10-100 Мбит/с</td>
+                                        <td>50 кбит/с</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Задержка</strong></td>
+                                        <td>1-10 сек</td>
+                                        <td>50-100 мс</td>
+                                        <td>1-10 сек</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Стоимость модуля</strong></td>
+                                        <td>Средняя</td>
+                                        <td>Высокая</td>
+                                        <td>Низкая</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Инфраструктура</strong></td>
+                                        <td>Существующая сеть</td>
+                                        <td>Существующая сеть</td>
+                                        <td>Нужно развертывать</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h2>Когда использовать NB-IoT?</h2>
+
+                            <p>NB-IoT идеально подходит для:</p>
+
+                            <ul>
+                                <li><strong>Счетчиков воды и тепла</strong> — передают данные раз в день</li>
+                                <li><strong>Счетчиков электроэнергии</strong> — нужна надежная связь</li>
+                                <li><strong>Датчиков утечек</strong> — работают годами без обслуживания</li>
+                                <li><strong>Систем охраны</strong> — нужна стабильная связь</li>
+                                <li><strong>Удаленных объектов</strong> — где нет хорошего покрытия 4G</li>
+                                <li><strong>Производственных объектов</strong> — для мониторинга ресурсов</li>
+                            </ul>
+
+                            <h2>Вега NB-11 — пример устройства на NB-IoT</h2>
+
+                            <p><strong>Вега NB-11</strong> — это модуль передачи данных, который подключается к обычному счетчику воды и превращает его в "умный" счетчик с дистанционным съемом показаний.</p>
+
+                            <p>Характеристики:</p>
+
+                            <ul>
+                                <li>Работает на сети NB-IoT операторов Беларуси</li>
+                                <li>Батарея работает 5-7 лет</li>
+                                <li>Передает показания один раз в день</li>
+                                <li>Работает в подвалах и закрытых помещениях</li>
+                                <li>Совместим с большинством счетчиков воды</li>
+                                <li>Интегрируется с платформой Meter.by</li>
+                            </ul>
+
+                            <h2>Как NB-IoT работает в Беларуси?</h2>
+
+                            <p>В Беларуси NB-IoT развернута операторами мобильной связи:</p>
+
+                            <ul>
+                                <li><strong>МТС</strong> — покрытие по всей стране</li>
+                                <li><strong>Velcom</strong> — развивающаяся сеть</li>
+                                <li><strong>Life</strong> — локальное покрытие</li>
+                            </ul>
+
+                            <p>Это означает, что вы можете использовать NB-IoT устройства практически везде в Беларуси, где есть мобильная сеть.</p>
+
+                            <h2>Преимущества для организаций</h2>
+
+                            <p>Если вы управляющая компания, водоканал или производство, NB-IoT дает вам:</p>
+
+                            <ul>
+                                <li><strong>Автоматизацию</strong> — не нужно ходить по счетчикам</li>
+                                <li><strong>Точность</strong> — данные передаются автоматически</li>
+                                <li><strong>Экономию</strong> — меньше ошибок и потерь</li>
+                                <li><strong>Контроль</strong> — видите потребление в реальном времени</li>
+                                <li><strong>Надежность</strong> — система работает стабильно</li>
+                                <li><strong>Масштабируемость</strong> — легко добавить новые счетчики</li>
+                            </ul>
+
+                            <h2>Как начать использовать NB-IoT?</h2>
+
+                            <p>Если вы хотите внедрить систему дистанционного съема на базе NB-IoT:</p>
+
+                            <ol>
+                                <li><strong>Свяжитесь с нами</strong> — расскажите о вашем объекте</li>
+                                <li><strong>Проверим покрытие</strong> — убедимся, что NB-IoT работает на вашей территории</li>
+                                <li><strong>Подберем оборудование</strong> — выберем подходящие счетчики и модули</li>
+                                <li><strong>Установим систему</strong> — профессиональный монтаж и настройка</li>
+                                <li><strong>Запустим платформу</strong> — начнете получать данные в личный кабинет</li>
+                            </ol>
+
+                            <div class="alert alert-info mt-4">
+                                <h4><i class="bi bi-info-circle me-2"></i>Полезная информация</h4>
+                                <p class="mb-2"><strong>Контакты:</strong></p>
+                                <p class="mb-1"><i class="bi bi-telephone me-2"></i>Телефон: +375 (29) 252-49-88</p>
+                                <p class="mb-1"><i class="bi bi-envelope me-2"></i>Email: info@meter.by</p>
+                                <p class="mb-1"><i class="bi bi-globe me-2"></i>Сайт: <a href="https://meter.by" target="_blank">meter.by</a></p>
+                            </div>
+
+                        </div>
+
+                        <!-- Article Footer -->
+                        <footer class="article-footer mt-5 pt-4 border-top">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="mb-3">Поделиться статьей</h5>
+                                    <div class="d-flex gap-2">
+                                        <a href="#" class="btn btn-outline-primary" title="Telegram">
+                                            <i class="bi bi-telegram"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-outline-secondary" title="Viber">
+                                            <i class="bi bi-chat-dots"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                                    <h5 class="mb-3">Есть вопросы?</h5>
+                                    <a href="../../prices.html" class="btn btn-primary">
+                                        <i class="bi bi-calculator me-2"></i>
+                                        Рассчитать стоимость
+                                    </a>
+                                </div>
+                            </div>
+                        </footer>
+
+                        <!-- Related Articles Section -->
+                        <div id="related-articles" class="mt-5 pt-4 border-top" x-data="relatedArticles" x-init="init()">
+                            <h3 class="mb-4">Похожие статьи</h3>
+                            <div class="row g-4" x-show="articles.length > 0">
+                                <template x-for="article in articles" :key="article.id">
+                                    <div class="col-md-4">
+                                        <div class="card h-100" style="cursor: pointer;" @click="navigateToArticle(article.slug)">
+                                            <img :src="'../../' + article.image" 
+                                                 :alt="article.title" 
+                                                 class="card-img-top"
+                                                 style="height: 150px; object-fit: cover;">
+                                            <div class="card-body">
+                                                <h6 class="card-title" x-text="article.title"></h6>
+                                                <small class="text-muted">
+                                                    <i class="bi bi-calendar me-1"></i>
+                                                    <span x-text="formatDate(article.date)"></span>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+
+                        <!-- Back Button (bottom) -->
+                        <div class="mt-5 text-center">
+                            <a href="../index.html" class="btn btn-outline-primary btn-lg">
+                                <i class="bi bi-arrow-left me-2"></i>
+                                Вернуться к новостям
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Meter.by</h5>
+                    <p>Современные решения для учета ресурсов в Республике Беларусь</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>
+                        <i class="bi bi-telephone me-2"></i>+375 (29) 252-49-88<br>
+                        <i class="bi bi-envelope me-2"></i>info@meter.by
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="bi bi-telegram"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-chat-dots"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <small>&copy; 2025 Meter.by. Все права защищены.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Messenger Buttons -->
+    <div class="messenger-buttons">
+        <a href="#" class="messenger-btn telegram-btn" title="Telegram">
+            <i class="bi bi-telegram"></i>
+        </a>
+        <a href="#" class="messenger-btn viber-btn" title="Viber">
+            <i class="bi bi-chat-dots"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script src="../../js/navigation-manager.js"></script>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('themeSwitch', () => ({
+                isDark: localStorage.getItem('theme') === 'dark',
+                toggle() {
+                    this.isDark = !this.isDark;
+                    document.body.classList.add('theme-transition');
+                    const newTheme = this.isDark ? 'dark' : 'light';
+                    localStorage.setItem('theme', newTheme);
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    setTimeout(() => {
+                        document.body.classList.remove('theme-transition');
+                    }, 300);
+                },
+                init() {
+                    const savedTheme = this.isDark ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                    document.body.classList.add('theme-transition');
+                }
+            }));
+
+            Alpine.data('relatedArticles', () => ({
+                articles: [],
+                currentArticleTags: ["NB-IoT", "Технология", "IoT", "Дистанционный съем", "Счетчики"],
+                async init() {
+                    await this.loadRelatedArticles();
+                },
+                async loadRelatedArticles() {
+                    try {
+                        const response = await fetch('../data/articles-metadata.json');
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        const data = await response.json();
+                        const allArticles = data.articles || [];
+                        const currentSlug = '2025-11-29-nbiot-technology-guide';
+                        const related = allArticles
+                            .filter(article => article.slug !== currentSlug)
+                            .map(article => {
+                                const matchingTags = article.tags.filter(tag => 
+                                    this.currentArticleTags.includes(tag)
+                                ).length;
+                                return { ...article, matchingTags };
+                            })
+                            .filter(article => article.matchingTags > 0)
+                            .sort((a, b) => b.matchingTags - a.matchingTags)
+                            .slice(0, 3);
+                        this.articles = related;
+                    } catch (error) {
+                        console.error('Error loading related articles:', error);
+                        this.articles = [];
+                    }
+                },
+                formatDate(dateString) {
+                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                    return new Date(dateString).toLocaleDateString('ru-RU', options);
+                },
+                navigateToArticle(slug) {
+                    window.location.href = `${slug}.html`;
+                }
+            }));
+        });
+    </script>
+</body>
+</html>

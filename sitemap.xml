@@ -45,6 +45,12 @@
     </url>
     <!-- Статьи новостей -->
     <url>
+        <loc>https://meter.by/news/articles/2025-11-29-nbiot-technology-guide.html</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://meter.by/news/articles/2025-11-21-meter-by-professional-metering-solutions-belarus.html</loc>
         <lastmod>2025-11-21</lastmod>
         <changefreq>monthly</changefreq>

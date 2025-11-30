@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "id": "nbiot-technology-guide",
+      "title": "NB-IoT: как работает и почему это лучше обычной связи",
+      "slug": "2025-11-29-nbiot-technology-guide",
+      "date": "2025-11-29",
+      "excerpt": "Простое объяснение технологии NB-IoT для дистанционного съема показаний счетчиков. Как работает, преимущества перед обычной связью, применение в Беларуси.",
+      "image": "images/distancionni schetchik.webp",
+      "tags": ["NB-IoT", "Технология", "IoT", "Дистанционный съем", "Счетчики", "Вега NB-11", "Передача данных"]
+    },
+    {
       "id": "minsk-heating-networks-remote-metering-case",
       "title": "Кейс: дистанционный съем показаний по требованию Минских Тепловых сетей",
       "slug": "2025-11-24-minsk-heating-networks-remote-metering-case",
